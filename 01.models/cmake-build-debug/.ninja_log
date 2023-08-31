@@ -1,0 +1,6 @@
+# ninja log v5
+0	684	1693236780600391187	CMakeFiles/01_models.dir/src/Edge.cpp.o	eb0afe349b99d8c0
+0	689	1693236780600371520	CMakeFiles/01_models.dir/src/Vertex.cpp.o	988fc0c9760fe05c
+0	690	1693236780609593824	CMakeFiles/01_models.dir/src/Face.cpp.o	798ebbe545d0f54f
+691	803	1693236780734858553	01_models	abfa3afdf798553a
+1	690	1693236780600379437	CMakeFiles/01_models.dir/main.cpp.o	9c45264123489587
