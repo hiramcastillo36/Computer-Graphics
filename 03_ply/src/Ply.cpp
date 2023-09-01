@@ -9,24 +9,6 @@ using namespace std;
 
 Ply :: Ply(string fileName) {
     this -> fileName = fileName;
-    read_header();
-    cout<< "size_vertices: " << size_vertices << endl;
-}
-
-vector <string> Ply :: split(const string& str, const string& delim){
-    vector<string> tokens;
-    size_t prev = 0, pos = 0;
-    do{
-        pos = str.find(delim, prev);
-        if (pos == string::npos) pos = str.length();
-        string token = str.substr(prev, pos-prev);
-        if (!token.empty()) tokens.push_back(token);
-        prev = pos + delim.length();
-    }while (pos < str.length() && prev < str.length());
-    return tokens;
-}
-
-void Ply :: read_header() {
     string line;
     ifstream PLYfile(fileName);
     while(getline(PLYfile, line) && line != "end_header") {
@@ -44,16 +26,13 @@ void Ply :: read_header() {
             }
         }
     }
-
     while(getline(PLYfile, line)) {
         if(size_vertices > 0){
-            cout<<line<<endl;
             vector <string> elems = split(line, " ");
             Vertex v(stof(elems[0]), stof(elems[1]), stof(elems[2]));
             this -> vertices.push_back(v);
             size_vertices --;
         } else {
-            cout<<line<<endl;
             vector <string> elems = split(line, " ");
             unsigned int prev_vertice;
             prev_vertice = stoi(split(elems[1], " ")[0]) ;
@@ -65,7 +44,6 @@ void Ply :: read_header() {
                 Edge e(vertices[prev_vertice], vertices[actual_vertice]);
                 prev_vertice = actual_vertice;
                 edges.push_back(e);
-                cout<<endl;
             }
             Edge e(vertices[prev_vertice], vertices[stoi(split(elems[1], " ")[0]) ]);
             edges.push_back(e);
@@ -73,5 +51,17 @@ void Ply :: read_header() {
             this -> faces.push_back(face);
         }
     }
-    cout<<endl;
+}
+
+vector <string> Ply :: split(const string& str, const string& delim){
+    vector<string> tokens;
+    size_t prev = 0, pos = 0;
+    do{
+        pos = str.find(delim, prev);
+        if (pos == string::npos) pos = str.length();
+        string token = str.substr(prev, pos-prev);
+        if (!token.empty()) tokens.push_back(token);
+        prev = pos + delim.length();
+    }while (pos < str.length() && prev < str.length());
+    return tokens;
 }

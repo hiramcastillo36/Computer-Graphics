@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-    Ply cube("../models/cone.ply");
+    Ply cube("../models/cube.ply");
 
     return 0;
 }
