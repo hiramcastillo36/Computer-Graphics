@@ -1,5 +1,4 @@
 #include <iostream>
-#include "../include/Vertex.h"
 #include "../include/Edge.h"
 using namespace std;
 

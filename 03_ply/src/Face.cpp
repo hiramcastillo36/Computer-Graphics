@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "../include/Face.h"
-#include "../include/Edge.h"
+
 using namespace std;
 
 Face::Face(vector <Edge> edges){

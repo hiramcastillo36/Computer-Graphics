@@ -2,8 +2,10 @@
 // Created by Hiram Castillo on 31/08/23.
 //
 
-#ifndef INC_02_OBJ_OBJ_H
-#define INC_02_OBJ_OBJ_H
+#ifndef PLY_H
+#define PLY_H
+
+#pragma once
 
 #include <iostream>
 #include <fstream>
@@ -26,8 +28,7 @@ class Ply {
         string fileName;
 
         vector<string> split(const string &str, const string &delim);
-        void read_header();
 };
 
 
-#endif //INC_02_OBJ_OBJ_H
+#endif //PLY_H

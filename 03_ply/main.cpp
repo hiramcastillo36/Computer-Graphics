@@ -9,6 +9,6 @@ using namespace std;
 int main(){
 
     Ply cube("../models/cube.ply");
-
+    Ply cone("../models/cone.ply");
     return 0;
 }

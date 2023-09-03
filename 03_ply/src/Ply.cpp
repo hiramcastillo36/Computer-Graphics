@@ -3,38 +3,38 @@
 //
 
 #include "Ply.h"
-#include "../include/Vertex.h"
-#include "../include/Edge.h"
-using namespace std;
 
 Ply :: Ply(string fileName) {
     this -> fileName = fileName;
     string line;
-    ifstream PLYfile(fileName);
+    ifstream PLYfile(this -> fileName);
+    vector <string> elems;
+    unsigned int prev_vertice;
+    // leer el header, obtener el numero de vertices y de caras
     while(getline(PLYfile, line) && line != "end_header") {
-        vector <string> elems = split(line, " ");
-        // cambiar por switch
+        elems = split(line, " ");
         if(!elems.empty()){
             split(line, " ");
             if(elems[0] == "element"){
                 if(elems[1] == "vertex"){
-                    size_vertices = stoi(elems[2]) ;
+                    this -> size_vertices = stoi(elems[2]) ;
                 }
                 if(elems[1] == "face"){
-                    size_faces = stoi(elems[2]) + 1;
+                    this -> size_faces = stoi(elems[2]) + 1;
                 }
             }
         }
     }
+
+    // leer vertices y caras
     while(getline(PLYfile, line)) {
-        if(size_vertices > 0){
-            vector <string> elems = split(line, " ");
+        if(this -> size_vertices > 0){
+            elems = split(line, " ");
             Vertex v(stof(elems[0]), stof(elems[1]), stof(elems[2]));
             this -> vertices.push_back(v);
-            size_vertices --;
+            this -> size_vertices --;
         } else {
-            vector <string> elems = split(line, " ");
-            unsigned int prev_vertice;
+            elems = split(line, " ");
             prev_vertice = stoi(split(elems[1], " ")[0]) ;
             vector <Edge> edges = {};
             vector <string> temp_edges_slides;
