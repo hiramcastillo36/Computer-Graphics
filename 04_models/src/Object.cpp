@@ -2,7 +2,7 @@
 // Created by Hiram Castillo on 04/09/23.
 //
 
-#include "Object.h"
+#include "../include/Object.h"
 using namespace std;
 
 Object::Object(string fileName) : fileName(fileName) {}
@@ -18,6 +18,14 @@ vector<string> Object::split(const std::string &str, const std::string &delim) {
         prev = pos + delim.length();
     }while (pos < str.length() && prev < str.length());
     return tokens;
+}
+
+vector <Vertex> Object::getVertices() {
+    return vertices;
+}
+
+vector <Face> Object::getFaces() {
+    return faces;
 }
 
 void Object::load() {

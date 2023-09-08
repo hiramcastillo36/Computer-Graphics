@@ -2,15 +2,13 @@
 // Created by Hiram Castillo on 31/08/23.
 //
 
-#include "Obj.h"
-
-using namespace std;
+#include "../include/Obj.h"
 
 Obj::Obj(string fileName) : Object(fileName) {
     string line;
     ifstream OBJfile(fileName);
     bool isHaveNormals = false;
-
+    // Verificar si el archivo se abrio correctamente
     if (!OBJfile.is_open()) {
         cout << "No se pudo abrir el archivo" << endl;
         return;
@@ -50,7 +48,6 @@ Obj::Obj(string fileName) : Object(fileName) {
                     Edge e(vertices[prev_vertice], vertices[actual_vertice]);
                     prev_vertice = actual_vertice;
                     edges.push_back(e);
-
                 }
                 Edge e(vertices[prev_vertice], vertices[stoi(split(elems[1], "//")[0]) - 1]);
                 edges.push_back(e);
@@ -59,9 +56,9 @@ Obj::Obj(string fileName) : Object(fileName) {
             }
         }
     }
-    for (int i = 0; i < faces.size(); i++) {
+    /*for (int i = 0; i < faces.size(); i++) {
         faces[i].print();
-    }
+    }*/
 }
 
 void Obj::load() {

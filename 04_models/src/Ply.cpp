@@ -2,13 +2,9 @@
 // Created by Hiram Castillo on 31/08/23.
 //
 
-#include "Ply.h"
-#include <iostream>
-#include "Object.h"
-using namespace std;
+#include "../include/Ply.h"
 
 Ply :: Ply (string fileName) : Object(fileName) {
-    cout<<fileName;
     string line;
     ifstream PLYfile(fileName);
     vector <string> elems;
@@ -62,12 +58,12 @@ Ply :: Ply (string fileName) : Object(fileName) {
             this -> faces.push_back(face);
             size_faces--;
         }
-    }
+    }/*
     int i=1;
     for(Face &f: this -> faces){
         cout<<"Face "<<i++<<endl;
         f.print();
-    }
+    }*/
 }
 
 void Ply::load() {

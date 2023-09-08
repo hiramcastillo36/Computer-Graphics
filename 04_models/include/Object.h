@@ -19,6 +19,9 @@ using namespace std;
 class Object {
     public:
         Object(string fileName);
+        vector <Vertex> getVertices();
+        vector <Face> getFaces();
+
     virtual void load() = 0;
 
     protected:

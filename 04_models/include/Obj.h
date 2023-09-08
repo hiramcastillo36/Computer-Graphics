@@ -5,22 +5,15 @@
 #ifndef INC_02_OBJ_OBJ_H
 #define INC_02_OBJ_OBJ_H
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include "Vertex.h"
-#include "Edge.h"
-#include "Face.h"
-#include "Model.h"
-#include "Object.h"
-#include "Model.h"
+#pragma once
 
-using namespace std;
+#include "Object.h"
 
 class Obj : public Object{
     public:
         Obj(string fileName);
-        void load() override;
+        void load() override;   // se debe agregar override para que se
+                                // entienda que es una subclase
 
 };
 

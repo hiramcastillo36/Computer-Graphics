@@ -7,13 +7,6 @@
 
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include "Vertex.h"
-#include "Edge.h"
-#include "Face.h"
-#include "Model.h"
 #include "Object.h"
 
 using namespace std;
