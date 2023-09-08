@@ -36,3 +36,10 @@
 */cmake-build-debug/
 */cmake-build-release/
 */main.dSYM/
+*/CMakeFiles/
+*/CMakeCache.txt
+*/cmake_install.cmake
+*/Makefile
+*/Makefile.Debug
+*/Makefile.Release
+*/cmake-build-debug-event-trace

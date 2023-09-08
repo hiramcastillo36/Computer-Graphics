@@ -3,8 +3,12 @@
 //
 
 #include "Ply.h"
+#include <iostream>
+#include "Object.h"
+using namespace std;
 
-Ply :: Ply(string fileName) {
+Ply :: Ply (string fileName) : Object(fileName) {
+    cout<<fileName;
     string line;
     ifstream PLYfile(fileName);
     vector <string> elems;
@@ -66,15 +70,6 @@ Ply :: Ply(string fileName) {
     }
 }
 
-vector <string> Ply :: split(const string& str, const string& delim){
-    vector<string> tokens;
-    size_t prev = 0, pos = 0;
-    do{
-        pos = str.find(delim, prev);
-        if (pos == string::npos) pos = str.length();
-        string token = str.substr(prev, pos-prev);
-        if (!token.empty()) tokens.push_back(token);
-        prev = pos + delim.length();
-    }while (pos < str.length() && prev < str.length());
-    return tokens;
+void Ply::load() {
+    cout << "Ply::load()" << endl;
 }

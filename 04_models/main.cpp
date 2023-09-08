@@ -1,5 +1,6 @@
 #include <iostream>
 #include "include/Ply.h"
+#include "include/Model.h"
 
 using namespace std;
 
@@ -7,7 +8,8 @@ using namespace std;
 //src implementaciones de clases
 
 int main(){
-    Ply cube("models/cube.ply");
-    Ply cone("models/cone.ply");
+    Model<Ply> model("models/cube.ply");
+    Model<Obj> model2("models/cone.obj");
+    cout << endl; // debbuging
     return 0;
 }

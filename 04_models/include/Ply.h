@@ -13,20 +13,16 @@
 #include "Vertex.h"
 #include "Edge.h"
 #include "Face.h"
+#include "Model.h"
+#include "Object.h"
 
 using namespace std;
 
-class Ply {
+class Ply : public Object {
     public:
         Ply(string fileName);
+        void load();
 
-    private:
-        vector<Vertex> vertices = {};
-        vector<Face> faces = {};
-
-        string fileName;
-
-        vector<string> split(const string &str, const string &delim);
 };
 
 
