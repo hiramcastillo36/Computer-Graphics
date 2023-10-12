@@ -37,5 +37,18 @@ int main() {
     // Q en funcion de t es un segmento curvo
     // Q(t) = T * MB * GB
     
+    vector <Vertex> curva_bezier = anm.bezier(P1, P4, R1, R4, 0.1);
+
+    Animation anm2;
+
+    Vertex v1(2, 4, 6);
+
+    Col<float> v1h = v1.homog();
+
+    Mat<float> v1p = anm2.T(-2.0, -4.0, -6.0) * v1h;
+    Mat<float> v1pp = anm2.S(1.0, 2.0, 3.0) * v1h;
+
+    cout << v1p << endl;
+    cout << v1pp << endl;
     return 0;
-}
+}   

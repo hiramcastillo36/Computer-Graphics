@@ -38,3 +38,7 @@ Row<float> Vertex :: row(){
     return r;
 }
 
+Col<float> Vertex :: homog(){
+    Col<float> h = {this -> x, this -> y, this -> z, 1};
+    return h;
+}

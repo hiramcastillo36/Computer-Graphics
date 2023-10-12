@@ -19,6 +19,7 @@ class Vertex{
         Vertex operator+(Vertex op2);
         Vertex operator*(float op2);
         Row<float> row();
+        Col<float> homog();
 
 private:
         float x, y, z;

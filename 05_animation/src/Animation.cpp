@@ -49,3 +49,54 @@ vector<Vertex> Animation :: hermite(Vertex P1, Vertex P4, Vertex R1, Vertex R4, 
 
     return v;
 }
+
+vector<Vertex> Animation :: bezier(Vertex P1, Vertex P2, Vertex P3, Vertex P4, float dt){
+
+    Mat<float> MH   {   
+                        {2, -2, 1, 1}, 
+                        {-3,3,-2,-1}, 
+                        {0,0, 1, 0}, 
+                        {1, 0, 0, 0} 
+                    };
+
+    Mat <float> GH = {};
+    
+    GH.insert_rows(0, P1.row());
+    GH.insert_rows(1, P2.row());
+    GH.insert_rows(2, P3.row());
+    GH.insert_rows(3, P4.row());
+    
+    Col<float> GHx{1, 5, 3, -1};
+    
+    vector <Vertex> v = {};
+    // ciclo para calcular las x
+    for(float t=0.0; t<=1.0+dt; t+=dt){
+        Row<float> T{ powf(t,3), powf(t,2), t, 1};
+        Mat<float> Qt = T * MH * GH;
+        
+        Vertex tv(Qt(0,0), Qt(0,1), Qt(0,2));
+        v.push_back(tv);
+    }
+
+    return v;
+}
+
+Mat<float> Animation :: T (float dx, float dy, float dz){
+    Mat<float> T = {
+                        {1, 0, 0, dx},
+                        {0, 1, 0, dy},
+                        {0, 0, 1, dz},
+                        {0, 0, 0, 1}
+                    };
+    return T;
+}
+
+Mat<float> Animation :: S (float sx, float sy, float sz){
+    Mat<float> S = {
+                        {sx, 0, 0, 0},
+                        {0, sy, 0, 0},
+                        {0, 0, sz, 0},
+                        {0, 0, 0, 1}
+                    };
+    return S;
+}
