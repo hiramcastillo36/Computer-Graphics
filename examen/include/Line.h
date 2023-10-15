@@ -2,7 +2,23 @@
 // Created by Hiram Castillo on 20/09/23.
 //
 
-#ifndef EXAMEN_LINE_H
-#define EXAMEN_LINE_H
+#ifndef LINE_H
+#define LINE_H
 
-#endif //EXAMEN_LINE_H
+#pragma once
+
+#include "Edge.h"
+#include "iostream"
+#include <vector>
+
+using namespace std;
+
+class Line {
+    private:
+        float magnitude;
+    public:
+        Line(Edge edge); //constructor
+        float getLongitud();
+};
+
+#endif //LINE_H
