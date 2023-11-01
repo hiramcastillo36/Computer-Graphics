@@ -9,6 +9,11 @@
 using namespace std;
 using namespace arma;
 
+/**
+ * @brief
+ * This class is used to create vertices.
+ */
+
 class Vertex{
     public:
         Vertex(); //constructor default
@@ -23,7 +28,7 @@ class Vertex{
         float getX();
         float getY();
         float getZ();
-private:
+    private:
         float x, y, z;
 };
 

@@ -9,6 +9,11 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ *  This class is used to create faces using edges.
+ */
+
 class Face {
     private:
         vector <Edge> edges;

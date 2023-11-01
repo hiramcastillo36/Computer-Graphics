@@ -4,13 +4,26 @@
 
 #include "../include/Obj.h"
 
+/**
+ * @brief Construct a new Obj:: Obj object
+ * 
+ * @param string fileName 
+ * @param float r 
+ * @param float g 
+ * @param float b 
+ */
+
 Obj::Obj(string fileName, float r, float g, float b) : Object(fileName, r, g, b) {
     this->load();
     this->set_data();
 }
 
+/**
+ * @brief 
+ * This method is used to load in memory the obj file.
+ */
+
 void Obj::load() {
-    cout << "Ply::load()" << endl;
     string line;
     ifstream OBJfile(fileName);
     bool isHaveNormals = false;

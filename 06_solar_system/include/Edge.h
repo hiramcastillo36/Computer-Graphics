@@ -5,6 +5,11 @@
 
 #include "Vertex.h"
 
+/**
+ * @brief 
+ * This class is used to create edges using vertices.
+ */
+
 class Edge {
     private:
         Vertex vi, vf;

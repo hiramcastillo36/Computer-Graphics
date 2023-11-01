@@ -15,6 +15,11 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ *  This class is used to create the window and load the shaders.
+ */
+
 class OpenGL
 {
 public:

@@ -6,6 +6,12 @@
 #include "Obj.h"     // Incluye la definición de la clase Cubo
 #include "Ply.h" // Incluye la definición de la clase Triangulo
 
+/**
+ * @brief 
+ *  This class is used to create models using Obj and Ply.
+ * @tparam T 
+ */
+
 template <typename T>
 
 class Model : public T{

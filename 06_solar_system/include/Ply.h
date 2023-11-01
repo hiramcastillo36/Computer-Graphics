@@ -11,6 +11,11 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ *  This class is used to create objects using the ply file.
+ */
+
 class Ply : public Object {
     public:
         Ply(string fileName, float r, float g, float b);

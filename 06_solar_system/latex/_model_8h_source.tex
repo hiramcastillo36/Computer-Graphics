@@ -1,0 +1,31 @@
+\doxysection{Model.\+h}
+\hypertarget{_model_8h_source}{}\label{_model_8h_source}\index{include/Model.h@{include/Model.h}}
+\mbox{\hyperlink{_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Model.h}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ MODEL\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ MODEL\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_obj_8h}{Obj.h}}"{}}\ \ \ \ \ \textcolor{comment}{//\ Incluye\ la\ definición\ de\ la\ clase\ Cubo}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ply_8h}{Ply.h}}"{}}\ \textcolor{comment}{//\ Incluye\ la\ definición\ de\ la\ clase\ Triangulo}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_model}{Model}}\ :\ \textcolor{keyword}{public}\ T\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_model_ae3df9a91393d8eaf52594479a315e9ec}{Model}}(\textcolor{keywordtype}{string}\ fileName,\ \textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b)\ :\ T(fileName,\ r,\ g,\ b)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ El\ constructor\ de\ Model\ ahora\ crea\ un\ objeto\ de\ tipo\ Obj\ usando\ fileName.}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Esto\ es\ posible\ porque\ Obj\ y\ Ply\ heredan\ de\ Object,\ por\ lo\ que\ pueden}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ser\ tratados\ como\ Object.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ El\ constructor\ de\ Model\ ahora\ crea\ un\ objeto\ de\ tipo\ Obj\ usando\ fileName.}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Esto\ es\ posible\ porque\ Obj\ y\ Ply\ heredan\ de\ Object,\ por\ lo\ que\ pueden}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ ser\ tratados\ como\ Object.}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MODEL\_H}}
+
+\end{DoxyCode}

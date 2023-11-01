@@ -3,13 +3,17 @@
 //
 
 #include "../include/Object.h"
-#include <glm/vec3.hpp> // glm::vec3
-#include <glm/vec4.hpp> // glm::vec4
-#include <glm/mat4x4.hpp> // glm::mat4
-#include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
-#include <glm/ext/matrix_clip_space.hpp> // glm::perspective
-#include <glm/ext/scalar_constants.hpp> // glm::pi
+
 using namespace std;
+
+/**
+ * @brief Construct a new Object:: Object object
+ * 
+ * @param string fileName 
+ * @param float r 
+ * @param float g 
+ * @param float b 
+ */
 
 Object::Object(string fileName, float r, float g, float b) {
     this->fileName = fileName;
@@ -17,6 +21,14 @@ Object::Object(string fileName, float r, float g, float b) {
     this->g = g;
     this->b = b;
 }
+
+/**
+ * @brief 
+ * This method split a string with a delimiter.
+ * @param str 
+ * @param delim 
+ * @return vector < string > 
+ */
 
 vector<string> Object::split(const std::string &str, const std::string &delim) {
     vector<string> tokens;
@@ -31,21 +43,41 @@ vector<string> Object::split(const std::string &str, const std::string &delim) {
     return tokens;
 }
 
+/**
+ * @brief 
+ * This method returns the vertices.
+ * @return vector < Vertex > 
+ */
+
 vector <Vertex> Object::getVertices() {
     return vertices;
 }
+
+/**
+ * @brief 
+ * This method returns the faces.
+ * @return vector < Face > 
+ */
 
 vector <Face> Object::getFaces() {
     return faces;
 }
 
-void Object::draw(GLuint programID)
-{
-    //Transformaciones
-    glm::mat4 scale1 = glm::scale(glm::mat4(1.0f), glm::vec3(0.5f));
+/**
+ * @brief 
+ * This method is used to draw the object.
+ * @param programID 
+ * @param translate 
+ */
 
+void Object::draw(GLuint programID, glm::mat4 translate)
+{   
+    
+    this->transform = translate;
+
+    //Enviar al shader
     GLuint MatrixID = glGetUniformLocation(programID, "Transform");
-    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &scale1[0][0]);
+    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &this->transform[0][0]);
 
     // 1st attribute buffer : vertices
     glEnableVertexAttribArray(0);
@@ -73,6 +105,11 @@ void Object::draw(GLuint programID)
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle
     glDisableVertexAttribArray(0);
 }
+
+/**
+ * @brief 
+ * This method is used to set the data of the object.
+ */
 
 void Object::set_data(){
     vector <GLfloat> vertex_buffer_data={};

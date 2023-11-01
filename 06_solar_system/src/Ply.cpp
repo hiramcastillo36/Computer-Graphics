@@ -4,10 +4,25 @@
 
 #include "../include/Ply.h"
 
+/**
+ * @brief 
+ * Construct a new Ply:: Ply object
+ * @param string fileName 
+ * @param float r 
+ * @param float g 
+ * @param float b 
+ * @return Ply 
+ */
+
 Ply :: Ply (string fileName, float r, float g, float b) : Object(fileName, r, g, b) {
     this->load();   
     this->set_data();
 }
+
+/**
+ * @brief 
+ * This method is used to load in memory the ply file.
+ */
 
 void Ply::load() {
     cout << "Ply::load()" << endl;

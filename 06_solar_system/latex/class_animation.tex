@@ -1,0 +1,229 @@
+\doxysection{Animation Class Reference}
+\hypertarget{class_animation}{}\label{class_animation}\index{Animation@{Animation}}
+
+
+This class is used to create animations using the hermite and bezier curves.  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_animation}{Animation}\+:\+: \doxylink{class_animation}{Animation} object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_ac8454ed7c5f4a5a48591f7483251a46d}{line}} (float dt, \mbox{\hyperlink{class_vertex}{Vertex}} v1, \mbox{\hyperlink{class_vertex}{Vertex}} v2)
+\begin{DoxyCompactList}\small\item\em This method returns the line. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_a94579309ac0f3316fa190bfbf8ca6a2e}{hermite}} (\mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P4, \mbox{\hyperlink{class_vertex}{Vertex}} R1, \mbox{\hyperlink{class_vertex}{Vertex}} R4, float dt)
+\begin{DoxyCompactList}\small\item\em This method returns the hermite curve. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_ab64e14e2cfb97930c35009c836b960d3}{bezier}} (\mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P2, \mbox{\hyperlink{class_vertex}{Vertex}} P3, \mbox{\hyperlink{class_vertex}{Vertex}} P4, float dt)
+\begin{DoxyCompactList}\small\item\em This method returns the bezier curve. \end{DoxyCompactList}\item 
+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a34f28290b5efb7db9bfd3fc41e9a85e4}{T}} (float dx, float dy, float dz)
+\begin{DoxyCompactList}\small\item\em This method returns the translation matrix. \end{DoxyCompactList}\item 
+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a0031eb5c458860c194eda392ee33b96f}{S}} (float sx, float sy, float sz)
+\begin{DoxyCompactList}\small\item\em This method returns the scale matrix. \end{DoxyCompactList}\item 
+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_ae0b3f2ac6d73238d55212b3be2d98051}{Rx}} (float theta)
+\begin{DoxyCompactList}\small\item\em This method returns the rotation matrix around the x axis. \end{DoxyCompactList}\item 
+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a3d53ad3ed6bc26dfb64cc8ce162f9336}{Ry}} (float theta)
+\begin{DoxyCompactList}\small\item\em This method returns the rotation matrix around the y axis. \end{DoxyCompactList}\item 
+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_aa17db73aca3bd88ae6d21da97061f267}{Rz}} (float theta)
+\begin{DoxyCompactList}\small\item\em This method returns the rotation matrix around the z axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to create animations using the hermite and bezier curves. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_animation_a83f0a16cef7117f187ad596de38dd9d6}\label{class_animation_a83f0a16cef7117f187ad596de38dd9d6} 
+\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily Animation\+::\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_animation}{Animation}\+:\+: \doxylink{class_animation}{Animation} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_ab64e14e2cfb97930c35009c836b960d3}\label{class_animation_ab64e14e2cfb97930c35009c836b960d3} 
+\index{Animation@{Animation}!bezier@{bezier}}
+\index{bezier@{bezier}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{bezier()}{bezier()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::bezier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P2,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P3,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P4,  }\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+This method returns the bezier curve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & P1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P2 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P3 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P4 \\
+\hline
+{\em float} & dt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector \texorpdfstring{$<$}{<} \doxylink{class_vertex}{Vertex} \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a94579309ac0f3316fa190bfbf8ca6a2e}\label{class_animation_a94579309ac0f3316fa190bfbf8ca6a2e} 
+\index{Animation@{Animation}!hermite@{hermite}}
+\index{hermite@{hermite}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{hermite()}{hermite()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::hermite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P4,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{R1,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{R4,  }\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+This method returns the hermite curve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & P1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P4 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & R1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & R4 \\
+\hline
+{\em float} & dt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector \texorpdfstring{$<$}{<} \doxylink{class_vertex}{Vertex} \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_ac8454ed7c5f4a5a48591f7483251a46d}\label{class_animation_ac8454ed7c5f4a5a48591f7483251a46d} 
+\index{Animation@{Animation}!line@{line}}
+\index{line@{line}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{line()}{line()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::line (\begin{DoxyParamCaption}\item[{float}]{dt,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{v1,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{v2 }\end{DoxyParamCaption})}
+
+
+
+This method returns the line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & dt \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & v1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & v2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_ae0b3f2ac6d73238d55212b3be2d98051}\label{class_animation_ae0b3f2ac6d73238d55212b3be2d98051} 
+\index{Animation@{Animation}!Rx@{Rx}}
+\index{Rx@{Rx}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rx()}{Rx()}}
+{\footnotesize\ttfamily Mat$<$ float $>$ Animation\+::\+Rx (\begin{DoxyParamCaption}\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+This method returns the rotation matrix around the x axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat \texorpdfstring{$<$}{<} float \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a3d53ad3ed6bc26dfb64cc8ce162f9336}\label{class_animation_a3d53ad3ed6bc26dfb64cc8ce162f9336} 
+\index{Animation@{Animation}!Ry@{Ry}}
+\index{Ry@{Ry}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Ry()}{Ry()}}
+{\footnotesize\ttfamily Mat$<$ float $>$ Animation\+::\+Ry (\begin{DoxyParamCaption}\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+This method returns the rotation matrix around the y axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat \texorpdfstring{$<$}{<} float \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_aa17db73aca3bd88ae6d21da97061f267}\label{class_animation_aa17db73aca3bd88ae6d21da97061f267} 
+\index{Animation@{Animation}!Rz@{Rz}}
+\index{Rz@{Rz}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rz()}{Rz()}}
+{\footnotesize\ttfamily Mat$<$ float $>$ Animation\+::\+Rz (\begin{DoxyParamCaption}\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+This method returns the rotation matrix around the z axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat \texorpdfstring{$<$}{<} float \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a0031eb5c458860c194eda392ee33b96f}\label{class_animation_a0031eb5c458860c194eda392ee33b96f} 
+\index{Animation@{Animation}!S@{S}}
+\index{S@{S}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{S()}{S()}}
+{\footnotesize\ttfamily Mat$<$ float $>$ Animation\+::S (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{float}]{sz }\end{DoxyParamCaption})}
+
+
+
+This method returns the scale matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & sx \\
+\hline
+{\em float} & sy \\
+\hline
+{\em float} & sz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat \texorpdfstring{$<$}{<} float \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a34f28290b5efb7db9bfd3fc41e9a85e4}\label{class_animation_a34f28290b5efb7db9bfd3fc41e9a85e4} 
+\index{Animation@{Animation}!T@{T}}
+\index{T@{T}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{T()}{T()}}
+{\footnotesize\ttfamily Mat$<$ float $>$ Animation\+::T (\begin{DoxyParamCaption}\item[{float}]{dx,  }\item[{float}]{dy,  }\item[{float}]{dz }\end{DoxyParamCaption})}
+
+
+
+This method returns the translation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & dx \\
+\hline
+{\em float} & dy \\
+\hline
+{\em float} & dz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat \texorpdfstring{$<$}{<} float \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_animation_8h}{Animation.\+h}}\item 
+src/\mbox{\hyperlink{_animation_8cpp}{Animation.\+cpp}}\end{DoxyCompactItemize}

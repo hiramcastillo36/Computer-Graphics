@@ -16,10 +16,9 @@ using namespace std;
 using namespace arma;
 
 /**
-    * Clase Animation
-    * Se encarga de realizar las animaciones
-    * de los objetos
-*/
+ * @brief 
+ *  This class is used to create animations using the hermite and bezier curves.
+ */
 
 class Animation {
     public:
