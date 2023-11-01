@@ -20,16 +20,16 @@ using namespace std;
  *  This class is used to create the window and load the shaders.
  */
 
-class Triangle
-{
-    public:
-        Triangle(vector <GLfloat> vertex_buffer_data, vector <GLfloat> color_buffer_data);
-        void draw();
+class Triangle {
+public:
+    Triangle(vector<GLfloat> vertex_buffer_data, vector<GLfloat> color_buffer_data);
 
-    private:
-        GLuint vertexbuffer;
-        GLuint colorbuffer;
-        GLuint datasize;
+    void draw();
+
+private:
+    GLuint vertexbuffer;
+    GLuint colorbuffer;
+    GLuint datasize;
 };
 
 #endif

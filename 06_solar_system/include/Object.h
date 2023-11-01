@@ -33,26 +33,34 @@ using namespace std;
  */
 
 class Object {
-    public:
-        Object(string fileName, float r, float g, float b);
-        vector <Vertex> getVertices();
-        vector <Face> getFaces();
-        virtual void load() = 0;
-        void draw(GLuint programID, glm::mat4 transform);
-        float r, g, b;
+public:
+    Object(string fileName, float r, float g, float b);
 
-    protected:
-        string fileName;
-        vector<Vertex> vertices = {};
-        vector<Face> faces = {};
-        vector <string> split(const string& str, const string& delim);
-        GLuint vertexbuffer;
-        GLuint colorbuffer;
-        GLuint datasize;
-        GLuint MatrixID;
-        glm::mat4 transform;
-        void set_data();
-        
+    vector<Vertex> getVertices();
+
+    vector<Face> getFaces();
+
+    virtual void load() = 0;
+
+    void draw(GLuint programID, glm::mat4 transform);
+
+    float r, g, b;
+
+protected:
+    string fileName;
+    vector<Vertex> vertices = {};
+    vector<Face> faces = {};
+
+    vector<string> split(const string &str, const string &delim);
+
+    GLuint vertexbuffer;
+    GLuint colorbuffer;
+    GLuint datasize;
+    GLuint MatrixID;
+    glm::mat4 transform;
+
+    void set_data();
+
 };
 
 

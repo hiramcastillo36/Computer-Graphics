@@ -14,12 +14,13 @@
  *  This class is used to create objects using the obj file.
  */
 
-class Obj : public Object{
-    public:
-        Obj(string fileName, float r, float g, float b);
-           // se debe agregar override para que se
-                                // entienda que es una subclase
-        void load();
+class Obj : public Object {
+public:
+    Obj(string fileName, float r, float g, float b);
+
+    // se debe agregar override para que se
+    // entienda que es una subclase
+    void load();
 
 };
 

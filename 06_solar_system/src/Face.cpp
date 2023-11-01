@@ -8,8 +8,8 @@ using namespace std;
  * @param vector < Edge > 
  */
 
-Face::Face(vector <Edge> edges){
-    this -> edges = edges;
+Face::Face(vector<Edge> edges) {
+    this->edges = edges;
 }
 
 /**
@@ -17,13 +17,13 @@ Face::Face(vector <Edge> edges){
  * This method prints the face.
  */
 
-void Face::print(){
-    int i=1;
-    for(Edge &e: this -> edges){
-        cout<<"Edge_"<<i++<<" = ";
+void Face::print() {
+    int i = 1;
+    for (Edge &e: this->edges) {
+        cout << "Edge_" << i++ << " = ";
         e.print();
     }
-    cout<<endl;
+    cout << endl;
 }
 
 /**
@@ -32,6 +32,6 @@ void Face::print(){
  * @return vector <Edge> 
  */
 
-vector <Edge> Face::getEdges(){
-    return this -> edges;
+vector<Edge> Face::getEdges() {
+    return this->edges;
 }

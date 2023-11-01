@@ -45,7 +45,7 @@ int main(void) {
 	glClearColor(0.05f, 0.0f, 0.1f ,0.0f); //Color del fondo
 	
     Model<Ply> earth("models/rock.ply", 0.0, 0.0, 1.0);
-    Model<Ply> sun("models/cube.ply", 1.0, 1.0, 0.0);
+    Model<Ply> sun("models/rock.ply", 1.0, 1.0, 0.0);
     Model<Ply> mars("models/rock.ply", 1.0, 0.0, 0.0);
     Model<Ply> moon("models/rock.ply", 1.0, 0.0, 1.0);
     Model<Ply> star("models/rock.ply", 1.0, 1.0, 1.0);

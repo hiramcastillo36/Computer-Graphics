@@ -15,14 +15,15 @@ using namespace std;
  */
 
 class Face {
-    private:
-        vector <Edge> edges;
+private:
+    vector<Edge> edges;
 
-    public:
-        Face(vector <Edge> edges); //constructor
-        // ~Face(vector <Edge> edges); -> destructor
-        void print();
-        vector <Edge> getEdges();
+public:
+    Face(vector<Edge> edges); //constructor
+    // ~Face(vector <Edge> edges); -> destructor
+    void print();
+
+    vector<Edge> getEdges();
 };
 
 

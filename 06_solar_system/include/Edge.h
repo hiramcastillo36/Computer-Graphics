@@ -11,15 +11,17 @@
  */
 
 class Edge {
-    private:
-        Vertex vi, vf;
-        
-    public:
-        Edge(Vertex vi, Vertex vf); //constructor
-        // ~Edge(); -> destructor
-        void print();
-        Vertex getVi();
-        Vertex getVf();
+private:
+    Vertex vi, vf;
+
+public:
+    Edge(Vertex vi, Vertex vf); //constructor
+    // ~Edge(); -> destructor
+    void print();
+
+    Vertex getVi();
+
+    Vertex getVf();
 };
 
 #endif

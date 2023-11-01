@@ -17,9 +17,10 @@ using namespace std;
  */
 
 class Ply : public Object {
-    public:
-        Ply(string fileName, float r, float g, float b);
-        void load();
+public:
+    Ply(string fileName, float r, float g, float b);
+
+    void load();
 };
 
 

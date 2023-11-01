@@ -33,13 +33,13 @@ Object::Object(string fileName, float r, float g, float b) {
 vector<string> Object::split(const std::string &str, const std::string &delim) {
     vector<string> tokens;
     size_t prev = 0, pos = 0;
-    do{
+    do {
         pos = str.find(delim, prev);
         if (pos == string::npos) pos = str.length();
-        string token = str.substr(prev, pos-prev);
+        string token = str.substr(prev, pos - prev);
         if (!token.empty()) tokens.push_back(token);
         prev = pos + delim.length();
-    }while (pos < str.length() && prev < str.length());
+    } while (pos < str.length() && prev < str.length());
     return tokens;
 }
 
@@ -49,7 +49,7 @@ vector<string> Object::split(const std::string &str, const std::string &delim) {
  * @return vector < Vertex > 
  */
 
-vector <Vertex> Object::getVertices() {
+vector<Vertex> Object::getVertices() {
     return vertices;
 }
 
@@ -59,7 +59,7 @@ vector <Vertex> Object::getVertices() {
  * @return vector < Face > 
  */
 
-vector <Face> Object::getFaces() {
+vector<Face> Object::getFaces() {
     return faces;
 }
 
@@ -70,9 +70,8 @@ vector <Face> Object::getFaces() {
  * @param translate 
  */
 
-void Object::draw(GLuint programID, glm::mat4 translate)
-{   
-    
+void Object::draw(GLuint programID, glm::mat4 translate) {
+
     this->transform = translate;
 
     //Enviar al shader
@@ -83,24 +82,24 @@ void Object::draw(GLuint programID, glm::mat4 translate)
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
     glVertexAttribPointer(
-        0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
-        3,                  // size
-        GL_FLOAT,           // type
-        GL_FALSE,           // normalized?
-        0,                  // stride
-        (void*)0            // array buffer offset
+            0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
+            3,                  // size
+            GL_FLOAT,           // type
+            GL_FALSE,           // normalized?
+            0,                  // stride
+            (void *) 0            // array buffer offset
     );
-	// 2nd attribute buffer : colors
-	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
-	glVertexAttribPointer(
-		1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
-		3,                                // size
-		GL_FLOAT,                         // type
-		GL_FALSE,                         // normalized?
-		0,                                // stride
-		(void*)0                          // array buffer offset
-	);
+    // 2nd attribute buffer : colors
+    glEnableVertexAttribArray(1);
+    glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
+    glVertexAttribPointer(
+            1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+            3,                                // size
+            GL_FLOAT,                         // type
+            GL_FALSE,                         // normalized?
+            0,                                // stride
+            (void *) 0                          // array buffer offset
+    );
     // Draw the triangle !
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle
     glDisableVertexAttribArray(0);
@@ -111,13 +110,13 @@ void Object::draw(GLuint programID, glm::mat4 translate)
  * This method is used to set the data of the object.
  */
 
-void Object::set_data(){
-    vector <GLfloat> vertex_buffer_data={};
-    vector <GLfloat> color_buffer_data ={};
-    
+void Object::set_data() {
+    vector<GLfloat> vertex_buffer_data = {};
+    vector<GLfloat> color_buffer_data = {};
 
-    for(Face face : this->faces){
-        for(Edge edge : face.getEdges()){
+
+    for (Face face: this->faces) {
+        for (Edge edge: face.getEdges()) {
             vertex_buffer_data.push_back(edge.getVi().getX());
             vertex_buffer_data.push_back(edge.getVi().getY());
             vertex_buffer_data.push_back(edge.getVi().getZ());
@@ -133,11 +132,11 @@ void Object::set_data(){
 
     glGenBuffers(1, &this->vertexbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
-    glBufferData(GL_ARRAY_BUFFER, vertex_buffer_data.size()*sizeof(GLfloat), &vertex_buffer_data[0], GL_STATIC_DRAW);
-	this->datasize = vertex_buffer_data.size();
+    glBufferData(GL_ARRAY_BUFFER, vertex_buffer_data.size() * sizeof(GLfloat), &vertex_buffer_data[0], GL_STATIC_DRAW);
+    this->datasize = vertex_buffer_data.size();
 
-	glGenBuffers(1, &this->colorbuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
-	glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size()*sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
+    glGenBuffers(1, &this->colorbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
+    glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size() * sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
 }
 

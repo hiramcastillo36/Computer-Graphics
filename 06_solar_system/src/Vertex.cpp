@@ -6,10 +6,10 @@
  * @return Vertex 
  */
 
-Vertex :: Vertex(){
-    this -> x = 0.0;
-    this -> y = 0.0;
-    this -> z = 0.0;
+Vertex::Vertex() {
+    this->x = 0.0;
+    this->y = 0.0;
+    this->z = 0.0;
 }
 
 /**
@@ -21,10 +21,10 @@ Vertex :: Vertex(){
  * @return Vertex 
  */
 
-Vertex :: Vertex(float vx, float vy, float vz){
-    this -> x = vx;
-    this -> y = vy;
-    this -> z = vz;
+Vertex::Vertex(float vx, float vy, float vz) {
+    this->x = vx;
+    this->y = vy;
+    this->z = vz;
 }
 
 /**
@@ -32,8 +32,8 @@ Vertex :: Vertex(float vx, float vy, float vz){
  * Print the vertex.
  */
 
-void Vertex::print(){
-    cout<<"("<< this -> x<<", "<< this -> y<<", "<< this -> z<<")";
+void Vertex::print() {
+    cout << "(" << this->x << ", " << this->y << ", " << this->z << ")";
 }
 
 /**
@@ -43,8 +43,8 @@ void Vertex::print(){
  * @return Vertex 
  */
 
-Vertex Vertex :: operator-(Vertex op2){
-    return Vertex(this -> x - op2.x, this -> y - op2.y, this -> z - op2.z);
+Vertex Vertex::operator-(Vertex op2) {
+    return Vertex(this->x - op2.x, this->y - op2.y, this->z - op2.z);
 }
 
 /**
@@ -54,8 +54,8 @@ Vertex Vertex :: operator-(Vertex op2){
  * @return Vertex 
  */
 
-Vertex Vertex :: operator+(Vertex op2){
-    return Vertex(this -> x + op2.x, this -> y + op2.y, this -> z + op2.z);
+Vertex Vertex::operator+(Vertex op2) {
+    return Vertex(this->x + op2.x, this->y + op2.y, this->z + op2.z);
 }
 
 /**
@@ -65,8 +65,8 @@ Vertex Vertex :: operator+(Vertex op2){
  * @return Vertex 
  */
 
-Vertex Vertex :: operator*(float op2){
-    return Vertex(this -> x * op2, this -> y * op2, this -> z * op2);
+Vertex Vertex::operator*(float op2) {
+    return Vertex(this->x * op2, this->y * op2, this->z * op2);
 }
 
 /**
@@ -75,8 +75,8 @@ Vertex Vertex :: operator*(float op2){
  * @return Row < float > 
  */
 
-Row<float> Vertex :: row(){
-    Row<float> r = {this -> x, this -> y, this -> z};
+Row<float> Vertex::row() {
+    Row<float> r = {this->x, this->y, this->z};
     return r;
 }
 
@@ -86,8 +86,8 @@ Row<float> Vertex :: row(){
  * @return Col < float > 
  */
 
-Col<float> Vertex :: homog(){
-    Col<float> h = {this -> x, this -> y, this -> z, 1};
+Col<float> Vertex::homog() {
+    Col<float> h = {this->x, this->y, this->z, 1};
     return h;
 }
 
@@ -97,8 +97,8 @@ Col<float> Vertex :: homog(){
  * @return float 
  */
 
-float Vertex :: getX(){
-    return this -> x;
+float Vertex::getX() {
+    return this->x;
 }
 
 /**
@@ -107,8 +107,8 @@ float Vertex :: getX(){
  * @return float 
  */
 
-float Vertex :: getY(){
-    return this -> y;
+float Vertex::getY() {
+    return this->y;
 }
 
 /**
@@ -117,6 +117,6 @@ float Vertex :: getY(){
  * @return float 
  */
 
-float Vertex :: getZ(){
-    return this -> z;
+float Vertex::getZ() {
+    return this->z;
 }

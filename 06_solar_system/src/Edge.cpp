@@ -3,13 +3,12 @@
 using namespace std;
 
 
-
 /**
  * @brief Construct a new Edge:: Edge object
  */
-Edge :: Edge(Vertex vi, Vertex vf){
-    this -> vi = vi;
-    this -> vf = vf;
+Edge::Edge(Vertex vi, Vertex vf) {
+    this->vi = vi;
+    this->vf = vf;
 }
 
 /**
@@ -17,12 +16,12 @@ Edge :: Edge(Vertex vi, Vertex vf){
  * This method prints the edge.
  */
 
-void Edge::print(){
-    cout<< "vi: ";
-    this -> vi.print();
-    cout<< ", vf: ";
-    this -> vf.print();
-    cout<<endl;
+void Edge::print() {
+    cout << "vi: ";
+    this->vi.print();
+    cout << ", vf: ";
+    this->vf.print();
+    cout << endl;
 }
 
 /**
@@ -31,8 +30,8 @@ void Edge::print(){
  * @return Vertex 
  */
 
-Vertex Edge::getVi(){
-    return this -> vi;
+Vertex Edge::getVi() {
+    return this->vi;
 }
 
 /**
@@ -41,6 +40,6 @@ Vertex Edge::getVi(){
  * @return Vertex 
  */
 
-Vertex Edge::getVf(){
-    return this -> vf;
+Vertex Edge::getVf() {
+    return this->vf;
 }
