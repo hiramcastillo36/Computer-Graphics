@@ -100,6 +100,7 @@ void Object::draw(GLuint programID, glm::mat4 translate) {
             0,                                // stride
             (void *) 0                          // array buffer offset
     );
+    
     // Draw the triangle !
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle
     glDisableVertexAttribArray(0);

@@ -1,0 +1,269 @@
+\doxysection{Object Class Reference}
+\hypertarget{class_object}{}\label{class_object}\index{Object@{Object}}
+
+
+This class is used to create objects using vertices and faces.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_aa57eb6cc4d19245e51907a706534e07d}{Object}} (string \mbox{\hyperlink{class_object_aed5219de2a5260b172566ca817411614}{file\+Name}}, float \mbox{\hyperlink{class_object_ae9c56985f63711321770aa0f8ef9042d}{r}}, float \mbox{\hyperlink{class_object_a5650f8a9110a8b8238b60560bb111b0c}{g}}, float \mbox{\hyperlink{class_object_ae2658c68493c8595658123484e506c4e}{b}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_object}{Object}\+:\+: \doxylink{class_object}{Object} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_object_aba723932a2b2e11297c1197a6b8d8467}{get\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em This method returns the vertices. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ \mbox{\hyperlink{class_object_aef3d9b4a4e91caed80299207ae6cff39}{get\+Faces}} ()
+\begin{DoxyCompactList}\small\item\em This method returns the faces. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_object_a7052058f23997afc23490d904c31872d}{load}} ()=0
+\item 
+void \mbox{\hyperlink{class_object_aa53c254ac86a97881cd1d4b6f26a3e1b}{draw}} (GLuint program\+ID, glm\+::mat4 \mbox{\hyperlink{class_object_a6b9e1c5f1dad7c7622cd5523d1a76de3}{transform}})
+\begin{DoxyCompactList}\small\item\em This method is used to draw the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_object_ae9c56985f63711321770aa0f8ef9042d}{r}}
+\item 
+float \mbox{\hyperlink{class_object_a5650f8a9110a8b8238b60560bb111b0c}{g}}
+\item 
+float \mbox{\hyperlink{class_object_ae2658c68493c8595658123484e506c4e}{b}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_object_a5ead10d01ac62314aae690e6e094a3ec}{split}} (const string \&str, const string \&delim)
+\begin{DoxyCompactList}\small\item\em This method split a string with a delimiter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_ae7309d85e7f0d7d09b09a396f2b6017f}{set\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to set the data of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_object_aed5219de2a5260b172566ca817411614}{file\+Name}}
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_object_a2dbcf166f7dcdf3e21123253b4f91381}{vertices}} = \{\}
+\item 
+vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ \mbox{\hyperlink{class_object_a930e2a0e138690afe71201b8c4552ab7}{faces}} = \{\}
+\item 
+GLuint \mbox{\hyperlink{class_object_af3c7c45308a764d1f92333c8f72c7e13}{vertexbuffer}}
+\item 
+GLuint \mbox{\hyperlink{class_object_a8812b04d88a9771f6e5f7c25bf107958}{colorbuffer}}
+\item 
+GLuint \mbox{\hyperlink{class_object_a514540d6d31ba5a450ffa3fbf3753b4f}{datasize}}
+\item 
+GLuint \mbox{\hyperlink{class_object_a471691d2513e8013cd012b03343c3216}{Matrix\+ID}}
+\item 
+GLuint \mbox{\hyperlink{class_object_a40eb5a116fb2b8d3bbd084a4332e0ac6}{Vertex\+Array\+ID}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_object_a6b9e1c5f1dad7c7622cd5523d1a76de3}{transform}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to create objects using vertices and faces. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_object_aa57eb6cc4d19245e51907a706534e07d}\label{class_object_aa57eb6cc4d19245e51907a706534e07d} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{string}]{file\+Name,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_object}{Object}\+:\+: \doxylink{class_object}{Object} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+Name \\
+\hline
+{\em float} & r \\
+\hline
+{\em float} & g \\
+\hline
+{\em float} & b \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_ae8f5483f459e46687bd01e6f9977afd3}\label{class_object_ae8f5483f459e46687bd01e6f9977afd3} 
+\index{Object@{Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_object_aa53c254ac86a97881cd1d4b6f26a3e1b}\label{class_object_aa53c254ac86a97881cd1d4b6f26a3e1b} 
+\index{Object@{Object}!draw@{draw}}
+\index{draw@{draw}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Object\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{translate }\end{DoxyParamCaption})}
+
+
+
+This method is used to draw the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program\+ID} & \\
+\hline
+{\em translate} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_aef3d9b4a4e91caed80299207ae6cff39}\label{class_object_aef3d9b4a4e91caed80299207ae6cff39} 
+\index{Object@{Object}!getFaces@{getFaces}}
+\index{getFaces@{getFaces}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getFaces()}{getFaces()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ Object\+::get\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the faces. 
+
+\begin{DoxyReturn}{Returns}
+vector \texorpdfstring{$<$}{<} \doxylink{class_face}{Face} \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_object_aba723932a2b2e11297c1197a6b8d8467}\label{class_object_aba723932a2b2e11297c1197a6b8d8467} 
+\index{Object@{Object}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Object\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the vertices. 
+
+\begin{DoxyReturn}{Returns}
+vector \texorpdfstring{$<$}{<} \doxylink{class_vertex}{Vertex} \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{class_object_a7052058f23997afc23490d904c31872d}\label{class_object_a7052058f23997afc23490d904c31872d} 
+\index{Object@{Object}!load@{load}}
+\index{load@{load}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Object\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_obj_a1d5749d4cd3023b3a5b864f86857c5ec}{Obj}}, and \mbox{\hyperlink{class_ply_adca3f927c20e1c72f99b20885565b8fd}{Ply}}.
+
+\Hypertarget{class_object_ae7309d85e7f0d7d09b09a396f2b6017f}\label{class_object_ae7309d85e7f0d7d09b09a396f2b6017f} 
+\index{Object@{Object}!set\_data@{set\_data}}
+\index{set\_data@{set\_data}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{set\_data()}{set\_data()}}
+{\footnotesize\ttfamily void Object\+::set\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This method is used to set the data of the object. 
+
+\Hypertarget{class_object_a5ead10d01ac62314aae690e6e094a3ec}\label{class_object_a5ead10d01ac62314aae690e6e094a3ec} 
+\index{Object@{Object}!split@{split}}
+\index{split@{split}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Object\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const string \&}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This method split a string with a delimiter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+{\em delim} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector \texorpdfstring{$<$}{<} string \texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_object_ae2658c68493c8595658123484e506c4e}\label{class_object_ae2658c68493c8595658123484e506c4e} 
+\index{Object@{Object}!b@{b}}
+\index{b@{b}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily float Object\+::b}
+
+\Hypertarget{class_object_a8812b04d88a9771f6e5f7c25bf107958}\label{class_object_a8812b04d88a9771f6e5f7c25bf107958} 
+\index{Object@{Object}!colorbuffer@{colorbuffer}}
+\index{colorbuffer@{colorbuffer}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{colorbuffer}{colorbuffer}}
+{\footnotesize\ttfamily GLuint Object\+::colorbuffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_a514540d6d31ba5a450ffa3fbf3753b4f}\label{class_object_a514540d6d31ba5a450ffa3fbf3753b4f} 
+\index{Object@{Object}!datasize@{datasize}}
+\index{datasize@{datasize}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{datasize}{datasize}}
+{\footnotesize\ttfamily GLuint Object\+::datasize\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_a930e2a0e138690afe71201b8c4552ab7}\label{class_object_a930e2a0e138690afe71201b8c4552ab7} 
+\index{Object@{Object}!faces@{faces}}
+\index{faces@{faces}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_face}{Face}}$>$ Object\+::faces = \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_aed5219de2a5260b172566ca817411614}\label{class_object_aed5219de2a5260b172566ca817411614} 
+\index{Object@{Object}!fileName@{fileName}}
+\index{fileName@{fileName}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily string Object\+::file\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_a5650f8a9110a8b8238b60560bb111b0c}\label{class_object_a5650f8a9110a8b8238b60560bb111b0c} 
+\index{Object@{Object}!g@{g}}
+\index{g@{g}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily float Object\+::g}
+
+\Hypertarget{class_object_a471691d2513e8013cd012b03343c3216}\label{class_object_a471691d2513e8013cd012b03343c3216} 
+\index{Object@{Object}!MatrixID@{MatrixID}}
+\index{MatrixID@{MatrixID}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{MatrixID}{MatrixID}}
+{\footnotesize\ttfamily GLuint Object\+::\+Matrix\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_ae9c56985f63711321770aa0f8ef9042d}\label{class_object_ae9c56985f63711321770aa0f8ef9042d} 
+\index{Object@{Object}!r@{r}}
+\index{r@{r}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily float Object\+::r}
+
+\Hypertarget{class_object_a6b9e1c5f1dad7c7622cd5523d1a76de3}\label{class_object_a6b9e1c5f1dad7c7622cd5523d1a76de3} 
+\index{Object@{Object}!transform@{transform}}
+\index{transform@{transform}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::transform\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_a40eb5a116fb2b8d3bbd084a4332e0ac6}\label{class_object_a40eb5a116fb2b8d3bbd084a4332e0ac6} 
+\index{Object@{Object}!VertexArrayID@{VertexArrayID}}
+\index{VertexArrayID@{VertexArrayID}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{VertexArrayID}{VertexArrayID}}
+{\footnotesize\ttfamily GLuint Object\+::\+Vertex\+Array\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_af3c7c45308a764d1f92333c8f72c7e13}\label{class_object_af3c7c45308a764d1f92333c8f72c7e13} 
+\index{Object@{Object}!vertexbuffer@{vertexbuffer}}
+\index{vertexbuffer@{vertexbuffer}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{vertexbuffer}{vertexbuffer}}
+{\footnotesize\ttfamily GLuint Object\+::vertexbuffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_object_a2dbcf166f7dcdf3e21123253b4f91381}\label{class_object_a2dbcf166f7dcdf3e21123253b4f91381} 
+\index{Object@{Object}!vertices@{vertices}}
+\index{vertices@{vertices}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_vertex}{Vertex}}$>$ Object\+::vertices = \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_object_8h}{Object.\+h}}\item 
+src/\mbox{\hyperlink{_object_8cpp}{Object.\+cpp}}\end{DoxyCompactItemize}

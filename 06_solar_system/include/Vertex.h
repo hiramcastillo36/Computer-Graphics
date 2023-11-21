@@ -37,6 +37,11 @@ public:
 
     float getZ();
 
+    void setX(float vx);
+    void setY(float vy);
+    void setZ(float vz);
+    
+
 private:
     float x, y, z;
 };

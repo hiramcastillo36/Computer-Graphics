@@ -120,3 +120,33 @@ float Vertex::getY() {
 float Vertex::getZ() {
     return this->z;
 }
+
+/**
+ * @brief 
+ * Sets the x coordinate of the vertex.
+ * @param float vx 
+ */
+
+void Vertex::setX(float vx) {
+    this->x = vx;
+}
+
+/**
+ * @brief 
+ * Sets the y coordinate of the vertex.
+ * @param float vy 
+ */
+
+void Vertex::setY(float vy) {
+    this->y = vy;   
+}
+
+/**
+ * @brief 
+ * Sets the z coordinate of the vertex.
+ * @param float vz 
+ */
+
+void Vertex::setZ(float vz) {
+    this->z = vz;
+}

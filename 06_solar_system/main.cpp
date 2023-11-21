@@ -1,12 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <glm/vec4.hpp> // glm::vec4
-#include <glm/mat4x4.hpp> // glm::mat4
-#include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
-
 #include "include/Animation.h"
-#include "include/Model.h"
-#include "include/OpenGL.h"
+#include "include/Vertex.h"
 
 using namespace std;
 using namespace arma;
@@ -16,127 +11,47 @@ using namespace arma;
 
 /**
  * @brief 
- *  Main functiond
+ * 
  * @return int 
  */
 
 int main(void) {
-    //Proceso para que funcione la renderizacion
-    OpenGL gl = OpenGL(); //Instancia de clase
+    Vertex P1(8, 12, -1);
+    Vertex P2(-2, 3, 4);
+    Vertex P3(12, -1, 2);
+    //traslate the vertex p1, p2, p3 to XZ
 
-    //Preparacion de ventana
-    GLFWwindow* window = gl.createWindow( 1200, 1200, "Solar system"); 
-    if( window == NULL )
-        return -1;
-
-
-    glfwMakeContextCurrent(window);
-    glewExperimental=true;
-    if (glewInit() != GLEW_OK) {
-        fprintf(stderr, "Failed to initialize GLEW\n");
-        return -1;
-    }
-
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LESS);
-
-    glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-    
-	glClearColor(0.05f, 0.0f, 0.1f ,0.0f); //Color del fondo
-	
-    Model<Ply> earth("models/rock.ply", 0.0, 0.0, 1.0);
-    Model<Ply> sun("models/rock.ply", 1.0, 1.0, 0.0);
-    Model<Ply> mars("models/rock.ply", 1.0, 0.0, 0.0);
-    Model<Ply> moon("models/rock.ply", 1.0, 0.0, 1.0);
-    Model<Ply> star("models/rock.ply", 1.0, 1.0, 1.0);
-
-
-    //Transformaciones
-    glm::mat4 scale_earth = glm::scale(glm::mat4(1.0f), glm::vec3(0.3f));
-    glm::mat4 translate_earth = glm::translate(glm::mat4(1.0f), glm::vec3(-0.75,0.0f,0.0f));
-    
-    glm::mat4 scale_sun = glm::scale(glm::mat4(1.0f), glm::vec3(0.7f));
-
-    //Transformation for mars
-    glm::mat4 scale_mars = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));
-    glm::mat4 translate_mars = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
-
-    //Transformation for moon
-    glm::mat4 scale_moon = glm::scale(glm::mat4(1.0f), glm::vec3(0.3f));
-    glm::mat4 translate_moon = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
     
 
-    float angle_mars = 0.0f;
-    float angle = 0.0f;
-    float angle_moon = 0.0f;
     Animation an;
 
-    Vertex P1(-0.9,0.9,0.0);
-    Vertex P2(-0.5,0.8,0.0);
-    Vertex P3(0.3,0.0,0.0);
-    Vertex P4(0.7,-0.8,0.0);
+    Col<float> P1h = P1.homog();
+    Col<float> P2h = P2.homog();
+    Col<float> P3h = P3.homog();
 
-    // trayectoria de la estrella
-    vector<Vertex> star_path = an.bezier(P1, P2, P3, P4, 0.001);
+    Mat<float> v1p = an.T(-8, -12, 1) * P1h; //traslate a XZ
+    Mat<float> v2p = an.T(-8, -12, 1) * P2h; //traslate a XZ
+    Mat<float> v3p = an.T(-8, -12, 1) * P3h; //traslate a XZ
 
-    unsigned int star_position = 0;
+    float angle = -77.01;
 
-    //Transformation for star
-    glm::mat4 scale_star = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+    v1p = an.Rx(angle) * v1p;
+    v2p = an.Rx(angle) * v2p;
+    v3p = an.Rx(angle) * v3p;
     
-    do {
-        // generate rotation 
-        
-        glm::mat4 rotation_earth = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_earth =  rotation_earth * translate_earth * scale_earth;
+    cout<<"P1: "<<v1p<<endl;
+    cout<<"P2: "<<v2p<<endl;
+    cout<<"P3: "<<v3p<<endl;
 
-        if(angle<360.0f){
-            angle += 0.5;
-        }else{
-            angle = 0.0f;
-        }
+    angle = 15.9;
 
-        //Rotation for mars
-        glm::mat4 rotation_mars = glm::rotate(glm::mat4(1.0f), glm::radians(angle_mars), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_mars = rotation_mars * translate_mars * scale_mars;
+    v1p = an.Rz(angle) * v1p;
+    v2p = an.Rz(angle) * v2p;
+    v3p = an.Rz(angle) * v3p;
 
-        if(angle_mars<360.0f){
-            angle_mars += 0.2;
-        }else{
-            angle_mars = 0.0f;
-        }
+    cout<<"P1: "<<v1p<<endl;
+    cout<<"P2: "<<v2p<<endl;
+    cout<<"P3: "<<v3p<<endl;
 
-        //Rotation for moon
-        glm::mat4 rotation_moon = glm::rotate(glm::mat4(1.0f), glm::radians(angle_moon), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_moon = translate_moon * scale_moon * transform_earth;
-
-        if(angle_moon<360.0f){
-            angle_moon += 0.5;
-        }else{
-            angle_moon = 0.0f;
-        }
-
-        glm::mat4 translate_star = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), star_path[star_position].getY(), star_path[star_position].getX()));
-        glm::mat4 transform_star = translate_star * scale_star;
-
-        if(star_position < star_path.size()-1){
-            star_position++;
-        }else{
-            star_position = 0;
-        }
-
-        // Clear the screen
-        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-        earth.draw(gl.getProgramID(), transform_earth);
-        sun.draw(gl.getProgramID(), scale_sun);
-        mars.draw(gl.getProgramID(), transform_mars);
-        moon.draw(gl.getProgramID(), transform_earth * transform_moon);
-        star.draw(gl.getProgramID(), transform_star);
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-
-    } while ( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
-        glfwWindowShouldClose(window) == 0 );
     return 0;
 }   
