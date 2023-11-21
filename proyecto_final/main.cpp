@@ -8,7 +8,7 @@
 #include "include/Model.h"
 #include "include/OpenGL.h"
 #include "include/Simulation.h"
-
+ 
 using namespace std;
 
 //include definición de clases
@@ -46,6 +46,8 @@ int main() {
       
     Simulation simulation;
     
+    
+
     do {
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -57,5 +59,7 @@ int main() {
     } while ( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
         glfwWindowShouldClose(window) == 0 );
         
+    glfwTerminate();
+
     return 0;
 }   

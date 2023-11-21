@@ -103,7 +103,7 @@ void Object::draw(GLuint programID, glm::mat4 translate) {
 		(void*)0                          // array buffer offset
 	);
 
-    glBindVertexArray(this->vao);
+    glBindVertexArray(this->vertexbuffer);
     // Draw the triangle !
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle    
 }
@@ -139,19 +139,23 @@ void Object::set_data() {
 
     cout<<"vertex_buffer_data.size() = "<<vertex_buffer_data.size()<<endl;
 
-    glGenVertexArrays(1, &vao);
+    GLuint VertexArrayID;
 
+    glGenVertexArrays(1, &VertexArrayID);
     
-    glGenBuffers(1, &this->vbo);
+
+
+    glGenBuffers(1, &this->vertexbuffer);
     glGenBuffers(1, &this->colorbuffer);
     
-    glBindVertexArray(this->vao);
+    glBindVertexArray(VertexArrayID);
 
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBindVertexArray(this->vertexbuffer);
+
+    glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
     glBufferData(GL_ARRAY_BUFFER, vertex_buffer_data.size()*sizeof(GLfloat), &vertex_buffer_data[0], GL_STATIC_DRAW);
 	this->datasize = vertex_buffer_data.size();
 
-    glBindVertexArray(this->vao);
 	
 	glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
 	glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size()*sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
@@ -161,4 +165,27 @@ void Object::set_data() {
 
     cout << "Object::set_data() end" << endl;
 
+}
+
+vector<GLfloat> Object::vertex_buffer_data() {
+    vector<GLfloat> vertex_buffer_data = {};
+    vector<GLfloat> color_buffer_data = {};
+
+    for (Face face: this->faces) {
+        vector<Vertex> vertices;
+        for (Edge edge: face.getEdges()) {
+            Vertex vi = edge.getVi();
+            Vertex vf = edge.getVf();
+            vertices.push_back(vi);
+            vector<float> viVector = vi.getXYZ();
+            vertex_buffer_data.push_back(viVector[0]);
+            vertex_buffer_data.push_back(viVector[1]);
+            vertex_buffer_data.push_back(viVector[2]);
+            color_buffer_data.push_back(this->r);
+            color_buffer_data.push_back(this->g);
+            color_buffer_data.push_back(this->b);
+        }
+    }
+
+    return vertex_buffer_data;
 }

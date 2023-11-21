@@ -53,8 +53,11 @@ protected:
     GLuint colorbuffer;
     GLuint datasize;
     GLuint MatrixID;
+    GLuint vertexbuffer;
     
     glm::mat4 transform;
+
+    vector<GLfloat> vertex_buffer_data();
 /*
     GLuint vao;
     GLuint vbo;
