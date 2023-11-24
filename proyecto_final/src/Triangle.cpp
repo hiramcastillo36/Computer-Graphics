@@ -16,7 +16,11 @@ Triangle::Triangle(vector<GLfloat> vertex_buffer_data, vector<GLfloat> color_buf
     glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size() * sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
 }
 
-void Triangle::draw() {
+void Triangle::draw(GLuint programID, glm::mat4 transform) {
+
+    GLuint MatrixID = glGetUniformLocation(programID, "Transform");
+    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &transform[0][0]);
+
     // 1st attribute buffer : vertices
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
@@ -39,6 +43,8 @@ void Triangle::draw() {
             0,                                // stride
             (void *) 0                          // array buffer offset
     );
+
+    glBindVertexArray(this->vertexbuffer);
     // Draw the triangle !
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle
     glDisableVertexAttribArray(0);

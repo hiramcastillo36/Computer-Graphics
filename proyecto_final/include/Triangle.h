@@ -13,6 +13,9 @@
 #include <vector>
 #include <string>
 
+#include <glm/vec4.hpp> // glm::vec4
+#include <glm/mat4x4.hpp> // glm::mat4
+
 using namespace std;
 
 /**
@@ -24,7 +27,7 @@ class Triangle {
 public:
     Triangle(vector<GLfloat> vertex_buffer_data, vector<GLfloat> color_buffer_data);
 
-    void draw();
+    void draw(GLuint programID,glm::mat4 transform);
 
 private:
     GLuint vertexbuffer;

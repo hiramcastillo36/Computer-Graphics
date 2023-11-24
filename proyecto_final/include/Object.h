@@ -41,6 +41,9 @@ public:
     void draw(GLuint programID, glm::mat4 transform);
     float r, g, b;
 
+    vector<GLfloat> vertex_buffer_data();
+    vector<GLfloat> color_buffer_data();
+
 protected:
     string fileName;
     vector<Vertex> vertices = {};
@@ -55,9 +58,11 @@ protected:
     GLuint MatrixID;
     GLuint vertexbuffer;
     
+    vector<GLfloat> vertex_buffer;
+    vector<GLfloat> color_buffer;
     glm::mat4 transform;
 
-    vector<GLfloat> vertex_buffer_data();
+    
 /*
     GLuint vao;
     GLuint vbo;

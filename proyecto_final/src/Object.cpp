@@ -114,13 +114,6 @@ void Object::draw(GLuint programID, glm::mat4 translate) {
  */
 
 void Object::set_data() {
-    cout << "Object::set_data()" << endl;
-    
-    vector<GLfloat> vertex_buffer_data = {};
-    vector<GLfloat> color_buffer_data = {};
-
-    cout<<"vertex_buffer_data.size() = "<<vertex_buffer_data.size()<<endl;
-
     for (Face face: this->faces) {
         vector<Vertex> vertices;
         for (Edge edge: face.getEdges()) {
@@ -128,64 +121,21 @@ void Object::set_data() {
             Vertex vf = edge.getVf();
             vertices.push_back(vi);
             vector<float> viVector = vi.getXYZ();
-            vertex_buffer_data.push_back(viVector[0]);
-            vertex_buffer_data.push_back(viVector[1]);
-            vertex_buffer_data.push_back(viVector[2]);
-            color_buffer_data.push_back(this->r);
-            color_buffer_data.push_back(this->g);
-            color_buffer_data.push_back(this->b);
+            this->vertex_buffer.push_back(viVector[0]);
+            this->vertex_buffer.push_back(viVector[1]);
+            this->vertex_buffer.push_back(viVector[2]);
+
+            color_buffer.push_back(this->r);
+            color_buffer.push_back(this->g);
+            color_buffer.push_back(this->b);
         }
     }
-
-    cout<<"vertex_buffer_data.size() = "<<vertex_buffer_data.size()<<endl;
-
-    GLuint VertexArrayID;
-
-    glGenVertexArrays(1, &VertexArrayID);
-    
-
-
-    glGenBuffers(1, &this->vertexbuffer);
-    glGenBuffers(1, &this->colorbuffer);
-    
-    glBindVertexArray(VertexArrayID);
-
-    glBindVertexArray(this->vertexbuffer);
-
-    glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
-    glBufferData(GL_ARRAY_BUFFER, vertex_buffer_data.size()*sizeof(GLfloat), &vertex_buffer_data[0], GL_STATIC_DRAW);
-	this->datasize = vertex_buffer_data.size();
-
-	
-	glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
-	glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size()*sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
-
-    cout<<"vertex_buffer_data.size() = "<<vertex_buffer_data.size()<<endl;
-    
-
-    cout << "Object::set_data() end" << endl;
-
 }
 
 vector<GLfloat> Object::vertex_buffer_data() {
-    vector<GLfloat> vertex_buffer_data = {};
-    vector<GLfloat> color_buffer_data = {};
+    return vertex_buffer;
+}
 
-    for (Face face: this->faces) {
-        vector<Vertex> vertices;
-        for (Edge edge: face.getEdges()) {
-            Vertex vi = edge.getVi();
-            Vertex vf = edge.getVf();
-            vertices.push_back(vi);
-            vector<float> viVector = vi.getXYZ();
-            vertex_buffer_data.push_back(viVector[0]);
-            vertex_buffer_data.push_back(viVector[1]);
-            vertex_buffer_data.push_back(viVector[2]);
-            color_buffer_data.push_back(this->r);
-            color_buffer_data.push_back(this->g);
-            color_buffer_data.push_back(this->b);
-        }
-    }
-
-    return vertex_buffer_data;
+vector<GLfloat> Object::color_buffer_data() {
+    return color_buffer;
 }
