@@ -39,7 +39,7 @@ public:
     vector<Face> getFaces();
     virtual void load() = 0;
     void draw(GLuint programID, glm::mat4 transform);
-    float r, g, b;
+    
 
     vector<GLfloat> vertex_buffer_data();
     vector<GLfloat> color_buffer_data();
@@ -48,7 +48,7 @@ protected:
     string fileName;
     vector<Vertex> vertices = {};
     vector<Face> faces = {};
-
+float r, g, b;
     vector<string> split(const string &str, const string &delim);
 
     GLuint vao;

@@ -26,9 +26,14 @@ Obj::Obj(string fileName, float r, float g, float b) : Object(fileName, r, g, b)
 void Obj::load() {
     string line;
     ifstream OBJfile(fileName);
-
-    while (getline(OBJfile, line))
-    {  
+    bool isHaveNormals = false;
+    cout<<"File name: "<<fileName<<endl;
+    // Verificar si el archivo se abrio correctamente
+    if (!OBJfile.is_open()) {
+        cout << "No se pudo abrir el archivo obj" << endl;
+        return;
+    }
+    while (getline(OBJfile, line)) {
         vector<string> elems = this->split(line, " ");
         if (!elems.empty())
         {

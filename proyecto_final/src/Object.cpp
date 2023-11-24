@@ -106,6 +106,7 @@ void Object::draw(GLuint programID, glm::mat4 translate) {
     glBindVertexArray(this->vertexbuffer);
     // Draw the triangle !
     glDrawArrays(GL_TRIANGLES, 0, this->datasize); // Starting from vertex 0; 3 vertices total -> 1 triangle    
+    glDisableVertexAttribArray(0);
 }
 
 /**
@@ -114,22 +115,37 @@ void Object::draw(GLuint programID, glm::mat4 translate) {
  */
 
 void Object::set_data() {
-    for (Face face: this->faces) {
-        vector<Vertex> vertices;
-        for (Edge edge: face.getEdges()) {
-            Vertex vi = edge.getVi();
-            Vertex vf = edge.getVf();
-            vertices.push_back(vi);
-            vector<float> viVector = vi.getXYZ();
-            this->vertex_buffer.push_back(viVector[0]);
-            this->vertex_buffer.push_back(viVector[1]);
-            this->vertex_buffer.push_back(viVector[2]);
+    vector <GLfloat> vertex_buffer_data = {};
+    vector <GLfloat> color_buffer_data = {};
 
-            color_buffer.push_back(this->r);
-            color_buffer.push_back(this->g);
-            color_buffer.push_back(this->b);
+    for(Face f: this->faces)
+    {
+        for(Edge e: f.getEdges())
+        {
+            float x = e.getVi().getX();
+            float y = e.getVi().getY();
+            float z= e.getVi().getZ();
+            vertex_buffer_data.push_back(x);
+            vertex_buffer_data.push_back(y);
+            vertex_buffer_data.push_back(z);
+            color_buffer_data.push_back(this->r);
+            color_buffer_data.push_back(this->g);
+            color_buffer_data.push_back(this->b);
         }
     }
+
+    GLuint VertexArrayID;
+    glGenVertexArrays(1, &VertexArrayID);
+    glBindVertexArray(VertexArrayID);
+
+    glGenBuffers(1, &this->vertexbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, this->vertexbuffer);
+    glBufferData(GL_ARRAY_BUFFER, vertex_buffer_data.size()*sizeof(GLfloat), &vertex_buffer_data[0], GL_STATIC_DRAW);
+    this->datasize = vertex_buffer_data.size();
+
+    glGenBuffers(1, &this->colorbuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
+    glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size()*sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
 }
 
 vector<GLfloat> Object::vertex_buffer_data() {
