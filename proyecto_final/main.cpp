@@ -5,7 +5,11 @@
 #include <glm/vec4.hpp> // glm::vec4
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
-
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include "include/Vertex.h"
 #include "include/Animation.h"
 #include "include/Model.h"
 #include "include/OpenGL.h"
@@ -41,11 +45,8 @@ int main( void )
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
     Model <Ply> ball_sim("models/rock.ply", 1.0, 0.0, 0.0);
-    sleep(1);
-    Model <Obj> robot_sim("models/kuro.obj", 1.0, 0.0, 1.0);
-    sleep(1);
-    Model <Obj> enemy_sim("models/avion.obj", 0.0, 0.0, 1.0);
-    sleep(1);
+    Model <Ply> robot_sim("models/robot.ply", 1.0, 0.0, 1.0);
+    Model <Obj> enemy_sim("models/enemy2.obj", 0.0, 0.0, 1.0);
 
 	glClearColor(0.0f, 0.0f, 0.0f ,0.0f);
 	
@@ -60,7 +61,7 @@ int main( void )
     glm::mat4 translate_sun = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f,0.0f));
 
     //Transformation for mars
-    glm::mat4 scale_mars = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));
+    glm::mat4 scale_mars = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
     glm::mat4 translate_mars = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
 
     //Transformation for moon
@@ -84,6 +85,14 @@ int main( void )
 
     //Transformation for star
     glm::mat4 scale_star = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+
+    glm::mat4 View = glm::lookAt(
+        glm::vec3(0,0,3), // Camera is at (0,0,2), in World Space
+        glm::vec3(0,0,0), // and looks at the origin
+        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+    );
+
+    glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
 
     do {
         glm::mat4 rotation_earth = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(0.0f,0.1f,0.0f));
@@ -125,10 +134,12 @@ int main( void )
         }
 
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-
-        //ball_sim.draw(gl.getProgramID(), translate_sun * scale_sun);
-        robot_sim.draw(gl.getProgramID(), transform_earth);
-        //enemy_sim.draw(gl.getProgramID(), transform_mars);
+        glm::mat4 mvp = Projection * View * translate_sun * scale_sun;
+        ball_sim.draw(gl.getProgramID(), mvp);
+        glm::mat4 mvp2 = Projection * View * transform_mars;
+        robot_sim.draw(gl.getProgramID(), mvp2);
+        glm::mat4 mvp3 = Projection * View * transform_earth;
+        enemy_sim.draw(gl.getProgramID(), mvp3);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
