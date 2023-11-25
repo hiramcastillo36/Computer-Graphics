@@ -51,7 +51,7 @@ int main( void )
 	glClearColor(0.0f, 0.0f, 0.0f ,0.0f);
 	
     srand (time(NULL));
-    float random_enemy = (float)(rand() % 4 + 1)/10;
+    float random_enemy = (float)(rand() % 2 + 1)/10;
     cout << random_enemy << endl;
 
     //Transformaciones
@@ -66,19 +66,15 @@ int main( void )
     //Transformation for ball
     glm::mat4 scale_ball = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
     glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy));
-
-    float angle_ball = 0.0f;
-    float angle = 0.0f;
-    float angle_moon = 0.0f;
     
     Animation an;
+
     Vertex P1(-1.0,0.0,0.0);
     Vertex P2(-0.8,0.0,1.5);
     Vertex P3(0.5,0.0,0.5);
     Vertex P4(1.0,0.0,0.0);
 
-// trayectoria de la estrella
-    vector<Vertex> star_path = an.bezier(P1, P2, P3, P4, 0.001);
+    vector<Vertex> robot_path = an.bezier(P1, P2, P3, P4, 0.009);
 
     unsigned int star_position = 0;
 
@@ -99,8 +95,6 @@ int main( void )
         glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
     );
 
-    
-
     glm::mat4 View = glm::lookAt(
         glm::vec3(0,0,2), // Camera is at (0,0,2), in World Space
         glm::vec3(0,0,0), // and looks at the origingggggggggg
@@ -116,9 +110,6 @@ int main( void )
 
     glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
 
-    
-    
-
     //Rotation for ball
     
     glm::mat4 transform_ball = translate_ball * scale_ball;
@@ -126,12 +117,12 @@ int main( void )
     do {
         
 
-        glm::mat4 translate_robot = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), 0.0, star_path[star_position].getZ()));
+        glm::mat4 translate_robot = glm::translate(glm::mat4(1.0f), glm::vec3(robot_path[star_position].getX(), 0.0, robot_path[star_position].getZ()));
         glm::mat4 transform_robot = translate_robot * scale_robot;
 
-        //cout<<star_path[star_position].getX()<<" "<<star_path[star_position].getY()<< " " << star_path[star_position].getZ()<<endl;
+        //cout<<robot_path[star_position].getX()<<" "<<robot_path[star_position].getY()<< " " << robot_path[star_position].getZ()<<endl;
 
-        if(star_position < star_path.size() - 1)
+        if(star_position < robot_path.size() - 1)
             star_position++;
         else
             star_position = 0;
