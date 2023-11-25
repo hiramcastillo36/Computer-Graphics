@@ -88,7 +88,7 @@ vector<Vertex> Animation::bezier(Vertex P1, Vertex P2, Vertex P3, Vertex P4, flo
 
     Mat<float> MH{
         {-1, 3, -3, 1},
-        {-3, -6, 3, 0},
+        {3, -6, 3, 0},
         {-3, 3, 0, 0},
         {1, 0, 0, 0}
     };
@@ -102,7 +102,8 @@ vector<Vertex> Animation::bezier(Vertex P1, Vertex P2, Vertex P3, Vertex P4, flo
     vector<Vertex> v;
 
     for (float t = 0.0; t <= 1.0 + dt; t += dt) {
-        Row<float> T = {powf(t, 3), powf(t, 2), t, 1};
+        Row<float> T = {powf(t, 3), powf(t, 2),  t, 1};
+        
         Mat<float> Qt = T * MH * GH;
 
         Vertex tv(Qt(0, 0), Qt(0, 1), Qt(0, 2));

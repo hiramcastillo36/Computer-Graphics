@@ -50,33 +50,37 @@ int main( void )
 
 	glClearColor(0.0f, 0.0f, 0.0f ,0.0f);
 	
-    
-    
-    //Transformaciones
-    glm::mat4 scale_earth = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));
-    glm::mat4 translate_earth = glm::translate(glm::mat4(1.0f), glm::vec3(-0.75,0.0f,0.0f));    
-    
-    glm::mat4 scale_sun = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-    glm::mat4 rotate_sun = glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0f,0.0f,0.0f));
-    glm::mat4 translate_sun = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f,0.0f));
+    srand (time(NULL));
+    float random_enemy = (float)(rand() % 4 + 1)/10;
+    cout << random_enemy << endl;
 
-    //Transformation for mars
-    glm::mat4 scale_mars = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
-    glm::mat4 translate_mars = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
+    //Transformaciones
+    glm::mat4 scale_robot = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));
+    glm::mat4 translate_robot = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f,0.0f,0.0f));    
+    
+    // ball
+    glm::mat4 scale_enemy = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+    glm::mat4 rotate_enemy = glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0f,0.0f,0.0f));
+    glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(1.0f,0.0f,0.0f));
+
+    // enemy
+    //Transformation for ball
+    glm::mat4 scale_ball = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
+    glm::mat4 translate_ball = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy));
 
     //Transformation for moon
     glm::mat4 scale_moon = glm::scale(glm::mat4(1.0f), glm::vec3(0.3f));
     glm::mat4 translate_moon = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
 
-    float angle_mars = 0.0f;
+    float angle_ball = 0.0f;
     float angle = 0.0f;
     float angle_moon = 0.0f;
     
     Animation an;
-    Vertex P1(-0.9,0.9,0.0);
-    Vertex P2(-0.5,0.8,0.0);
-    Vertex P3(0.3,0.0,0.0);
-    Vertex P4(0.7,-0.8,0.0);
+    Vertex P1(-1.0,0.0,0.0);
+    Vertex P2(-0.5,0.0,0.6);
+    Vertex P3(0.3,0.0,0.3);
+    Vertex P4(1.0,0.0,0.0);
 
 // trayectoria de la estrella
     vector<Vertex> star_path = an.bezier(P1, P2, P3, P4, 0.001);
@@ -86,59 +90,48 @@ int main( void )
     //Transformation for star
     glm::mat4 scale_star = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
+    
     glm::mat4 View = glm::lookAt(
-        glm::vec3(0,0,3), // Camera is at (0,0,2), in World Space
+        glm::vec3(0,2,0), // Camera is at (0,0,2), in World Space
+        glm::vec3(0,0,0), // and looks at the origin
+        glm::vec3(0,0, -1)  // Head is up (set to 0,-1,0 to look upside-down)
+    );
+    /*
+    glm::mat4 View = glm::lookAt(
+        glm::vec3(0,0,2), // Camera is at (0,0,2), in World Space
         glm::vec3(0,0,0), // and looks at the origin
         glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
-
+    );*/
     glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
 
+    
+    glm::mat4 transform_robot = translate_robot * scale_robot;
+
+    //Rotation for ball
+    
+    glm::mat4 transform_ball = translate_ball * scale_ball;
+
+        
+
     do {
-        glm::mat4 rotation_earth = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_earth =  rotation_earth * translate_earth * scale_earth;
+        
 
-        if(angle<360.0f){
-            angle += 0.5;
-        }else{
-            angle = 0.0f;
-        }
+        glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), 0.0, star_path[star_position].getZ()));
+        
+        cout<<star_path[star_position].getX()<<" "<<star_path[star_position].getY()<< " " << star_path[star_position].getZ()<<endl;
 
-        //Rotation for mars
-        glm::mat4 rotation_mars = glm::rotate(glm::mat4(1.0f), glm::radians(angle_mars), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_mars = rotation_mars * translate_mars * scale_mars;
-
-        if(angle_mars<360.0f){
-            angle_mars += 0.2;
-        }else{
-            angle_mars = 0.0f;
-        }
-
-        //Rotation for moon
-        glm::mat4 rotation_moon = glm::rotate(glm::mat4(1.0f), glm::radians(angle_moon), glm::vec3(0.0f,0.1f,0.0f));
-        glm::mat4 transform_moon = translate_moon * scale_moon * transform_earth;
-
-        if(angle_moon<360.0f){
-            angle_moon += 0.5;
-        }else{
-            angle_moon = 0.0f;
-        }
-
-        glm::mat4 translate_star = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), star_path[star_position].getY(), star_path[star_position].getX()));
-        glm::mat4 transform_star = translate_star * scale_star;
-
-        if(star_position < star_path.size()-1){
+        if(star_position < star_path.size() - 1)
             star_position++;
-        }else{
+        else
             star_position = 0;
-        }
 
+        // Clear the screen
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-        glm::mat4 mvp = Projection * View * translate_sun * scale_sun;
+        glm::mat4 mvp = Projection * View * translate_enemy * scale_enemy;
         ball_sim.draw(gl.getProgramID(), mvp);
-        glm::mat4 mvp2 = Projection * View * transform_mars;
+        glm::mat4 mvp2 = Projection * View * transform_ball;
         robot_sim.draw(gl.getProgramID(), mvp2);
-        glm::mat4 mvp3 = Projection * View * transform_earth;
+        glm::mat4 mvp3 = Projection * View * transform_robot;
         enemy_sim.draw(gl.getProgramID(), mvp3);
 
         glfwSwapBuffers(window);
