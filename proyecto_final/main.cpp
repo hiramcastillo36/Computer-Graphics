@@ -55,22 +55,17 @@ int main( void )
     cout << random_enemy << endl;
 
     //Transformaciones
-    glm::mat4 scale_robot = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));
+    glm::mat4 scale_robot = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
     glm::mat4 translate_robot = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f,0.0f,0.0f));    
     
     // ball
-    glm::mat4 scale_enemy = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-    glm::mat4 rotate_enemy = glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0f,0.0f,0.0f));
-    glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(1.0f,0.0f,0.0f));
+    glm::mat4 scale_enemy = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
+    glm::mat4 translate_ball = glm::translate(glm::mat4(1.0f), glm::vec3(1.2f,0.0f,0.0f));
 
     // enemy
     //Transformation for ball
-    glm::mat4 scale_ball = glm::scale(glm::mat4(1.0f), glm::vec3(0.4f));
-    glm::mat4 translate_ball = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy));
-
-    //Transformation for moon
-    glm::mat4 scale_moon = glm::scale(glm::mat4(1.0f), glm::vec3(0.3f));
-    glm::mat4 translate_moon = glm::translate(glm::mat4(1.0f), glm::vec3(0.4,0.0f,0.0f));
+    glm::mat4 scale_ball = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+    glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy));
 
     float angle_ball = 0.0f;
     float angle = 0.0f;
@@ -78,8 +73,8 @@ int main( void )
     
     Animation an;
     Vertex P1(-1.0,0.0,0.0);
-    Vertex P2(-0.5,0.0,0.6);
-    Vertex P3(0.3,0.0,0.3);
+    Vertex P2(-0.8,0.0,1.5);
+    Vertex P3(0.5,0.0,0.5);
     Vertex P4(1.0,0.0,0.0);
 
 // trayectoria de la estrella
@@ -89,36 +84,52 @@ int main( void )
 
     //Transformation for star
     glm::mat4 scale_star = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-
-    
+/*
+    // Desde arriba
     glm::mat4 View = glm::lookAt(
         glm::vec3(0,2,0), // Camera is at (0,0,2), in World Space
         glm::vec3(0,0,0), // and looks at the origin
         glm::vec3(0,0, -1)  // Head is up (set to 0,-1,0 to look upside-down)
     );
-    /*
+    // Desde abajo
+    
+    glm::mat4 View = glm::lookAt(
+        glm::vec3(2,1,1), // Camera is at (0,0,2), in World Space
+        glm::vec3(0,0,0), // and looks at the oribgin
+        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+    );
+
+    
+
     glm::mat4 View = glm::lookAt(
         glm::vec3(0,0,2), // Camera is at (0,0,2), in World Space
-        glm::vec3(0,0,0), // and looks at the origin
+        glm::vec3(0,0,0), // and looks at the origingggggggggg
         glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );*/
+    );
+    */
+
+    glm::mat4 View = glm::lookAt(
+        glm::vec3(2,1,2), // Camera is at (0,0,2), in World Space
+        glm::vec3(-1,0,0), // and looks at the oribgin
+        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+    );
+
     glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
 
     
-    glm::mat4 transform_robot = translate_robot * scale_robot;
+    
 
     //Rotation for ball
     
     glm::mat4 transform_ball = translate_ball * scale_ball;
 
-        
-
     do {
         
 
-        glm::mat4 translate_enemy = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), 0.0, star_path[star_position].getZ()));
-        
-        cout<<star_path[star_position].getX()<<" "<<star_path[star_position].getY()<< " " << star_path[star_position].getZ()<<endl;
+        glm::mat4 translate_robot = glm::translate(glm::mat4(1.0f), glm::vec3(star_path[star_position].getX(), 0.0, star_path[star_position].getZ()));
+        glm::mat4 transform_robot = translate_robot * scale_robot;
+
+        //cout<<star_path[star_position].getX()<<" "<<star_path[star_position].getY()<< " " << star_path[star_position].getZ()<<endl;
 
         if(star_position < star_path.size() - 1)
             star_position++;
@@ -128,11 +139,11 @@ int main( void )
         // Clear the screen
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         glm::mat4 mvp = Projection * View * translate_enemy * scale_enemy;
-        ball_sim.draw(gl.getProgramID(), mvp);
         glm::mat4 mvp2 = Projection * View * transform_ball;
-        robot_sim.draw(gl.getProgramID(), mvp2);
         glm::mat4 mvp3 = Projection * View * transform_robot;
-        enemy_sim.draw(gl.getProgramID(), mvp3);
+        ball_sim.draw(gl.getProgramID(), mvp2);
+        robot_sim.draw(gl.getProgramID(), mvp3);
+        enemy_sim.draw(gl.getProgramID(), mvp);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
