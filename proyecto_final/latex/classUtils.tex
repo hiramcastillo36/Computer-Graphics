@@ -1,0 +1,117 @@
+\hypertarget{classUtils}{}\doxysection{Utils Class Reference}
+\label{classUtils}\index{Utils@{Utils}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+Inheritance diagram for Utils\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUtils}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classUtils_a2723d7da62de75c7001bedbcc8d06062}{load}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUtils_a4d0135e3cd39fb38e7a3f32800896d37}{draw}} (GLuint program\+ID)=0
+\item 
+void \mbox{\hyperlink{classUtils_a0b44e88b7e1d4fc90c4a9aff9caea98e}{set\+Scale}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{classUtils_a8a500fc4ba8bae589df0c911524218d1}{set\+Translate}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{classUtils_adfbecd5e7c9f972b73c5bbf33b06db1f}{set\+Transform}} (glm\+::mat4 \mbox{\hyperlink{classUtils_aa6d588dc4ce0991d8d806ef6b1448896}{scale}}, glm\+::mat4 \mbox{\hyperlink{classUtils_a06761b13367eb66d0a9ba9b06dd61a57}{translate}})
+\item 
+glm\+::mat4 \mbox{\hyperlink{classUtils_ad7e1873a67a6fbafb35db28701d69d72}{get\+Transform}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classUtils_aa6d588dc4ce0991d8d806ef6b1448896}{scale}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classUtils_a06761b13367eb66d0a9ba9b06dd61a57}{translate}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classUtils_a43087e003fc070ae42457ded8def34b5}{rotate}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classUtils_a0c3c07455c75b2dd36daea1e0f2d38da}{transform}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUtils_a4d0135e3cd39fb38e7a3f32800896d37}\label{classUtils_a4d0135e3cd39fb38e7a3f32800896d37}} 
+\index{Utils@{Utils}!draw@{draw}}
+\index{draw@{draw}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Utils\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classRobot_ad71c001e0b3f5ae24b02acfc77674bd4}{Robot}}, \mbox{\hyperlink{classEnemy_ad42619dd9923e75cb8a0b34f15a0037c}{Enemy}}, and \mbox{\hyperlink{classBall_ac09919c24921141d79fa3377c100abf5}{Ball}}.
+
+\mbox{\Hypertarget{classUtils_ad7e1873a67a6fbafb35db28701d69d72}\label{classUtils_ad7e1873a67a6fbafb35db28701d69d72}} 
+\index{Utils@{Utils}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily glm\+::mat4 Utils\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUtils_a2723d7da62de75c7001bedbcc8d06062}\label{classUtils_a2723d7da62de75c7001bedbcc8d06062}} 
+\index{Utils@{Utils}!load@{load}}
+\index{load@{load}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Utils\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classRobot_aaa81167e852be7283409544a66011854}{Robot}}, \mbox{\hyperlink{classEnemy_a926d3aa1e6282f9f559227209be890f3}{Enemy}}, and \mbox{\hyperlink{classBall_a49f92783620453a730ac82836d731486}{Ball}}.
+
+\mbox{\Hypertarget{classUtils_a0b44e88b7e1d4fc90c4a9aff9caea98e}\label{classUtils_a0b44e88b7e1d4fc90c4a9aff9caea98e}} 
+\index{Utils@{Utils}!setScale@{setScale}}
+\index{setScale@{setScale}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Utils\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUtils_adfbecd5e7c9f972b73c5bbf33b06db1f}\label{classUtils_adfbecd5e7c9f972b73c5bbf33b06db1f}} 
+\index{Utils@{Utils}!setTransform@{setTransform}}
+\index{setTransform@{setTransform}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{setTransform()}{setTransform()}}
+{\footnotesize\ttfamily void Utils\+::set\+Transform (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{scale,  }\item[{glm\+::mat4}]{translate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUtils_a8a500fc4ba8bae589df0c911524218d1}\label{classUtils_a8a500fc4ba8bae589df0c911524218d1}} 
+\index{Utils@{Utils}!setTranslate@{setTranslate}}
+\index{setTranslate@{setTranslate}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{setTranslate()}{setTranslate()}}
+{\footnotesize\ttfamily void Utils\+::set\+Translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUtils_a43087e003fc070ae42457ded8def34b5}\label{classUtils_a43087e003fc070ae42457ded8def34b5}} 
+\index{Utils@{Utils}!rotate@{rotate}}
+\index{rotate@{rotate}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily glm\+::mat4 Utils\+::rotate\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUtils_aa6d588dc4ce0991d8d806ef6b1448896}\label{classUtils_aa6d588dc4ce0991d8d806ef6b1448896}} 
+\index{Utils@{Utils}!scale@{scale}}
+\index{scale@{scale}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily glm\+::mat4 Utils\+::scale\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUtils_a0c3c07455c75b2dd36daea1e0f2d38da}\label{classUtils_a0c3c07455c75b2dd36daea1e0f2d38da}} 
+\index{Utils@{Utils}!transform@{transform}}
+\index{transform@{transform}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily glm\+::mat4 Utils\+::transform\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUtils_a06761b13367eb66d0a9ba9b06dd61a57}\label{classUtils_a06761b13367eb66d0a9ba9b06dd61a57}} 
+\index{Utils@{Utils}!translate@{translate}}
+\index{translate@{translate}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{translate}{translate}}
+{\footnotesize\ttfamily glm\+::mat4 Utils\+::translate\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Utils_8h}{Utils.\+h}}\end{DoxyCompactItemize}
