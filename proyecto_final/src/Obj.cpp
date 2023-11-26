@@ -27,47 +27,55 @@ void Obj::load() {
     string line;
     ifstream OBJfile(fileName);
     bool isHaveNormals = false;
-    cout<<"File name: "<<fileName<<endl;
     // Verificar si el archivo se abrio correctamente
     if (!OBJfile.is_open()) {
-        cout << "No se pudo abrir el archivo obj" << endl;
+        cout << "No se pudo abrir el archivo" << endl;
         return;
     }
     while (getline(OBJfile, line)) {
-        vector<string> elems = this->split(line, " ");
-        if (!elems.empty())
-        {
-            if(elems[0] == "v")
-            {
+        vector<string> elems = split(line, " ");
+        // cambiar por switch
+        if (!elems.empty()) {
+            if (elems[0] == "v") {
                 float x = stof(elems[1]);
                 float y = stof(elems[2]);
                 float z = stof(elems[3]);
                 Vertex v(x, y, z);
                 this->vertices.push_back(v);
             }
-                if (elems[0] == "f")
-            {
-                vector<Edge> edges;
-                int n = elems.size() - 1;
-
-                for (int i = 1; i < n; i++)
-                {
-                    unsigned int vi1 = stoi(split(elems[i], "/")[0]) - 1;
-                    unsigned int vi2 = stoi(split(elems[i + 1], "/")[0]) - 1;
-
-                    Edge e(vertices[vi1], vertices[vi2]);
+            if (elems[0] == "vn") {
+                isHaveNormals = true;
+            }
+            if (elems[0] == "f") {
+                //cout << line << endl;
+                // -1 porque los indices empiezan en 1 de la lectura de nuestro obj, en el caso de los vectores empiezan en 0
+                unsigned int prev_vertice = stoi(split(elems[1], "//")[0]) - 1;
+                if (isHaveNormals) {
+                    prev_vertice = stoi(split(elems[1], "//")[0]) - 1;
+                } else {
+                    prev_vertice = stoi(split(elems[1], " ")[0]) - 1;
+                }
+                vector<Edge> edges = {};
+                vector<string> temp_edges_slides;
+                for (int i = 2; i < elems.size(); i++) {
+                    if (isHaveNormals) {
+                        temp_edges_slides = split(elems[i], "//");
+                    } else {
+                        temp_edges_slides = split(elems[i], " ");
+                    }
+                    unsigned int actual_vertice = stoi(temp_edges_slides[0]) - 1;
+                    Edge e(vertices[prev_vertice], vertices[actual_vertice]);
+                    prev_vertice = actual_vertice;
                     edges.push_back(e);
                 }
-
-                // Conectamos el último vértice con el primer vértice
-                unsigned int vi1 = stoi(split(elems[n], "/")[0]) - 1;
-                unsigned int vi2 = stoi(split(elems[1], "/")[0]) - 1;
-                Edge e(vertices[vi1], vertices[vi2]);
+                Edge e(vertices[prev_vertice], vertices[stoi(split(elems[1], "//")[0]) - 1]);
                 edges.push_back(e);
-
-                Face f(edges);
-                this->faces.push_back(f);
+                Face face(edges);
+                this->faces.push_back(face);
             }
         }
     }
+    /*for (int i = 0; i < faces.size(); i++) {
+        faces[i].print();
+    }*/
 }
