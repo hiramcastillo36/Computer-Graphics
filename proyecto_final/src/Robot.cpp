@@ -14,8 +14,8 @@ Robot::Robot() {
     Animation an;
 
     Vertex P1(-1.0, 0.0, 0.0);
-    Vertex P2(-0.8, 0.0, 1.5);
-    Vertex P3(0.5, 0.0, 0.5);
+    Vertex P2(-0.2, 0.0, -1.5);
+    Vertex P3(0.9, 0.0, 0.5);
     Vertex P4(1.0, 0.0, 0.0);
 
     this->path = an.bezier(P1, P2, P3, P4, 0.009);
