@@ -31,6 +31,8 @@ Simulation::Simulation()
     this -> robot_path = an.bezier(P1, P2, P3, P4, 0.009);
     this -> robot_path_index = 0;
 
+    this -> camera = this->scene.getCameraPrincipal();
+
     cout<<"Simulation created"<<endl;
 }
 
@@ -46,17 +48,9 @@ void Simulation::init(GLuint programID)
         robot_path_index = 0;
     }
 
-    glm::mat4 View = glm::lookAt(
-        glm::vec3(2,1,2), // Camera is at (0,0,2), in World Space
-        glm::vec3(-1,0,0), // and looks at the oribgin
-        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
-
-    glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
-
-    glm::mat4 mvp = Projection * View * translate_enemy * scale_enemy;
-    glm::mat4 mvp2 = Projection * View * transform_ball;
-    glm::mat4 mvp3 = Projection * View * transform_robot;
+    glm::mat4 mvp = camera * translate_enemy * scale_enemy;
+    glm::mat4 mvp2 = camera * transform_ball;
+    glm::mat4 mvp3 = camera * transform_robot;
 
     ball.draw(programID, mvp2);   
     robot.draw(programID, mvp3);

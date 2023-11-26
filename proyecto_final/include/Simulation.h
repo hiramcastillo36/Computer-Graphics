@@ -9,16 +9,15 @@
 #include <glm/mat4x4.hpp> // glm::mat4
 #include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 #include <GL/glew.h>
 #include "Animation.h"
 #include "Model.h"
 #include "OpenGL.h"
 #include "Simulation.h"
-
 #include "Robot.h"
 #include "Ball.h"
 #include "Enemy.h"
+#include "Scene.h"
 
 using namespace std;
 
@@ -49,6 +48,9 @@ private:
 
     vector<Vertex> robot_path;
     unsigned int robot_path_index;
+
+    glm::mat4 camera;
+    Scene scene;
 
 };
 

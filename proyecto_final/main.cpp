@@ -1,21 +1,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <vector>
-#include <glm/vec4.hpp> // glm::vec4
-#include <glm/mat4x4.hpp> // glm::mat4
-#include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "include/Vertex.h"
-#include "include/Animation.h"
-#include "include/Model.h"
 #include "include/OpenGL.h"
 #include "include/Simulation.h"
-#include "include/Triangle.h"
-#include <time.h>    /* time */
 
 using namespace std;
 
