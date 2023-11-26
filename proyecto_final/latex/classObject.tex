@@ -31,6 +31,20 @@ void \mbox{\hyperlink{classObject_aa53c254ac86a97881cd1d4b6f26a3e1b}{draw}} (GLu
 vector$<$ GLfloat $>$ \mbox{\hyperlink{classObject_ac51f3d10fbb3eeb813a70cb9f85d0b68}{vertex\+\_\+buffer\+\_\+data}} ()
 \item 
 vector$<$ GLfloat $>$ \mbox{\hyperlink{classObject_adb558ffcddf3500cb8698a542590f3aa}{color\+\_\+buffer\+\_\+data}} ()
+\item 
+void \mbox{\hyperlink{classObject_a6d4dd501ee4848dfe26216b30aeb64ce}{set\+Scale}} (glm\+::mat4 \mbox{\hyperlink{classObject_a19a25fe780e2b07bf1a5dc0db5ded377}{scale}})
+\item 
+void \mbox{\hyperlink{classObject_ac48ab01b73ab035ba716c586ae61c7fe}{set\+Rotate}} (glm\+::mat4 \mbox{\hyperlink{classObject_a0a9dbaa64df17576f38576d4c68ce714}{rotate}})
+\item 
+void \mbox{\hyperlink{classObject_ac8ce37df2fa751bfbbf0c8c2e3499a0d}{set\+Translate}} (glm\+::mat4 \mbox{\hyperlink{classObject_a287bec75f2cc84cf8420f2b1f8229dc3}{translate}})
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_ac8b5866feaf7dd71fc1c1955d6ccd16f}{get\+Scale}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_a78e85c967d97415862c15f8cd59944f5}{get\+Rotate}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_ad2775ffe94d290c3f25829dd6df62f3b}{get\+Translate}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_ac40d65907a69f7c5a2e87cd74f8ae4a0}{get\+Transform}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -54,10 +68,6 @@ float \mbox{\hyperlink{classObject_a5650f8a9110a8b8238b60560bb111b0c}{g}}
 \item 
 float \mbox{\hyperlink{classObject_ae2658c68493c8595658123484e506c4e}{b}}
 \item 
-GLuint \mbox{\hyperlink{classObject_a66190fee29d03d6478516686cbd01eb8}{vao}}
-\item 
-GLuint \mbox{\hyperlink{classObject_a14460e7e1b7678186f0411ca3957e55a}{vbo}}
-\item 
 GLuint \mbox{\hyperlink{classObject_a8812b04d88a9771f6e5f7c25bf107958}{colorbuffer}}
 \item 
 GLuint \mbox{\hyperlink{classObject_a514540d6d31ba5a450ffa3fbf3753b4f}{datasize}}
@@ -70,7 +80,13 @@ vector$<$ GLfloat $>$ \mbox{\hyperlink{classObject_a6c240112adb9812241cf8e13a0f6
 \item 
 vector$<$ GLfloat $>$ \mbox{\hyperlink{classObject_abf0a5476cd407256530632ba82ad20cd}{color\+\_\+buffer}}
 \item 
+glm\+::mat4 \mbox{\hyperlink{classObject_a19a25fe780e2b07bf1a5dc0db5ded377}{scale}}
+\item 
 glm\+::mat4 \mbox{\hyperlink{classObject_a6b9e1c5f1dad7c7622cd5523d1a76de3}{transform}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_a0a9dbaa64df17576f38576d4c68ce714}{rotate}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classObject_a287bec75f2cc84cf8420f2b1f8229dc3}{translate}}
 \end{DoxyCompactItemize}
 
 
@@ -112,7 +128,7 @@ Construct a new \mbox{\hyperlink{classObject}{Object}}\+:\+: \mbox{\hyperlink{cl
 \index{Object@{Object}!draw@{draw}}
 \index{draw@{draw}!Object@{Object}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Object\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{translate }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Object\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
 
 
 
@@ -122,7 +138,7 @@ This method is used to draw the object.
 \begin{DoxyParams}{Parameters}
 {\em program\+ID} & \\
 \hline
-{\em translate} & \\
+{\em camera} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classObject_aef3d9b4a4e91caed80299207ae6cff39}\label{classObject_aef3d9b4a4e91caed80299207ae6cff39}} 
@@ -138,6 +154,30 @@ This method returns the faces.
 \begin{DoxyReturn}{Returns}
 vector $<$ \mbox{\hyperlink{classFace}{Face}} $>$ 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classObject_a78e85c967d97415862c15f8cd59944f5}\label{classObject_a78e85c967d97415862c15f8cd59944f5}} 
+\index{Object@{Object}!getRotate@{getRotate}}
+\index{getRotate@{getRotate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getRotate()}{getRotate()}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::get\+Rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classObject_ac8b5866feaf7dd71fc1c1955d6ccd16f}\label{classObject_ac8b5866feaf7dd71fc1c1955d6ccd16f}} 
+\index{Object@{Object}!getScale@{getScale}}
+\index{getScale@{getScale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classObject_ac40d65907a69f7c5a2e87cd74f8ae4a0}\label{classObject_ac40d65907a69f7c5a2e87cd74f8ae4a0}} 
+\index{Object@{Object}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classObject_ad2775ffe94d290c3f25829dd6df62f3b}\label{classObject_ad2775ffe94d290c3f25829dd6df62f3b}} 
+\index{Object@{Object}!getTranslate@{getTranslate}}
+\index{getTranslate@{getTranslate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getTranslate()}{getTranslate()}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::get\+Translate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classObject_aba723932a2b2e11297c1197a6b8d8467}\label{classObject_aba723932a2b2e11297c1197a6b8d8467}} 
 \index{Object@{Object}!getVertices@{getVertices}}
 \index{getVertices@{getVertices}!Object@{Object}}
@@ -170,6 +210,24 @@ Implemented in \mbox{\hyperlink{classPly_adca3f927c20e1c72f99b20885565b8fd}{Ply}
 
 
 This method is used to set the data of the object. 
+
+\mbox{\Hypertarget{classObject_ac48ab01b73ab035ba716c586ae61c7fe}\label{classObject_ac48ab01b73ab035ba716c586ae61c7fe}} 
+\index{Object@{Object}!setRotate@{setRotate}}
+\index{setRotate@{setRotate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{setRotate()}{setRotate()}}
+{\footnotesize\ttfamily void Object\+::set\+Rotate (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{rotate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classObject_a6d4dd501ee4848dfe26216b30aeb64ce}\label{classObject_a6d4dd501ee4848dfe26216b30aeb64ce}} 
+\index{Object@{Object}!setScale@{setScale}}
+\index{setScale@{setScale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Object\+::set\+Scale (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{scale }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classObject_ac8ce37df2fa751bfbbf0c8c2e3499a0d}\label{classObject_ac8ce37df2fa751bfbbf0c8c2e3499a0d}} 
+\index{Object@{Object}!setTranslate@{setTranslate}}
+\index{setTranslate@{setTranslate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{setTranslate()}{setTranslate()}}
+{\footnotesize\ttfamily void Object\+::set\+Translate (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{translate }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classObject_a5ead10d01ac62314aae690e6e094a3ec}\label{classObject_a5ead10d01ac62314aae690e6e094a3ec}} 
 \index{Object@{Object}!split@{split}}
@@ -254,23 +312,29 @@ vector $<$ string $>$
 \doxysubsubsection{\texorpdfstring{r}{r}}
 {\footnotesize\ttfamily float Object\+::r\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classObject_a0a9dbaa64df17576f38576d4c68ce714}\label{classObject_a0a9dbaa64df17576f38576d4c68ce714}} 
+\index{Object@{Object}!rotate@{rotate}}
+\index{rotate@{rotate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::rotate\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classObject_a19a25fe780e2b07bf1a5dc0db5ded377}\label{classObject_a19a25fe780e2b07bf1a5dc0db5ded377}} 
+\index{Object@{Object}!scale@{scale}}
+\index{scale@{scale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::scale\hspace{0.3cm}{\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classObject_a6b9e1c5f1dad7c7622cd5523d1a76de3}\label{classObject_a6b9e1c5f1dad7c7622cd5523d1a76de3}} 
 \index{Object@{Object}!transform@{transform}}
 \index{transform@{transform}!Object@{Object}}
 \doxysubsubsection{\texorpdfstring{transform}{transform}}
 {\footnotesize\ttfamily glm\+::mat4 Object\+::transform\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classObject_a66190fee29d03d6478516686cbd01eb8}\label{classObject_a66190fee29d03d6478516686cbd01eb8}} 
-\index{Object@{Object}!vao@{vao}}
-\index{vao@{vao}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{vao}{vao}}
-{\footnotesize\ttfamily GLuint Object\+::vao\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classObject_a14460e7e1b7678186f0411ca3957e55a}\label{classObject_a14460e7e1b7678186f0411ca3957e55a}} 
-\index{Object@{Object}!vbo@{vbo}}
-\index{vbo@{vbo}!Object@{Object}}
-\doxysubsubsection{\texorpdfstring{vbo}{vbo}}
-{\footnotesize\ttfamily GLuint Object\+::vbo\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classObject_a287bec75f2cc84cf8420f2b1f8229dc3}\label{classObject_a287bec75f2cc84cf8420f2b1f8229dc3}} 
+\index{Object@{Object}!translate@{translate}}
+\index{translate@{translate}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{translate}{translate}}
+{\footnotesize\ttfamily glm\+::mat4 Object\+::translate\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classObject_a6c240112adb9812241cf8e13a0f659b7}\label{classObject_a6c240112adb9812241cf8e13a0f659b7}} 
 \index{Object@{Object}!vertex\_buffer@{vertex\_buffer}}

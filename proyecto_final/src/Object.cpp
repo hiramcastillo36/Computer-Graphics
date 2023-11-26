@@ -21,6 +21,11 @@ Object::Object(string fileName, float r, float g, float b) {
     this->r = r;
     this->g = g;
     this->b = b;
+
+    this->scale = glm::mat4(1.0f);
+    this->rotate = glm::mat4(1.0f);
+    this->translate = glm::mat4(1.0f);
+    this->transform = glm::mat4(1.0f);
 }
 
 
@@ -65,16 +70,44 @@ vector<Face> Object::getFaces() {
     return faces;
 }
 
+glm::mat4 Object::getScale() {
+    return scale;
+}
+
+glm::mat4 Object::getRotate() {
+    return rotate;
+}
+
+glm::mat4 Object::getTranslate() {
+    return translate;
+}
+
+glm::mat4 Object::getTransform() {
+    return rotate * translate * scale;
+}
+
+void Object::setScale(glm::mat4 scale) {
+    this->scale = scale;
+}
+
+void Object::setRotate(glm::mat4 rotate) {
+    this->rotate = rotate;
+}
+
+void Object::setTranslate(glm::mat4 translate) {
+    this->translate = translate;
+}
+
 /**
  * @brief 
  * This method is used to draw the object.
  * @param programID 
- * @param translate 
+ * @param camera 
  */
 
-void Object::draw(GLuint programID, glm::mat4 translate) {
+void Object::draw(GLuint programID, glm::mat4 camera) {
     
-    this->transform = translate;
+    this->transform = camera * getTransform();
 
     // Enviar al shader
     GLuint MatrixID = glGetUniformLocation(programID, "Transform");

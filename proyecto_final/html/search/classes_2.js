@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['edge_115',['Edge',['../classEdge.html',1,'']]],
-  ['enemy_116',['Enemy',['../classEnemy.html',1,'']]]
+  ['edge_113',['Edge',['../classEdge.html',1,'']]],
+  ['enemy_114',['Enemy',['../classEnemy.html',1,'']]]
 ];

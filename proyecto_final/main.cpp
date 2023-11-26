@@ -5,6 +5,9 @@
 #include <GLFW/glfw3.h>
 #include "include/OpenGL.h"
 #include "include/Simulation.h"
+#include "include/Robot.h"
+#include "include/Ball.h"
+#include "include/Enemy.h"
 
 using namespace std;
 
@@ -34,6 +37,7 @@ int main( void )
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
     Simulation simulation;
+
     do {
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         

@@ -1,22 +1,19 @@
 #include "../include/Enemy.h"
 
 
-Enemy::Enemy() : Utils()
+Enemy::Enemy()
 {
-    this->load();
-    this->enemy = Model <Obj> ("models/enemy.obj", 0.0, 0.0, 0.0);
+    this->enemy = Model <Obj> ("models/enemy2.obj", 0.0, 0.0, 1.0);
+
+    srand (time(NULL));
+    float random_enemy = (float)(rand() % 2 + 1)/10;
+
+    enemy.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.4f)));
+    enemy.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy)));
 }
 
-void Enemy::load()
+void Enemy::draw(GLuint programID, glm::mat4 camera)
 {
-    cout<<"Loading enemy..."<<endl;
-    this->scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.2f));    
-    this->translate = glm::translate(glm::mat4(1.0f), glm::vec3(-0.75f,0.0f,0.0f));
-    this->rotate = glm::rotate(glm::mat4(1.0f), glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-    this->transform =  this->rotate * this->translate * this->scale;
+    this->enemy.draw(programID, camera);
 }
 
-void Enemy::draw(GLuint programID)
-{
-    this->enemy.draw(programID, this->transform);
-}

@@ -43,16 +43,24 @@ public:
 
     vector<GLfloat> vertex_buffer_data();
     vector<GLfloat> color_buffer_data();
+    
+    void setScale(glm::mat4 scale);
+    void setRotate(glm::mat4 rotate);
+    void setTranslate(glm::mat4 translate);
 
+    glm::mat4 getScale();
+    glm::mat4 getRotate();
+    glm::mat4 getTranslate();
+    glm::mat4 getTransform();
+    
 protected:
     string fileName;
     vector<Vertex> vertices = {};
     vector<Face> faces = {};
-float r, g, b;
+    float r, g, b;
+    
     vector<string> split(const string &str, const string &delim);
 
-    GLuint vao;
-    GLuint vbo;
     GLuint colorbuffer;
     GLuint datasize;
     GLuint MatrixID;
@@ -60,13 +68,12 @@ float r, g, b;
     
     vector<GLfloat> vertex_buffer;
     vector<GLfloat> color_buffer;
-    glm::mat4 transform;
-
     
-/*
-    GLuint vao;
-    GLuint vbo;
-*/
+    glm::mat4 scale;
+    glm::mat4 transform;
+    glm::mat4 rotate;
+    glm::mat4 translate;
+
     void set_data();
 
 };

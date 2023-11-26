@@ -7,12 +7,15 @@ var searchData=
   ['getedges_29',['getEdges',['../classFace.html#a9ea29a424c8bead4d98968502a17fb31',1,'Face']]],
   ['getfaces_30',['getFaces',['../classObject.html#aef3d9b4a4e91caed80299207ae6cff39',1,'Object']]],
   ['getprogramid_31',['getProgramID',['../classOpenGL.html#a39d87020db31c36e3efb53c42f70cfde',1,'OpenGL']]],
-  ['gettransform_32',['getTransform',['../classUtils.html#ad7e1873a67a6fbafb35db28701d69d72',1,'Utils']]],
-  ['getvertices_33',['getVertices',['../classObject.html#aba723932a2b2e11297c1197a6b8d8467',1,'Object']]],
-  ['getvf_34',['getVf',['../classEdge.html#af4100fb591cc0fe4a0796b253a9b90e4',1,'Edge']]],
-  ['getvi_35',['getVi',['../classEdge.html#a75c9b07225f43ab021174f92b00e1931',1,'Edge']]],
-  ['getx_36',['getX',['../classVertex.html#aa78d4c3433559e6e50260240c49a3d03',1,'Vertex']]],
-  ['getxyz_37',['getXYZ',['../classVertex.html#ac63bc0d1d148985a7d6c40e16c413761',1,'Vertex']]],
-  ['gety_38',['getY',['../classVertex.html#a12facdc9f554fd718e449f2aa2eefeaf',1,'Vertex']]],
-  ['getz_39',['getZ',['../classVertex.html#a258fea59f7c07f4e8784fc90c6ac7cb3',1,'Vertex']]]
+  ['getrotate_32',['getRotate',['../classObject.html#a78e85c967d97415862c15f8cd59944f5',1,'Object']]],
+  ['getscale_33',['getScale',['../classObject.html#ac8b5866feaf7dd71fc1c1955d6ccd16f',1,'Object']]],
+  ['gettransform_34',['getTransform',['../classObject.html#ac40d65907a69f7c5a2e87cd74f8ae4a0',1,'Object']]],
+  ['gettranslate_35',['getTranslate',['../classObject.html#ad2775ffe94d290c3f25829dd6df62f3b',1,'Object']]],
+  ['getvertices_36',['getVertices',['../classObject.html#aba723932a2b2e11297c1197a6b8d8467',1,'Object']]],
+  ['getvf_37',['getVf',['../classEdge.html#af4100fb591cc0fe4a0796b253a9b90e4',1,'Edge']]],
+  ['getvi_38',['getVi',['../classEdge.html#a75c9b07225f43ab021174f92b00e1931',1,'Edge']]],
+  ['getx_39',['getX',['../classVertex.html#aa78d4c3433559e6e50260240c49a3d03',1,'Vertex']]],
+  ['getxyz_40',['getXYZ',['../classVertex.html#ac63bc0d1d148985a7d6c40e16c413761',1,'Vertex']]],
+  ['gety_41',['getY',['../classVertex.html#a12facdc9f554fd718e449f2aa2eefeaf',1,'Vertex']]],
+  ['getz_42',['getZ',['../classVertex.html#a258fea59f7c07f4e8784fc90c6ac7cb3',1,'Vertex']]]
 ];

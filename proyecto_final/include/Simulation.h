@@ -10,14 +10,17 @@
 #include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
 #include <glm/glm.hpp>
 #include <GL/glew.h>
-#include "Animation.h"
-#include "Model.h"
-#include "OpenGL.h"
-#include "Simulation.h"
 #include "Robot.h"
 #include "Ball.h"
 #include "Enemy.h"
+#include "Animation.h"
+#include "Model.h"
+#include "OpenGL.h"
 #include "Scene.h"
+#include "Ply.h"
+#include "Obj.h"
+#include "Vertex.h"
+
 
 using namespace std;
 
@@ -28,29 +31,13 @@ public:
     void init(GLuint programID);
 
 private:
-    Model<Ply> robot;
-    Model<Ply> ball;
-    Model<Obj> enemy;
-
-    glm::mat4 scale_ball;
-    glm::mat4 translate_ball;
-    glm::mat4 transform_ball;
-
-    glm::mat4 scale_robot;
-    glm::mat4 translate_robot;
-    glm::mat4 rotate_robot;
-    glm::mat4 transform_robot;
-
-    glm::mat4 scale_enemy;
-    glm::mat4 translate_enemy;
-    glm::mat4 rotation_enemy;
-    glm::mat4 transform_enemy;  
-
-    vector<Vertex> robot_path;
-    unsigned int robot_path_index;
-
+    
     glm::mat4 camera;
     Scene scene;
+    
+    Robot robot;
+    Ball ball;
+    Enemy enemy;
 
 };
 

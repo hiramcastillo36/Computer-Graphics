@@ -3,18 +3,19 @@
 
 #pragma once
 
-#include "Utils.h"
+#include <iostream>
+#include <vector>
+#include <glm/vec4.hpp> // glm::vec4
+#include <glm/mat4x4.hpp> // glm::mat4
+#include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
+#include <glm/glm.hpp>
+#include <GL/glew.h>
 #include "Model.h"
-#include "Obj.h"
 
-using namespace std;
-
-class Enemy : public Utils
-{
+class Enemy {
 public:
     Enemy();
-    void load();
-    void draw(GLuint programID);
+    void draw(GLuint programID, glm::mat4 camera);
 
 private:
     Model <Obj> enemy;

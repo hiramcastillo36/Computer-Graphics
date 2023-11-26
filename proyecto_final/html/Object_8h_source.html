@@ -109,52 +109,60 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    vector&lt;GLfloat&gt; vertex_buffer_data();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    vector&lt;GLfloat&gt; color_buffer_data();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classObject.html#aed5219de2a5260b172566ca817411614">   48</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classObject.html#aed5219de2a5260b172566ca817411614">fileName</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classObject.html#a2dbcf166f7dcdf3e21123253b4f91381">   49</a></span>&#160;    vector&lt;Vertex&gt; vertices = {};</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classObject.html#a930e2a0e138690afe71201b8c4552ab7">   50</a></span>&#160;    vector&lt;Face&gt; faces = {};</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classObject.html#ae2658c68493c8595658123484e506c4e">   51</a></span>&#160;<span class="keywordtype">float</span> r, g, <a class="code" href="classObject.html#ae2658c68493c8595658123484e506c4e">b</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    vector&lt;string&gt; split(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;delim);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classObject.html#a66190fee29d03d6478516686cbd01eb8">   54</a></span>&#160;    GLuint <a class="code" href="classObject.html#a66190fee29d03d6478516686cbd01eb8">vao</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classObject.html#a14460e7e1b7678186f0411ca3957e55a">   55</a></span>&#160;    GLuint <a class="code" href="classObject.html#a14460e7e1b7678186f0411ca3957e55a">vbo</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">   56</a></span>&#160;    GLuint <a class="code" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">colorbuffer</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">   57</a></span>&#160;    GLuint <a class="code" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">datasize</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classObject.html#a471691d2513e8013cd012b03343c3216">   58</a></span>&#160;    GLuint <a class="code" href="classObject.html#a471691d2513e8013cd012b03343c3216">MatrixID</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">   59</a></span>&#160;    GLuint <a class="code" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">vertexbuffer</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">   61</a></span>&#160;    vector&lt;GLfloat&gt; <a class="code" href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">vertex_buffer</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classObject.html#abf0a5476cd407256530632ba82ad20cd">   62</a></span>&#160;    vector&lt;GLfloat&gt; <a class="code" href="classObject.html#abf0a5476cd407256530632ba82ad20cd">color_buffer</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">   63</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">transform</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    GLuint vao;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    GLuint vbo;</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> set_data();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> setScale(glm::mat4 scale);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setRotate(glm::mat4 rotate);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> setTranslate(glm::mat4 translate);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    glm::mat4 getScale();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    glm::mat4 getRotate();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    glm::mat4 getTranslate();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    glm::mat4 getTransform();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classObject.html#aed5219de2a5260b172566ca817411614">   57</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classObject.html#aed5219de2a5260b172566ca817411614">fileName</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classObject.html#a2dbcf166f7dcdf3e21123253b4f91381">   58</a></span>&#160;    vector&lt;Vertex&gt; vertices = {};</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classObject.html#a930e2a0e138690afe71201b8c4552ab7">   59</a></span>&#160;    vector&lt;Face&gt; faces = {};</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classObject.html#ae2658c68493c8595658123484e506c4e">   60</a></span>&#160;    <span class="keywordtype">float</span> r, g, <a class="code" href="classObject.html#ae2658c68493c8595658123484e506c4e">b</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    vector&lt;string&gt; split(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;delim);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">   64</a></span>&#160;    GLuint <a class="code" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">colorbuffer</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">   65</a></span>&#160;    GLuint <a class="code" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">datasize</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classObject.html#a471691d2513e8013cd012b03343c3216">   66</a></span>&#160;    GLuint <a class="code" href="classObject.html#a471691d2513e8013cd012b03343c3216">MatrixID</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">   67</a></span>&#160;    GLuint <a class="code" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">vertexbuffer</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">   69</a></span>&#160;    vector&lt;GLfloat&gt; <a class="code" href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">vertex_buffer</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classObject.html#abf0a5476cd407256530632ba82ad20cd">   70</a></span>&#160;    vector&lt;GLfloat&gt; <a class="code" href="classObject.html#abf0a5476cd407256530632ba82ad20cd">color_buffer</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">   72</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">scale</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">   73</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">transform</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">   74</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">rotate</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">   75</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">translate</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> set_data();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aEdge_8h_html"><div class="ttname"><a href="Edge_8h.html">Edge.h</a></div></div>
 <div class="ttc" id="aFace_8h_html"><div class="ttname"><a href="Face_8h.html">Face.h</a></div></div>
 <div class="ttc" id="aVertex_8h_html"><div class="ttname"><a href="Vertex_8h.html">Vertex.h</a></div></div>
 <div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdoc">This class is used to create objects using vertices and faces.</div><div class="ttdef"><b>Definition:</b> Object.h:35</div></div>
-<div class="ttc" id="aclassObject_html_a14460e7e1b7678186f0411ca3957e55a"><div class="ttname"><a href="classObject.html#a14460e7e1b7678186f0411ca3957e55a">Object::vbo</a></div><div class="ttdeci">GLuint vbo</div><div class="ttdef"><b>Definition:</b> Object.h:55</div></div>
-<div class="ttc" id="aclassObject_html_a471691d2513e8013cd012b03343c3216"><div class="ttname"><a href="classObject.html#a471691d2513e8013cd012b03343c3216">Object::MatrixID</a></div><div class="ttdeci">GLuint MatrixID</div><div class="ttdef"><b>Definition:</b> Object.h:58</div></div>
-<div class="ttc" id="aclassObject_html_a514540d6d31ba5a450ffa3fbf3753b4f"><div class="ttname"><a href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">Object::datasize</a></div><div class="ttdeci">GLuint datasize</div><div class="ttdef"><b>Definition:</b> Object.h:57</div></div>
-<div class="ttc" id="aclassObject_html_a66190fee29d03d6478516686cbd01eb8"><div class="ttname"><a href="classObject.html#a66190fee29d03d6478516686cbd01eb8">Object::vao</a></div><div class="ttdeci">GLuint vao</div><div class="ttdef"><b>Definition:</b> Object.h:54</div></div>
-<div class="ttc" id="aclassObject_html_a6b9e1c5f1dad7c7622cd5523d1a76de3"><div class="ttname"><a href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">Object::transform</a></div><div class="ttdeci">glm::mat4 transform</div><div class="ttdef"><b>Definition:</b> Object.h:63</div></div>
-<div class="ttc" id="aclassObject_html_a6c240112adb9812241cf8e13a0f659b7"><div class="ttname"><a href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">Object::vertex_buffer</a></div><div class="ttdeci">vector&lt; GLfloat &gt; vertex_buffer</div><div class="ttdef"><b>Definition:</b> Object.h:61</div></div>
+<div class="ttc" id="aclassObject_html_a0a9dbaa64df17576f38576d4c68ce714"><div class="ttname"><a href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">Object::rotate</a></div><div class="ttdeci">glm::mat4 rotate</div><div class="ttdef"><b>Definition:</b> Object.h:74</div></div>
+<div class="ttc" id="aclassObject_html_a19a25fe780e2b07bf1a5dc0db5ded377"><div class="ttname"><a href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">Object::scale</a></div><div class="ttdeci">glm::mat4 scale</div><div class="ttdef"><b>Definition:</b> Object.h:72</div></div>
+<div class="ttc" id="aclassObject_html_a287bec75f2cc84cf8420f2b1f8229dc3"><div class="ttname"><a href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">Object::translate</a></div><div class="ttdeci">glm::mat4 translate</div><div class="ttdef"><b>Definition:</b> Object.h:75</div></div>
+<div class="ttc" id="aclassObject_html_a471691d2513e8013cd012b03343c3216"><div class="ttname"><a href="classObject.html#a471691d2513e8013cd012b03343c3216">Object::MatrixID</a></div><div class="ttdeci">GLuint MatrixID</div><div class="ttdef"><b>Definition:</b> Object.h:66</div></div>
+<div class="ttc" id="aclassObject_html_a514540d6d31ba5a450ffa3fbf3753b4f"><div class="ttname"><a href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">Object::datasize</a></div><div class="ttdeci">GLuint datasize</div><div class="ttdef"><b>Definition:</b> Object.h:65</div></div>
+<div class="ttc" id="aclassObject_html_a6b9e1c5f1dad7c7622cd5523d1a76de3"><div class="ttname"><a href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">Object::transform</a></div><div class="ttdeci">glm::mat4 transform</div><div class="ttdef"><b>Definition:</b> Object.h:73</div></div>
+<div class="ttc" id="aclassObject_html_a6c240112adb9812241cf8e13a0f659b7"><div class="ttname"><a href="classObject.html#a6c240112adb9812241cf8e13a0f659b7">Object::vertex_buffer</a></div><div class="ttdeci">vector&lt; GLfloat &gt; vertex_buffer</div><div class="ttdef"><b>Definition:</b> Object.h:69</div></div>
 <div class="ttc" id="aclassObject_html_a7052058f23997afc23490d904c31872d"><div class="ttname"><a href="classObject.html#a7052058f23997afc23490d904c31872d">Object::load</a></div><div class="ttdeci">virtual void load()=0</div></div>
-<div class="ttc" id="aclassObject_html_a8812b04d88a9771f6e5f7c25bf107958"><div class="ttname"><a href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">Object::colorbuffer</a></div><div class="ttdeci">GLuint colorbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:56</div></div>
-<div class="ttc" id="aclassObject_html_abf0a5476cd407256530632ba82ad20cd"><div class="ttname"><a href="classObject.html#abf0a5476cd407256530632ba82ad20cd">Object::color_buffer</a></div><div class="ttdeci">vector&lt; GLfloat &gt; color_buffer</div><div class="ttdef"><b>Definition:</b> Object.h:62</div></div>
-<div class="ttc" id="aclassObject_html_ae2658c68493c8595658123484e506c4e"><div class="ttname"><a href="classObject.html#ae2658c68493c8595658123484e506c4e">Object::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> Object.h:51</div></div>
-<div class="ttc" id="aclassObject_html_aed5219de2a5260b172566ca817411614"><div class="ttname"><a href="classObject.html#aed5219de2a5260b172566ca817411614">Object::fileName</a></div><div class="ttdeci">string fileName</div><div class="ttdef"><b>Definition:</b> Object.h:48</div></div>
-<div class="ttc" id="aclassObject_html_af3c7c45308a764d1f92333c8f72c7e13"><div class="ttname"><a href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">Object::vertexbuffer</a></div><div class="ttdeci">GLuint vertexbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:59</div></div>
+<div class="ttc" id="aclassObject_html_a8812b04d88a9771f6e5f7c25bf107958"><div class="ttname"><a href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">Object::colorbuffer</a></div><div class="ttdeci">GLuint colorbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:64</div></div>
+<div class="ttc" id="aclassObject_html_abf0a5476cd407256530632ba82ad20cd"><div class="ttname"><a href="classObject.html#abf0a5476cd407256530632ba82ad20cd">Object::color_buffer</a></div><div class="ttdeci">vector&lt; GLfloat &gt; color_buffer</div><div class="ttdef"><b>Definition:</b> Object.h:70</div></div>
+<div class="ttc" id="aclassObject_html_ae2658c68493c8595658123484e506c4e"><div class="ttname"><a href="classObject.html#ae2658c68493c8595658123484e506c4e">Object::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> Object.h:60</div></div>
+<div class="ttc" id="aclassObject_html_aed5219de2a5260b172566ca817411614"><div class="ttname"><a href="classObject.html#aed5219de2a5260b172566ca817411614">Object::fileName</a></div><div class="ttdeci">string fileName</div><div class="ttdef"><b>Definition:</b> Object.h:57</div></div>
+<div class="ttc" id="aclassObject_html_af3c7c45308a764d1f92333c8f72c7e13"><div class="ttname"><a href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">Object::vertexbuffer</a></div><div class="ttdeci">GLuint vertexbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:67</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

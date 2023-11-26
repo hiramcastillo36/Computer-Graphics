@@ -31,19 +31,9 @@ using namespace std;
 class Utils
 {
 public:
-    virtual void load() = 0;
-    virtual void draw(GLuint programID) = 0;
-protected:
-    glm::mat4 scale;
-    glm::mat4 translate;
-    glm::mat4 rotate;
-    glm::mat4 transform;
 
 public:
-    void setScale(float x, float y, float z);
-    void setTranslate(float x, float y, float z);
-    void setTransform(glm::mat4 scale, glm::mat4 translate);
-    glm::mat4 getTransform();
+    
 
 };
 
