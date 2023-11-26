@@ -12,6 +12,11 @@
 #include <GL/glew.h>
 #include "Model.h"
 
+/**
+ * @brief 
+ *  This class is used to create and draw the enemy
+ */
+
 class Enemy {
 public:
     Enemy();

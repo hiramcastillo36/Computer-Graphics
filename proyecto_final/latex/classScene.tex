@@ -2,20 +2,28 @@
 \label{classScene}\index{Scene@{Scene}}
 
 
+This class is used generate the camera views.  
+
+
+
+
 {\ttfamily \#include $<$Scene.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classScene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classScene}{Scene}}\+:\+: \mbox{\hyperlink{classScene}{Scene}} object. \end{DoxyCompactList}\item 
 glm\+::mat4 \mbox{\hyperlink{classScene_a8a50460c97398c00c7c77ca3fafa07b4}{get\+Camera\+Principal}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This method returns the principal camera. \end{DoxyCompactList}\item 
 glm\+::mat4 \mbox{\hyperlink{classScene_aa56a3990faa86d9da5055263f09b8eeb}{get\+CameraZ}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This method returns the camera in the z axis. \end{DoxyCompactList}\item 
 glm\+::mat4 \mbox{\hyperlink{classScene_a3dbfd358d1752feb8cec0fbc312ad715}{get\+CameraY}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method returns the camera in the y axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+This class is used generate the camera views. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classScene_ad10176d75a9cc0da56626f682d083507}\label{classScene_ad10176d75a9cc0da56626f682d083507}} 
@@ -26,6 +34,10 @@ glm\+::mat4 \mbox{\hyperlink{classScene_a3dbfd358d1752feb8cec0fbc312ad715}{get\+
 
 
 
+Construct a new \mbox{\hyperlink{classScene}{Scene}}\+:\+: \mbox{\hyperlink{classScene}{Scene}} object. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classScene_a8a50460c97398c00c7c77ca3fafa07b4}\label{classScene_a8a50460c97398c00c7c77ca3fafa07b4}} 
 \index{Scene@{Scene}!getCameraPrincipal@{getCameraPrincipal}}
@@ -33,18 +45,39 @@ glm\+::mat4 \mbox{\hyperlink{classScene_a3dbfd358d1752feb8cec0fbc312ad715}{get\+
 \doxysubsubsection{\texorpdfstring{getCameraPrincipal()}{getCameraPrincipal()}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+Camera\+Principal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+This method returns the principal camera. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classScene_a3dbfd358d1752feb8cec0fbc312ad715}\label{classScene_a3dbfd358d1752feb8cec0fbc312ad715}} 
 \index{Scene@{Scene}!getCameraY@{getCameraY}}
 \index{getCameraY@{getCameraY}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{getCameraY()}{getCameraY()}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+This method returns the camera in the y axis. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classScene_aa56a3990faa86d9da5055263f09b8eeb}\label{classScene_aa56a3990faa86d9da5055263f09b8eeb}} 
 \index{Scene@{Scene}!getCameraZ@{getCameraZ}}
 \index{getCameraZ@{getCameraZ}!Scene@{Scene}}
 \doxysubsubsection{\texorpdfstring{getCameraZ()}{getCameraZ()}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+This method returns the camera in the z axis. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

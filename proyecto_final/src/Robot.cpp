@@ -1,5 +1,10 @@
 #include "../include/Robot.h"
 
+/**
+ * @brief Construct a new Robot:: Robot object
+ * 
+ */
+
 Robot::Robot() {
     this->robot = Model <Ply> ("models/robot.ply", 1.0, 0.0, 1.0);
 
@@ -17,6 +22,13 @@ Robot::Robot() {
     this->pathIndex = 0;
 
 }
+
+/**
+ * @brief 
+ * This method draws the robot with the animation.
+ * @param programID 
+ * @param camera 
+ */
 
 void Robot::draw(GLuint programID, glm::mat4 camera) {
     

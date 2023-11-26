@@ -24,20 +24,27 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ *  This class is used to generate the simulation
+ */
+
 class Simulation
 {
 public:
     Simulation();
     void init(GLuint programID);
+    void changeCamera(int camera);
 
 private:
-    
-    glm::mat4 camera;
-    Scene scene;
     
     Robot robot;
     Ball ball;
     Enemy enemy;
+
+    glm::mat4 camera;
+    Scene scene;
+
 
 };
 

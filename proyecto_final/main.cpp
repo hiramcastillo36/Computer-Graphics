@@ -5,11 +5,20 @@
 #include <GLFW/glfw3.h>
 #include "include/OpenGL.h"
 #include "include/Simulation.h"
-#include "include/Robot.h"
-#include "include/Ball.h"
-#include "include/Enemy.h"
 
 using namespace std;
+
+int key_flag = 0;
+
+static void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_1 && action == GLFW_PRESS)
+        key_flag = 1;
+    if (key == GLFW_KEY_2 && action == GLFW_PRESS)
+        key_flag = 2;
+    if (key == GLFW_KEY_3 && action == GLFW_PRESS)
+        key_flag = 3;
+}
 
 /**
  * @brief 
@@ -36,11 +45,31 @@ int main( void )
 
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+
+    glfwSetKeyCallback(window, keyboard_callback);
+
     Simulation simulation;
 
     do {
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
+        if(key_flag == 1)
+        {
+            
+            simulation.changeCamera(1);
+        }
+        else if(key_flag == 2)
+        {
+            
+            simulation.changeCamera(2);
+        }
+        else if(key_flag == 3)
+        {
+            
+            simulation.changeCamera(3);
+        }
+        key_flag = 0;
         simulation.init(gl.getProgramID());
         
         glfwSwapBuffers(window);

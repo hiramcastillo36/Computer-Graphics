@@ -34,7 +34,7 @@ void Obj::load() {
     }
     while (getline(OBJfile, line)) {
         vector<string> elems = split(line, " ");
-        // cambiar por switch
+        
         if (!elems.empty()) {
             if (elems[0] == "v") {
                 float x = stof(elems[1]);
@@ -47,8 +47,6 @@ void Obj::load() {
                 isHaveNormals = true;
             }
             if (elems[0] == "f") {
-                //cout << line << endl;
-                // -1 porque los indices empiezan en 1 de la lectura de nuestro obj, en el caso de los vectores empiezan en 0
                 unsigned int prev_vertice = stoi(split(elems[1], "//")[0]) - 1;
                 if (isHaveNormals) {
                     prev_vertice = stoi(split(elems[1], "//")[0]) - 1;
@@ -75,7 +73,4 @@ void Obj::load() {
             }
         }
     }
-    /*for (int i = 0; i < faces.size(); i++) {
-        faces[i].print();
-    }*/
 }

@@ -10,6 +10,11 @@
 #include <GL/glew.h>
 #include <glm/gtc/matrix_transform.hpp>
 
+/**
+ * @brief 
+ *  This class is used generate the camera views
+ */
+
 class Scene
 {
 public:

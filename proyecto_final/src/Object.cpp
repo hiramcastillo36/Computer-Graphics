@@ -70,29 +70,71 @@ vector<Face> Object::getFaces() {
     return faces;
 }
 
+/**
+ * @brief 
+ * This method returns the scale matrix.
+ * @return glm::mat4 
+ */
+
 glm::mat4 Object::getScale() {
     return scale;
 }
+
+/**
+ * @brief 
+ * This method returns the rotation matrix.
+ * @return glm::mat4 
+ */
 
 glm::mat4 Object::getRotate() {
     return rotate;
 }
 
+/**
+ * @brief 
+ * This method returns the translation matrix.
+ * @return glm::mat4 
+ */
+
 glm::mat4 Object::getTranslate() {
     return translate;
 }
+
+/**
+ * @brief 
+ * This method returns the transform matrix.
+ * @return glm::mat4 
+ */
 
 glm::mat4 Object::getTransform() {
     return rotate * translate * scale;
 }
 
+/**
+ * @brief 
+ * This method sets the scale matrix.
+ * @param scale 
+ */
+
 void Object::setScale(glm::mat4 scale) {
     this->scale = scale;
 }
 
+/**
+ * @brief 
+ * This method sets the rotation matrix.
+ * @param rotate 
+ */
+
 void Object::setRotate(glm::mat4 rotate) {
     this->rotate = rotate;
 }
+
+/**
+ * @brief 
+ * This method sets the translation matrix.
+ * @param translate 
+ */
 
 void Object::setTranslate(glm::mat4 translate) {
     this->translate = translate;
@@ -178,12 +220,4 @@ void Object::set_data() {
     glGenBuffers(1, &this->colorbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, this->colorbuffer);
     glBufferData(GL_ARRAY_BUFFER, color_buffer_data.size()*sizeof(GLfloat), &color_buffer_data[0], GL_STATIC_DRAW);
-}
-
-vector<GLfloat> Object::vertex_buffer_data() {
-    return vertex_buffer;
-}
-
-vector<GLfloat> Object::color_buffer_data() {
-    return color_buffer;
 }

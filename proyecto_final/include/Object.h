@@ -40,10 +40,6 @@ public:
     virtual void load() = 0;
     void draw(GLuint programID, glm::mat4 transform);
     
-
-    vector<GLfloat> vertex_buffer_data();
-    vector<GLfloat> color_buffer_data();
-    
     void setScale(glm::mat4 scale);
     void setRotate(glm::mat4 rotate);
     void setTranslate(glm::mat4 translate);
@@ -65,9 +61,6 @@ protected:
     GLuint datasize;
     GLuint MatrixID;
     GLuint vertexbuffer;
-    
-    vector<GLfloat> vertex_buffer;
-    vector<GLfloat> color_buffer;
     
     glm::mat4 scale;
     glm::mat4 transform;

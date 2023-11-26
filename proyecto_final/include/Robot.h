@@ -17,6 +17,11 @@
 
 using namespace std;
 
+/**
+ * @brief 
+ *  This class is used to create and draw the robot
+ */
+
 class Robot {
 public:
     Robot();

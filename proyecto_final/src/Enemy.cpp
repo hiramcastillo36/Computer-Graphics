@@ -1,5 +1,9 @@
 #include "../include/Enemy.h"
 
+/**
+ * @brief Construct a new Enemy:: Enemy object
+ * 
+ */
 
 Enemy::Enemy()
 {
@@ -11,6 +15,13 @@ Enemy::Enemy()
     enemy.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.4f)));
     enemy.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy)));
 }
+
+/**
+ * @brief 
+ * This method draws the enemy.
+ * @param programID 
+ * @param camera 
+ */
 
 void Enemy::draw(GLuint programID, glm::mat4 camera)
 {
