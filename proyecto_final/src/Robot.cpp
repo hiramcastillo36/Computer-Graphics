@@ -8,15 +8,15 @@
 Robot::Robot() {
     this->robot = Model <Ply> ("models/robot.ply", 1.0, 0.0, 1.0);
 
-    robot.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.4f)));
-    robot.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, 0.0f, 0.0f)));
+    robot.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.7f)));
+    robot.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(-4.0f, 0.0f, 0.0f)));
 
     Animation an;
 
-    this->P1 = Vertex (-1.0, 0.0, 0.0);
+    this->P1 = Vertex (-4.0, 0.0, 0.0);
     this->P2 = Vertex (-0.2, 0.0, -1.5);
     this->P3 = Vertex (0.9, 0.0, 0.5);
-    this->P4 = Vertex (1.0, 0.0, 0.0);
+    this->P4 = Vertex (4.0, 0.0, 0.0);
 
     this->t = 0.001;
 
@@ -52,7 +52,9 @@ void Robot::draw(GLuint programID, glm::mat4 camera) {
  */
 
 void Robot::setP2(Vertex P2) {
+    Animation an;
     this->P2 = P2;
+    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.003);
 }
 
 /**
@@ -63,4 +65,6 @@ void Robot::setP2(Vertex P2) {
 
 void Robot::setP3(Vertex P3) {
     this->P3 = P3;
+    Animation an;
+    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.009);
 }

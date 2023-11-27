@@ -115,20 +115,19 @@ int main( void )
             simulation.changeCamera(3);
         }
         key_flag = 0;
-        if(point_flag < 3)
+        if(point_flag < 4)
         {
-            cout << "point_flag: " << point_flag << endl;
             if(point_flag == 1){
-                simulation.setPoint(xpos, ypos);
+                simulation.setPoint(xpos/100, -1*(ypos/100));
+                point_flag ++;
             }   
-            if(point_flag == 2){
-                simulation.setPoint2(xpos, ypos);
+            if(point_flag == 3){
+                simulation.setPoint2(xpos/100, -1*(ypos/100));
+                point_flag = 0;
             }
         }
-        else {
-            simulation.init(gl.getProgramID());
-        }
         
+        simulation.init(gl.getProgramID());
         
         glfwSwapBuffers(window);
         glfwPollEvents();

@@ -12,7 +12,7 @@ Enemy::Enemy()
     srand (time(NULL));
     float random_enemy = (float)(rand() % 2 + 1)/10;
 
-    enemy.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.4f)));
+    enemy.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.7f)));
     enemy.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(0.0f,0.0f, random_enemy)));
 }
 
