@@ -1,0 +1,4 @@
+<map id="Enemy::draw" name="Enemy::draw">
+<area shape="rect" id="node1" title="This method draws the enemy." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$classObject.html#aa53c254ac86a97881cd1d4b6f26a3e1b" title="This method is used to draw the object." alt="" coords="160,5,264,32"/>
+</map>

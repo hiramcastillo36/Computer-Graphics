@@ -9,6 +9,16 @@ This class is used generate the camera views.
 
 {\ttfamily \#include $<$Scene.\+h$>$}
 
+
+
+Collaboration diagram for Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classScene__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,7 +29,26 @@ glm\+::mat4 \mbox{\hyperlink{classScene_a8a50460c97398c00c7c77ca3fafa07b4}{get\+
 glm\+::mat4 \mbox{\hyperlink{classScene_aa56a3990faa86d9da5055263f09b8eeb}{get\+CameraZ}} ()
 \begin{DoxyCompactList}\small\item\em This method returns the camera in the z axis. \end{DoxyCompactList}\item 
 glm\+::mat4 \mbox{\hyperlink{classScene_a3dbfd358d1752feb8cec0fbc312ad715}{get\+CameraY}} ()
-\begin{DoxyCompactList}\small\item\em This method returns the camera in the y axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method returns the camera in the y axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classScene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a8a50460c97398c00c7c77ca3fafa07b4}{get\+Camera\+Principal}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_aa56a3990faa86d9da5055263f09b8eeb}{get\+CameraZ}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a3dbfd358d1752feb8cec0fbc312ad715}{get\+CameraY}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a075383b59ac3029c5ff40ec950089f7c}{view\+\_\+principal}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a275d419f07a6c3c4fa163312e24b2529}{view\+\_\+z}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a87d8cfdfb19bd888aa3fd3497884f9bb}{view\+\_\+y}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classScene_a866fbd2d4a47a2e78675f8c16da96b6e}{projection}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -29,12 +58,18 @@ This class is used generate the camera views.
 \mbox{\Hypertarget{classScene_ad10176d75a9cc0da56626f682d083507}\label{classScene_ad10176d75a9cc0da56626f682d083507}} 
 \index{Scene@{Scene}!Scene@{Scene}}
 \index{Scene@{Scene}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Construct a new \mbox{\hyperlink{classScene}{Scene}}\+:\+: \mbox{\hyperlink{classScene}{Scene}} object. 
+
+\mbox{\Hypertarget{classScene_ad10176d75a9cc0da56626f682d083507}\label{classScene_ad10176d75a9cc0da56626f682d083507}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -42,7 +77,7 @@ Construct a new \mbox{\hyperlink{classScene}{Scene}}\+:\+: \mbox{\hyperlink{clas
 \mbox{\Hypertarget{classScene_a8a50460c97398c00c7c77ca3fafa07b4}\label{classScene_a8a50460c97398c00c7c77ca3fafa07b4}} 
 \index{Scene@{Scene}!getCameraPrincipal@{getCameraPrincipal}}
 \index{getCameraPrincipal@{getCameraPrincipal}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{getCameraPrincipal()}{getCameraPrincipal()}}
+\doxysubsubsection{\texorpdfstring{getCameraPrincipal()}{getCameraPrincipal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+Camera\+Principal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -52,10 +87,16 @@ This method returns the principal camera.
 \begin{DoxyReturn}{Returns}
 glm\+::mat4 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a8a50460c97398c00c7c77ca3fafa07b4}\label{classScene_a8a50460c97398c00c7c77ca3fafa07b4}} 
+\index{Scene@{Scene}!getCameraPrincipal@{getCameraPrincipal}}
+\index{getCameraPrincipal@{getCameraPrincipal}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCameraPrincipal()}{getCameraPrincipal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+Camera\+Principal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classScene_a3dbfd358d1752feb8cec0fbc312ad715}\label{classScene_a3dbfd358d1752feb8cec0fbc312ad715}} 
 \index{Scene@{Scene}!getCameraY@{getCameraY}}
 \index{getCameraY@{getCameraY}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{getCameraY()}{getCameraY()}}
+\doxysubsubsection{\texorpdfstring{getCameraY()}{getCameraY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -65,10 +106,16 @@ This method returns the camera in the y axis.
 \begin{DoxyReturn}{Returns}
 glm\+::mat4 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classScene_a3dbfd358d1752feb8cec0fbc312ad715}\label{classScene_a3dbfd358d1752feb8cec0fbc312ad715}} 
+\index{Scene@{Scene}!getCameraY@{getCameraY}}
+\index{getCameraY@{getCameraY}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCameraY()}{getCameraY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classScene_aa56a3990faa86d9da5055263f09b8eeb}\label{classScene_aa56a3990faa86d9da5055263f09b8eeb}} 
 \index{Scene@{Scene}!getCameraZ@{getCameraZ}}
 \index{getCameraZ@{getCameraZ}!Scene@{Scene}}
-\doxysubsubsection{\texorpdfstring{getCameraZ()}{getCameraZ()}}
+\doxysubsubsection{\texorpdfstring{getCameraZ()}{getCameraZ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -78,9 +125,43 @@ This method returns the camera in the z axis.
 \begin{DoxyReturn}{Returns}
 glm\+::mat4 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classScene_aa56a3990faa86d9da5055263f09b8eeb}\label{classScene_aa56a3990faa86d9da5055263f09b8eeb}} 
+\index{Scene@{Scene}!getCameraZ@{getCameraZ}}
+\index{getCameraZ@{getCameraZ}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCameraZ()}{getCameraZ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::get\+CameraZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classScene_a866fbd2d4a47a2e78675f8c16da96b6e}\label{classScene_a866fbd2d4a47a2e78675f8c16da96b6e}} 
+\index{Scene@{Scene}!projection@{projection}}
+\index{projection@{projection}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{projection}{projection}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::projection\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classScene_a075383b59ac3029c5ff40ec950089f7c}\label{classScene_a075383b59ac3029c5ff40ec950089f7c}} 
+\index{Scene@{Scene}!view\_principal@{view\_principal}}
+\index{view\_principal@{view\_principal}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{view\_principal}{view\_principal}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::view\+\_\+principal\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classScene_a87d8cfdfb19bd888aa3fd3497884f9bb}\label{classScene_a87d8cfdfb19bd888aa3fd3497884f9bb}} 
+\index{Scene@{Scene}!view\_y@{view\_y}}
+\index{view\_y@{view\_y}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{view\_y}{view\_y}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::view\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classScene_a275d419f07a6c3c4fa163312e24b2529}\label{classScene_a275d419f07a6c3c4fa163312e24b2529}} 
+\index{Scene@{Scene}!view\_z@{view\_z}}
+\index{view\_z@{view\_z}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{view\_z}{view\_z}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::view\+\_\+z\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{Scene_8h}{Scene.\+h}}\item 
+src/\mbox{\hyperlink{example_8cpp}{example.\+cpp}}\item 
 src/\mbox{\hyperlink{Scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

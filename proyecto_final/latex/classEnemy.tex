@@ -9,13 +9,32 @@ This class is used to create and draw the enemy.
 
 {\ttfamily \#include $<$Enemy.\+h$>$}
 
+
+
+Collaboration diagram for Enemy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEnemy__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classEnemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classEnemy}{Enemy}}\+:\+: \mbox{\hyperlink{classEnemy}{Enemy}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEnemy_afa438edc8056dde48d2a08441262a883}{draw}} (GLuint program\+ID, glm\+::mat4 camera)
-\begin{DoxyCompactList}\small\item\em This method draws the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method draws the enemy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEnemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy}} ()
+\item 
+void \mbox{\hyperlink{classEnemy_afa438edc8056dde48d2a08441262a883}{draw}} (GLuint program\+ID, glm\+::mat4 camera)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModel}{Model}}$<$ \mbox{\hyperlink{classObj}{Obj}} $>$ \mbox{\hyperlink{classEnemy_a7a54fe68abf9255801951c575c12efac}{enemy}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -25,12 +44,26 @@ This class is used to create and draw the enemy.
 \mbox{\Hypertarget{classEnemy_a94f30d348b6d2840fd71675472ba38dd}\label{classEnemy_a94f30d348b6d2840fd71675472ba38dd}} 
 \index{Enemy@{Enemy}!Enemy@{Enemy}}
 \index{Enemy@{Enemy}!Enemy@{Enemy}}
-\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Construct a new \mbox{\hyperlink{classEnemy}{Enemy}}\+:\+: \mbox{\hyperlink{classEnemy}{Enemy}} object. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classEnemy_a94f30d348b6d2840fd71675472ba38dd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEnemy_a94f30d348b6d2840fd71675472ba38dd}\label{classEnemy_a94f30d348b6d2840fd71675472ba38dd}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -38,7 +71,7 @@ Construct a new \mbox{\hyperlink{classEnemy}{Enemy}}\+:\+: \mbox{\hyperlink{clas
 \mbox{\Hypertarget{classEnemy_afa438edc8056dde48d2a08441262a883}\label{classEnemy_afa438edc8056dde48d2a08441262a883}} 
 \index{Enemy@{Enemy}!draw@{draw}}
 \index{draw@{draw}!Enemy@{Enemy}}
-\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Enemy\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
 
 
@@ -52,9 +85,33 @@ This method draws the enemy.
 {\em camera} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classEnemy_afa438edc8056dde48d2a08441262a883_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEnemy_afa438edc8056dde48d2a08441262a883}\label{classEnemy_afa438edc8056dde48d2a08441262a883}} 
+\index{Enemy@{Enemy}!draw@{draw}}
+\index{draw@{draw}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Enemy\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEnemy_a7a54fe68abf9255801951c575c12efac}\label{classEnemy_a7a54fe68abf9255801951c575c12efac}} 
+\index{Enemy@{Enemy}!enemy@{enemy}}
+\index{enemy@{enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{enemy}{enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}}$<$ \mbox{\hyperlink{classObj}{Obj}} $>$ Enemy\+::enemy\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{Enemy_8h}{Enemy.\+h}}\item 
+src/\mbox{\hyperlink{example_8cpp}{example.\+cpp}}\item 
 src/\mbox{\hyperlink{Enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

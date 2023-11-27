@@ -1,0 +1,5 @@
+<map id="Ball::Ball" name="Ball::Ball">
+<area shape="rect" id="node1" title="Construct a new Ball:: Ball object." alt="" coords="5,31,85,57"/>
+<area shape="rect" id="node2" href="$classObject.html#a6d4dd501ee4848dfe26216b30aeb64ce" title="This method sets the scale matrix." alt="" coords="145,5,272,32"/>
+<area shape="rect" id="node3" href="$classObject.html#ac8ce37df2fa751bfbbf0c8c2e3499a0d" title="This method sets the translation matrix." alt="" coords="133,56,284,83"/>
+</map>

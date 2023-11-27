@@ -1,0 +1,5 @@
+<map id="Robot::draw" name="Robot::draw">
+<area shape="rect" id="node1" title="This method draws the robot with the animation." alt="" coords="5,31,105,57"/>
+<area shape="rect" id="node2" href="$classObject.html#aa53c254ac86a97881cd1d4b6f26a3e1b" title="This method is used to draw the object." alt="" coords="177,5,281,32"/>
+<area shape="rect" id="node3" href="$classObject.html#ac8ce37df2fa751bfbbf0c8c2e3499a0d" title="This method sets the translation matrix." alt="" coords="153,56,304,83"/>
+</map>

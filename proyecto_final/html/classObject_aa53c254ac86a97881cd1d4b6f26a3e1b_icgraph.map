@@ -1,0 +1,6 @@
+<map id="Object::draw" name="Object::draw">
+<area shape="rect" id="node1" title="This method is used to draw the object." alt="" coords="160,56,264,83"/>
+<area shape="rect" id="node2" href="$classBall.html#aac0aa52061c21df923908b281f0a59a8" title="This method draws the ball." alt="" coords="15,5,102,32"/>
+<area shape="rect" id="node3" href="$classEnemy.html#afa438edc8056dde48d2a08441262a883" title="This method draws the enemy." alt="" coords="5,56,112,83"/>
+<area shape="rect" id="node4" href="$classRobot.html#ab95df5f1448465fc35b235c921907ed5" title="This method draws the robot with the animation." alt="" coords="9,107,109,133"/>
+</map>

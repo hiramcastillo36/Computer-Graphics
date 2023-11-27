@@ -1,0 +1,5 @@
+<map id="Obj" name="Obj">
+<area shape="rect" id="node1" title="This class is used to create objects using the obj file." alt="" coords="40,923,208,1073"/>
+<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="31,1121,217,1272"/>
+<area shape="rect" id="node2" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,5,243,875"/>
+</map>

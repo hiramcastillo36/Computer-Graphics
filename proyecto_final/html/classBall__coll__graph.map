@@ -1,0 +1,8 @@
+<map id="Ball" name="Ball">
+<area shape="rect" id="node1" title="This class is used to create and draw the ball." alt="" coords="21,1351,227,1501"/>
+<area shape="rect" id="node2" href="$classModel.html" title=" " alt="" coords="31,1137,217,1288"/>
+<area shape="rect" id="node3" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="41,924,207,1075"/>
+<area shape="rect" id="node4" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,5,243,875"/>
+<area shape="rect" id="node5" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="232,924,419,1075"/>
+<area shape="rect" id="node6" title=" " alt="" coords="306,401,345,479"/>
+</map>

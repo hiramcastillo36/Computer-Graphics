@@ -27,10 +27,20 @@ public:
     Robot();
     void draw(GLuint programID, glm::mat4 camera);
 
+    void setP2(Vertex P2);
+    void setP3(Vertex P3);
+
 private:
     Model <Ply> robot;
     unsigned int pathIndex = 0;
     vector <Vertex> path;
+
+    Vertex P1;
+    Vertex P2;
+    Vertex P3;
+    Vertex P4;
+
+    float t;
 };
 
 #endif

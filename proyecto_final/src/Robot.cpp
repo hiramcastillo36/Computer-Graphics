@@ -13,12 +13,14 @@ Robot::Robot() {
 
     Animation an;
 
-    Vertex P1(-1.0, 0.0, 0.0);
-    Vertex P2(-0.2, 0.0, -1.5);
-    Vertex P3(0.9, 0.0, 0.5);
-    Vertex P4(1.0, 0.0, 0.0);
+    this->P1 = Vertex (-1.0, 0.0, 0.0);
+    this->P2 = Vertex (-0.2, 0.0, -1.5);
+    this->P3 = Vertex (0.9, 0.0, 0.5);
+    this->P4 = Vertex (1.0, 0.0, 0.0);
 
-    this->path = an.bezier(P1, P2, P3, P4, 0.009);
+    this->t = 0.009;
+
+    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.009);
     this->pathIndex = 0;
 
 }
@@ -41,4 +43,24 @@ void Robot::draw(GLuint programID, glm::mat4 camera) {
     }
 
     robot.draw(programID, camera);
+}
+
+/**
+ * @brief 
+ * This method sets the P2 vertex.
+ * @param P2 
+ */
+
+void Robot::setP2(Vertex P2) {
+    this->P2 = P2;
+}
+
+/**
+ * @brief 
+ * This method sets the P3 vertex.
+ * @param P3 
+ */
+
+void Robot::setP3(Vertex P3) {
+    this->P3 = P3;
 }

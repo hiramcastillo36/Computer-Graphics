@@ -1,0 +1,6 @@
+<map id="Vertex::Vertex" name="Vertex::Vertex">
+<area shape="rect" id="node1" title="Construct a new Vertex:: Vertex object." alt="" coords="192,56,307,83"/>
+<area shape="rect" id="node2" href="$classVertex.html#a34f20018d040c8c27b83507675b8f25e" title="Overload the * operator." alt="" coords="7,5,142,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#ae69ff4c56d76cf5d72c2492053421f32" title="Overload the + operator." alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node4" href="$classVertex.html#afc9a06d5398c52347d17834404a7998c" title="Overload the &#45; operator." alt="" coords="9,107,141,133"/>
+</map>

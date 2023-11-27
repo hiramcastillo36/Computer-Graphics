@@ -100,20 +100,21 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSimulation.html">Simulation</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> init(GLuint programID);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classRobot.html">Robot</a> robot;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classBall.html">Ball</a> ball;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classEnemy.html">Enemy</a> enemy;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    glm::mat4 camera;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classScene.html">Scene</a> scene;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> changeCamera(<span class="keywordtype">int</span> camera);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classSimulation.html#a958ebac54c64a01ac23a1973380c264c">   41</a></span>&#160;    <a class="code" href="classRobot.html">Robot</a> <a class="code" href="classSimulation.html#a958ebac54c64a01ac23a1973380c264c">robot</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSimulation.html#a209f476517d315661d5e1c3af799512a">   42</a></span>&#160;    <a class="code" href="classBall.html">Ball</a> <a class="code" href="classSimulation.html#a209f476517d315661d5e1c3af799512a">ball</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classSimulation.html#abc6eab9e56b5890d072b45490fabb76a">   43</a></span>&#160;    <a class="code" href="classEnemy.html">Enemy</a> <a class="code" href="classSimulation.html#abc6eab9e56b5890d072b45490fabb76a">enemy</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSimulation.html#a4b4b0626170ab3c2b78dac2a92ed96ed">   45</a></span>&#160;    glm::mat4 <a class="code" href="classSimulation.html#a4b4b0626170ab3c2b78dac2a92ed96ed">camera</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classSimulation.html#a252d46d0e8e6a1eea458512b7dc78181">   46</a></span>&#160;    <a class="code" href="classScene.html">Scene</a> <a class="code" href="classSimulation.html#a252d46d0e8e6a1eea458512b7dc78181">scene</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAnimation_8h_html"><div class="ttname"><a href="Animation_8h.html">Animation.h</a></div></div>
 <div class="ttc" id="aBall_8h_html"><div class="ttname"><a href="Ball_8h.html">Ball.h</a></div></div>
 <div class="ttc" id="aEnemy_8h_html"><div class="ttname"><a href="Enemy_8h.html">Enemy.h</a></div></div>
@@ -129,6 +130,11 @@ $(function() {
 <div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdoc">This class is used to create and draw the robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:25</div></div>
 <div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdoc">This class is used generate the camera views.</div><div class="ttdef"><b>Definition:</b> Scene.h:19</div></div>
 <div class="ttc" id="aclassSimulation_html"><div class="ttname"><a href="classSimulation.html">Simulation</a></div><div class="ttdoc">This class is used to generate the simulation.</div><div class="ttdef"><b>Definition:</b> Simulation.h:33</div></div>
+<div class="ttc" id="aclassSimulation_html_a209f476517d315661d5e1c3af799512a"><div class="ttname"><a href="classSimulation.html#a209f476517d315661d5e1c3af799512a">Simulation::ball</a></div><div class="ttdeci">Ball ball</div><div class="ttdef"><b>Definition:</b> Simulation.h:42</div></div>
+<div class="ttc" id="aclassSimulation_html_a252d46d0e8e6a1eea458512b7dc78181"><div class="ttname"><a href="classSimulation.html#a252d46d0e8e6a1eea458512b7dc78181">Simulation::scene</a></div><div class="ttdeci">Scene scene</div><div class="ttdef"><b>Definition:</b> Simulation.h:46</div></div>
+<div class="ttc" id="aclassSimulation_html_a4b4b0626170ab3c2b78dac2a92ed96ed"><div class="ttname"><a href="classSimulation.html#a4b4b0626170ab3c2b78dac2a92ed96ed">Simulation::camera</a></div><div class="ttdeci">glm::mat4 camera</div><div class="ttdef"><b>Definition:</b> Simulation.h:45</div></div>
+<div class="ttc" id="aclassSimulation_html_a958ebac54c64a01ac23a1973380c264c"><div class="ttname"><a href="classSimulation.html#a958ebac54c64a01ac23a1973380c264c">Simulation::robot</a></div><div class="ttdeci">Robot robot</div><div class="ttdef"><b>Definition:</b> Simulation.h:41</div></div>
+<div class="ttc" id="aclassSimulation_html_abc6eab9e56b5890d072b45490fabb76a"><div class="ttname"><a href="classSimulation.html#abc6eab9e56b5890d072b45490fabb76a">Simulation::enemy</a></div><div class="ttdeci">Enemy enemy</div><div class="ttdef"><b>Definition:</b> Simulation.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

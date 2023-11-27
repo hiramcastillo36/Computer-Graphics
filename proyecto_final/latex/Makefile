@@ -1,4 +1,4 @@
-LATEX_CMD=pdflatex
+LATEX_CMD=/home/graficacion/Documentos/github/Computer-Graphics/proyecto_final
 
 all: refman.pdf
 

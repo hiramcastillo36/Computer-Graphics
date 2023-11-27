@@ -9,13 +9,54 @@ This class is used to create and draw the robot.
 
 {\ttfamily \#include $<$Robot.\+h$>$}
 
+
+
+Collaboration diagram for Robot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRobot__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRobot}{Robot}}\+:\+: \mbox{\hyperlink{classRobot}{Robot}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRobot_ab95df5f1448465fc35b235c921907ed5}{draw}} (GLuint program\+ID, glm\+::mat4 camera)
-\begin{DoxyCompactList}\small\item\em This method draws the robot with the animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method draws the robot with the animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_ad46a0d47d427baea72b5fc43612df61b}{set\+P2}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a6555bec7b3749537b24ce777c778c42a}{P2}})
+\begin{DoxyCompactList}\small\item\em This method sets the P2 vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}{set\+P3}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a1895d0b511e164211d3eff710ccfc4e1}{P3}})
+\begin{DoxyCompactList}\small\item\em This method sets the P3 vertex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}} ()
+\item 
+void \mbox{\hyperlink{classRobot_ab95df5f1448465fc35b235c921907ed5}{draw}} (GLuint program\+ID, glm\+::mat4 camera)
+\item 
+void \mbox{\hyperlink{classRobot_ad46a0d47d427baea72b5fc43612df61b}{set\+P2}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a6555bec7b3749537b24ce777c778c42a}{P2}})
+\item 
+void \mbox{\hyperlink{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}{set\+P3}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a1895d0b511e164211d3eff710ccfc4e1}{P3}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModel}{Model}}$<$ \mbox{\hyperlink{classPly}{Ply}} $>$ \mbox{\hyperlink{classRobot_ab1c3d88c6f1c5fa8d90a697e21403ff8}{robot}}
+\item 
+unsigned int \mbox{\hyperlink{classRobot_a9c1add8560b70a42d1c3a6c44942111b}{path\+Index}} = 0
+\item 
+vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $>$ \mbox{\hyperlink{classRobot_a4b5fb63070b2007dcf3d88cb358e36d2}{path}}
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_abb7dd671b8fd99e9fed696facfb8e7c5}{P1}}
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a6555bec7b3749537b24ce777c778c42a}{P2}}
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a1895d0b511e164211d3eff710ccfc4e1}{P3}}
+\item 
+\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_abcf717ea4ca5b519896d0c7044cdba73}{P4}}
+\item 
+float \mbox{\hyperlink{classRobot_a29308ea68bfb377b990e27dacdf57cda}{t}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -25,12 +66,26 @@ This class is used to create and draw the robot.
 \mbox{\Hypertarget{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}\label{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}} 
 \index{Robot@{Robot}!Robot@{Robot}}
 \index{Robot@{Robot}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Robot\+::\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Construct a new \mbox{\hyperlink{classRobot}{Robot}}\+:\+: \mbox{\hyperlink{classRobot}{Robot}} object. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}\label{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}} 
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Robot\+::\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -38,7 +93,7 @@ Construct a new \mbox{\hyperlink{classRobot}{Robot}}\+:\+: \mbox{\hyperlink{clas
 \mbox{\Hypertarget{classRobot_ab95df5f1448465fc35b235c921907ed5}\label{classRobot_ab95df5f1448465fc35b235c921907ed5}} 
 \index{Robot@{Robot}!draw@{draw}}
 \index{draw@{draw}!Robot@{Robot}}
-\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Robot\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
 
 
@@ -52,9 +107,117 @@ This method draws the robot with the animation.
 {\em camera} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classRobot_ab95df5f1448465fc35b235c921907ed5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRobot_ab95df5f1448465fc35b235c921907ed5}\label{classRobot_ab95df5f1448465fc35b235c921907ed5}} 
+\index{Robot@{Robot}!draw@{draw}}
+\index{draw@{draw}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobot_ad46a0d47d427baea72b5fc43612df61b}\label{classRobot_ad46a0d47d427baea72b5fc43612df61b}} 
+\index{Robot@{Robot}!setP2@{setP2}}
+\index{setP2@{setP2}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{setP2()}{setP2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Robot\+::set\+P2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}}]{P2 }\end{DoxyParamCaption})}
+
+
+
+This method sets the P2 vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobot_ad46a0d47d427baea72b5fc43612df61b}\label{classRobot_ad46a0d47d427baea72b5fc43612df61b}} 
+\index{Robot@{Robot}!setP2@{setP2}}
+\index{setP2@{setP2}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{setP2()}{setP2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+::set\+P2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}}]{P2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}\label{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}} 
+\index{Robot@{Robot}!setP3@{setP3}}
+\index{setP3@{setP3}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{setP3()}{setP3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Robot\+::set\+P3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}}]{P3 }\end{DoxyParamCaption})}
+
+
+
+This method sets the P3 vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P3} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}\label{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}} 
+\index{Robot@{Robot}!setP3@{setP3}}
+\index{setP3@{setP3}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{setP3()}{setP3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+::set\+P3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}}]{P3 }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRobot_abb7dd671b8fd99e9fed696facfb8e7c5}\label{classRobot_abb7dd671b8fd99e9fed696facfb8e7c5}} 
+\index{Robot@{Robot}!P1@{P1}}
+\index{P1@{P1}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{P1}{P1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} Robot\+::\+P1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_a6555bec7b3749537b24ce777c778c42a}\label{classRobot_a6555bec7b3749537b24ce777c778c42a}} 
+\index{Robot@{Robot}!P2@{P2}}
+\index{P2@{P2}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{P2}{P2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} Robot\+::\+P2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_a1895d0b511e164211d3eff710ccfc4e1}\label{classRobot_a1895d0b511e164211d3eff710ccfc4e1}} 
+\index{Robot@{Robot}!P3@{P3}}
+\index{P3@{P3}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{P3}{P3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} Robot\+::\+P3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_abcf717ea4ca5b519896d0c7044cdba73}\label{classRobot_abcf717ea4ca5b519896d0c7044cdba73}} 
+\index{Robot@{Robot}!P4@{P4}}
+\index{P4@{P4}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{P4}{P4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} Robot\+::\+P4\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_a4b5fb63070b2007dcf3d88cb358e36d2}\label{classRobot_a4b5fb63070b2007dcf3d88cb358e36d2}} 
+\index{Robot@{Robot}!path@{path}}
+\index{path@{path}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $>$ Robot\+::path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_a9c1add8560b70a42d1c3a6c44942111b}\label{classRobot_a9c1add8560b70a42d1c3a6c44942111b}} 
+\index{Robot@{Robot}!pathIndex@{pathIndex}}
+\index{pathIndex@{pathIndex}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{pathIndex}{pathIndex}}
+{\footnotesize\ttfamily unsigned int Robot\+::path\+Index = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_ab1c3d88c6f1c5fa8d90a697e21403ff8}\label{classRobot_ab1c3d88c6f1c5fa8d90a697e21403ff8}} 
+\index{Robot@{Robot}!robot@{robot}}
+\index{robot@{robot}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{robot}{robot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}}$<$ \mbox{\hyperlink{classPly}{Ply}} $>$ Robot\+::robot\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobot_a29308ea68bfb377b990e27dacdf57cda}\label{classRobot_a29308ea68bfb377b990e27dacdf57cda}} 
+\index{Robot@{Robot}!t@{t}}
+\index{t@{t}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily float Robot\+::t\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{Robot_8h}{Robot.\+h}}\item 
+src/\mbox{\hyperlink{example_8cpp}{example.\+cpp}}\item 
 src/\mbox{\hyperlink{Robot_8cpp}{Robot.\+cpp}}\end{DoxyCompactItemize}

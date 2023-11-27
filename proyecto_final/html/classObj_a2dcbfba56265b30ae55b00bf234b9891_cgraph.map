@@ -1,0 +1,6 @@
+<map id="Obj::Obj" name="Obj::Obj">
+<area shape="rect" id="node1" title="Construct a new Obj:: Obj object." alt="" coords="5,31,80,57"/>
+<area shape="rect" id="node2" href="$classObj.html#a1d5749d4cd3023b3a5b864f86857c5ec" title="This method is used to load in memory the obj file." alt="" coords="152,5,232,32"/>
+<area shape="rect" id="node4" href="$classObject.html#ae7309d85e7f0d7d09b09a396f2b6017f" title="This method is used to set the data of the object." alt="" coords="128,56,256,83"/>
+<area shape="rect" id="node3" href="$classObject.html#a42b932f19ef0388be27fec88298db511" title=" " alt="" coords="304,5,404,32"/>
+</map>
