@@ -1,7 +1,7 @@
 <map id="Object" name="Object">
-<area shape="rect" id="node1" title="This class is used to create objects using vertices and faces." alt="" coords="85,5,323,875"/>
-<area shape="rect" id="node2" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="24,923,192,1073"/>
-<area shape="rect" id="node4" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="221,923,387,1073"/>
-<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="5,1121,192,1272"/>
-<area shape="rect" id="node5" href="$classModel.html" title=" " alt="" coords="216,1121,403,1272"/>
+<area shape="rect" id="node1" title="This class is used to create objects using vertices and faces." alt="" coords="85,5,323,567"/>
+<area shape="rect" id="node2" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="24,615,192,721"/>
+<area shape="rect" id="node4" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="221,615,387,721"/>
+<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="5,769,192,876"/>
+<area shape="rect" id="node5" href="$classModel.html" title=" " alt="" coords="216,769,403,876"/>
 </map>

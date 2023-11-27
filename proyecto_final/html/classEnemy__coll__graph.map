@@ -1,8 +1,8 @@
 <map id="Enemy" name="Enemy">
-<area shape="rect" id="node1" title="This class is used to create and draw the enemy." alt="" coords="21,1351,227,1501"/>
-<area shape="rect" id="node2" href="$classModel.html" title=" " alt="" coords="31,1137,217,1288"/>
-<area shape="rect" id="node3" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="40,924,208,1075"/>
-<area shape="rect" id="node4" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,5,243,875"/>
-<area shape="rect" id="node5" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="232,924,419,1075"/>
-<area shape="rect" id="node6" title=" " alt="" coords="306,401,345,479"/>
+<area shape="rect" id="node1" title="This class is used to create and draw the enemy." alt="" coords="121,955,327,1061"/>
+<area shape="rect" id="node2" href="$classModel.html" title=" " alt="" coords="131,785,317,892"/>
+<area shape="rect" id="node3" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="40,616,208,723"/>
+<area shape="rect" id="node4" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,5,243,567"/>
+<area shape="rect" id="node5" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="232,616,419,723"/>
+<area shape="rect" id="node6" title=" " alt="" coords="306,247,345,325"/>
 </map>

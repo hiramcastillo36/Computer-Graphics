@@ -37,7 +37,7 @@ public:
     void changeCamera(int camera);
 
 private:
-    
+    /** Robot */
     Robot robot;
     Ball ball;
     Enemy enemy;

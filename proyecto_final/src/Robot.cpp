@@ -18,7 +18,7 @@ Robot::Robot() {
     this->P3 = Vertex (0.9, 0.0, 0.5);
     this->P4 = Vertex (1.0, 0.0, 0.0);
 
-    this->t = 0.009;
+    this->t = 0.001;
 
     this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.009);
     this->pathIndex = 0;

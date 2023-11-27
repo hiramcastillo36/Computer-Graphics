@@ -1,5 +1,5 @@
 <map id="Object::split" name="Object::split">
-<area shape="rect" id="node1" title=" " alt="" coords="256,31,356,57"/>
+<area shape="rect" id="node1" title="This method split a string with a delimiter." alt="" coords="256,31,356,57"/>
 <area shape="rect" id="node2" href="$classObj.html#a1d5749d4cd3023b3a5b864f86857c5ec" title="This method is used to load in memory the obj file." alt="" coords="128,5,208,32"/>
 <area shape="rect" id="node4" href="$classPly.html#adca3f927c20e1c72f99b20885565b8fd" title="This method is used to load in memory the ply file." alt="" coords="129,56,207,83"/>
 <area shape="rect" id="node3" href="$classObj.html#a2dcbfba56265b30ae55b00bf234b9891" title="Construct a new Obj:: Obj object." alt="" coords="5,5,80,32"/>

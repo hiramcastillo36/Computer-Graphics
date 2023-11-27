@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_51',['init',['../classSimulation.html#a089ec7ead73faead7ff9cef850b9c09c',1,'Simulation::init(GLuint programID)'],['../classSimulation.html#a089ec7ead73faead7ff9cef850b9c09c',1,'Simulation::init(GLuint programID)']]]
+  ['init_50',['init',['../classSimulation.html#a089ec7ead73faead7ff9cef850b9c09c',1,'Simulation']]]
 ];

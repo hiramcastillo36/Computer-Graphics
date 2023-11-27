@@ -10,6 +10,9 @@ using namespace std;
 
 int key_flag = 0;
 
+//falta implementar
+double xpos, ypos;
+
 static void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
     if (key == GLFW_KEY_1 && action == GLFW_PRESS)
@@ -20,6 +23,17 @@ static void keyboard_callback(GLFWwindow* window, int key, int scancode, int act
         key_flag = 3;
 }
 
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
+    {
+       //getting cursor position
+       glfwGetCursorPos(window, &xpos, &ypos);
+       cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+    }
+}
+
+
 /**
  * @brief 
  *  Main functiond
@@ -29,7 +43,7 @@ int main( void )
 {
     OpenGL gl = OpenGL();
 
-    GLFWwindow* window = gl.createWindow( 1024, 500, "Simulation");
+    GLFWwindow* window = gl.createWindow( 1000, 500, "Simulation");
     if( window == NULL )
         return -1;
 
@@ -48,6 +62,7 @@ int main( void )
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     glfwSetKeyCallback(window, keyboard_callback);
+    glfwSetMouseButtonCallback(window, mouse_button_callback);
 
     Simulation simulation;
 
