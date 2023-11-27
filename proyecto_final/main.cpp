@@ -9,6 +9,7 @@
 using namespace std;
 
 int key_flag = 0;
+int point_flag = 0;
 
 //falta implementar
 double xpos, ypos;
@@ -28,8 +29,37 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
     {
        //getting cursor position
+       point_flag ++;
        glfwGetCursorPos(window, &xpos, &ypos);
        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+       if (xpos <= 500 && ypos <= 250) {
+        xpos =  xpos - 500;
+        ypos =   250 - ypos;
+        std::cout << "Primer cuadrante" << std::endl;
+        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+        return;
+    } else if (xpos <= 1000 && ypos < 250) {
+        ypos = 250 - ypos;
+        xpos = xpos - 500;
+        std::cout << "Segundo cuadrante" << std::endl;
+        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+        return;
+    } else if (xpos < 500 && ypos > 250) {
+        
+        ypos = 250 - ypos;
+        xpos = xpos - 500;
+        std::cout << "Tercer cuadrante" << std::endl;
+        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+        return;  
+    } else if (xpos > 500 && ypos > 250) {
+        ypos =  250 - ypos;
+        xpos = xpos - 500;
+
+        std::cout << "Cuarto cuadrante" << std::endl;
+        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+        return;
+    }
+       
     }
 }
 
@@ -85,7 +115,20 @@ int main( void )
             simulation.changeCamera(3);
         }
         key_flag = 0;
-        simulation.init(gl.getProgramID());
+        if(point_flag < 3)
+        {
+            cout << "point_flag: " << point_flag << endl;
+            if(point_flag == 1){
+                simulation.setPoint(xpos, ypos);
+            }   
+            if(point_flag == 2){
+                simulation.setPoint2(xpos, ypos);
+            }
+        }
+        else {
+            simulation.init(gl.getProgramID());
+        }
+        
         
         glfwSwapBuffers(window);
         glfwPollEvents();

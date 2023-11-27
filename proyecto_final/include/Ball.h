@@ -27,6 +27,7 @@ class Ball
 public:
     Ball();
     void draw(GLuint programID, glm::mat4 camera);
+    void setTranslate(glm::mat4 translate);
 
 private:
     Model <Ply> ball;

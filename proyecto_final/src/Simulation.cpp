@@ -26,7 +26,9 @@ void Simulation::init(GLuint programID)
 {
     ball.draw(programID, camera);   
     robot.draw(programID, camera);
-    enemy.draw(programID, camera);    
+    enemy.draw(programID, camera);  
+    ballPoint.draw(programID, camera);
+    ballPoint2.draw(programID, camera);  
 }
 
 /**
@@ -49,4 +51,30 @@ void Simulation::changeCamera(int camera)
     {
         this->camera = this->scene.getCameraZ();
     }
+}
+
+/**
+ * @brief 
+ * This method sets the point.
+ * @param float x 
+ * @param float y 
+*/
+
+void Simulation::setPoint(float x, float y)
+{
+    glm::mat4 translate = glm::translate(glm::mat4(1.0f), glm::vec3(x, y, 0.0f));
+    ballPoint.setTranslate(translate);
+}
+
+/**
+ * @brief 
+ * This method sets the second point.
+ * @param float x 
+ * @param float y 
+*/
+
+void Simulation::setPoint2(float x, float y)
+{
+    glm::mat4 translate = glm::translate(glm::mat4(1.0f), glm::vec3(x, y, 0.0f));
+    ballPoint2.setTranslate(translate);
 }

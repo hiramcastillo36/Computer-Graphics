@@ -22,3 +22,12 @@ void Ball::draw(GLuint programID, glm::mat4 camera)
 {
     this->ball.draw(programID, camera);
 }
+
+/**
+ * @brief 
+ * 
+ */
+
+void Ball::setTranslate(glm::mat4 translate){
+    this->ball.setTranslate(translate);
+}
