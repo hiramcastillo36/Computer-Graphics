@@ -1,6 +1,2 @@
 # Computer-Graphics
-
-
-
-https://github.com/hiramcastillo36/Computer-Graphics/assets/25136469/0b789545-47b7-4194-922f-2f26a1b56ca8
-
+https://github.com/hiramcastillo36/Computer-Graphics/assets/25136469/e534bd93-1549-4dd3-8637-c1a6c28c9df3
