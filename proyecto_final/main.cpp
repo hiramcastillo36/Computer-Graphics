@@ -11,7 +11,6 @@ using namespace std;
 int key_flag = 0;
 int point_flag = 0;
 
-//falta implementar
 double xpos, ypos;
 
 static void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -29,37 +28,10 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
     {
        //getting cursor position
-       point_flag ++;
-       glfwGetCursorPos(window, &xpos, &ypos);
-       cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
-       if (xpos <= 500 && ypos <= 250) {
-        xpos =  xpos - 500;
-        ypos =   250 - ypos;
-        std::cout << "Primer cuadrante" << std::endl;
-        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
-        return;
-    } else if (xpos <= 1000 && ypos < 250) {
-        ypos = 250 - ypos;
-        xpos = xpos - 500;
-        std::cout << "Segundo cuadrante" << std::endl;
-        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
-        return;
-    } else if (xpos < 500 && ypos > 250) {
-        
-        ypos = 250 - ypos;
-        xpos = xpos - 500;
-        std::cout << "Tercer cuadrante" << std::endl;
-        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
-        return;  
-    } else if (xpos > 500 && ypos > 250) {
+        point_flag ++;
+        glfwGetCursorPos(window, &xpos, &ypos);
         ypos =  250 - ypos;
         xpos = xpos - 500;
-
-        std::cout << "Cuarto cuadrante" << std::endl;
-        cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
-        return;
-    }
-       
     }
 }
 

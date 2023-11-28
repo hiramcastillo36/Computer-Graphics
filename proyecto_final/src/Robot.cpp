@@ -66,5 +66,5 @@ void Robot::setP2(Vertex P2) {
 void Robot::setP3(Vertex P3) {
     this->P3 = P3;
     Animation an;
-    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.009);
+    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.004);
 }
