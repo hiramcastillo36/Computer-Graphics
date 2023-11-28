@@ -35,12 +35,16 @@ public:
     Simulation();
     void init(GLuint programID);
     void changeCamera(int camera);
+    void setPoint(float x, float y);
+    void setPoint2(float x, float y);
 
 private:
     /** Robot */
     Robot robot;
     Ball ball;
     Enemy enemy;
+    Ball ballPoint;
+    Ball ballPoint2;
 
     glm::mat4 camera;
     Scene scene;

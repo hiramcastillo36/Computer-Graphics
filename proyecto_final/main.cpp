@@ -9,8 +9,8 @@
 using namespace std;
 
 int key_flag = 0;
+int point_flag = 0;
 
-//falta implementar
 double xpos, ypos;
 
 static void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -28,8 +28,10 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
     {
        //getting cursor position
-       glfwGetCursorPos(window, &xpos, &ypos);
-       cout << "Cursor Position at (" << xpos << " : " << ypos << endl;
+        point_flag ++;
+        glfwGetCursorPos(window, &xpos, &ypos);
+        ypos =  250 - ypos;
+        xpos = xpos - 500;
     }
 }
 
@@ -85,6 +87,18 @@ int main( void )
             simulation.changeCamera(3);
         }
         key_flag = 0;
+        if(point_flag < 4)
+        {
+            if(point_flag == 1){
+                simulation.setPoint(xpos/100, -1*(ypos/100));
+                point_flag ++;
+            }   
+            if(point_flag == 3){
+                simulation.setPoint2(xpos/100, -1*(ypos/100));
+                point_flag = 0;
+            }
+        }
+        
         simulation.init(gl.getProgramID());
         
         glfwSwapBuffers(window);
