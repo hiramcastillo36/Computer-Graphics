@@ -11,7 +11,7 @@ Simulation::Simulation()
 {
     this->scene = Scene();
 
-    this -> camera = this->scene.getCameraPrincipal();
+    this -> camera = this->scene.getCameraY();
     this->collision = -1;
     cout<<"Simulation created"<<endl;
 }
@@ -75,8 +75,6 @@ void Simulation::setPoint(float x, float y)
     {
         if(v.getX() + 0.15 > -0.6 && v.getX() - 0.15 < 0.6 && v.getZ() + 0.15 > -0.6 && v.getZ() - 0.15 < 0.6)
         {
-            //robot.setP4(Vertex(v.getX()-0.15, 0.0, v.getZ()-.15));
-            cout << "P4: " << v.getX() - 0.15 << " " << v.getZ() + 0.15 << endl;
             this->collision = limit;
             return;
         }
@@ -108,8 +106,6 @@ void Simulation::setPoint2(float x, float y)
         {
             
             this->collision = limit;
-            //robot.setP4(v);
-            cout << "P4: " << v.getX() - 0.15 << " " << v.getZ() + 0.15 << endl;
             return;
         } 
         limit++;

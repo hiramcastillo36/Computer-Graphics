@@ -24,17 +24,9 @@ Ply::Ply(string fileName, float r, float g, float b) : Object(fileName, r, g, b)
  * This method is used to load in memory the ply file.
  */
 
-void Ply::load() {
-    cout << "Ply::load()" << endl;
+void Ply::load() {    
     string line;
     ifstream PLYfile(fileName);
-
-    cout<<"File name: "<<fileName<<endl;
-    // Verificar si el archivo se abrio correctamente
-    if (!PLYfile.is_open()) {
-        cout << "No se pudo abrir el archivo ply" << endl;
-        return;
-    }
 
     vector<string> elems;
     unsigned int prev_vertice;
@@ -87,10 +79,5 @@ void Ply::load() {
             this->faces.push_back(face);
             size_faces--;
         }
-    }/*
-    int i=1;
-    for(Face &f: this -> faces){
-        cout<<"Face "<<i++<<endl;
-        f.print();
-    }*/
+    }
 }

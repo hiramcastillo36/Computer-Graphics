@@ -10,7 +10,7 @@ using namespace std;
 
 int key_flag = 0;
 int point_flag = 0;
-
+int stateSimulation = 1;
 double xpos, ypos;
 
 static void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -27,7 +27,6 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
     if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
     {
-       //getting cursor position
         point_flag ++;
         glfwGetCursorPos(window, &xpos, &ypos);
         ypos =  250 - ypos;
@@ -73,15 +72,19 @@ int main( void )
         
         if(key_flag == 1){
             simulation.changeCamera(1);
+            stateSimulation = 0;
         }
         else if(key_flag == 2){
             simulation.changeCamera(2);
+            stateSimulation = 1;
         }
         else if(key_flag == 3){
             simulation.changeCamera(3);
-        }
+            stateSimulation = 0;
+        } 
         key_flag = 0;
-        if(point_flag < 4){
+
+        if(stateSimulation == 1) { 
             if(point_flag == 1){
                 simulation.setPoint(xpos/100, -1*(ypos/100));
                 point_flag ++;
@@ -89,8 +92,12 @@ int main( void )
             if(point_flag == 3){
                 simulation.setPoint2(xpos/100, -1*(ypos/100));
                 point_flag = 0;
-            }
+            }  
         }
+        
+        if(point_flag > 3){
+            point_flag = 0;
+        }  
         
         simulation.init(gl.getProgramID());
         

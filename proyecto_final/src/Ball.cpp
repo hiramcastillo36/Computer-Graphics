@@ -6,7 +6,12 @@
  */
 
 Ball::Ball(){
-    this->ball = Model <Ply> ("models/rock.ply", 1.0, 0.0, 0.0);
+    // random rgb
+    srand (time(NULL));
+    float r = (float)(rand() % 10 + 1)/10;
+    float g = (float)(rand() % 10 + 1)/10;
+    float b = (float)(rand() % 10 + 1)/10;
+    this->ball = Model <Ply> ("models/rock.ply", r, g, b);
     ball.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.2f)));
     ball.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(4.0f, 0.0f, 0.0f)));
 }
@@ -17,7 +22,7 @@ Ball::Ball(){
  */
 
 Ball::Ball(float x, float y, float z){
-    this->ball = Model <Ply> ("models/rock.ply", 1.0, 0.0, 0.0);
+    this->ball = Model <Ply> ("models/rock.ply", x, y, z);
     ball.setScale(glm::scale(glm::mat4(1.0f), glm::vec3(0.1f)));
     ball.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(x, y, z)));
 }
