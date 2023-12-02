@@ -205,9 +205,18 @@ void Object::set_data() {
             color_buffer_data.push_back(this->r);
             color_buffer_data.push_back(this->g);
             color_buffer_data.push_back(this->b);
+            maxX = max(maxX, x);
+            maxZ = max(maxZ, z);
+            minX = min(minX, x);
+            minZ = min(minZ, z);
         }
     }
 
+    cout << "maxX: " << maxX << endl;
+    cout << "maxZ: " << maxZ << endl;
+    cout << "minX: " << minX << endl;
+    cout << "minZ: " << minZ << endl;
+    
     GLuint VertexArrayID;
     glGenVertexArrays(1, &VertexArrayID);
     glBindVertexArray(VertexArrayID);
