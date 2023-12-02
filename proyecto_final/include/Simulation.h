@@ -20,7 +20,7 @@
 #include "Ply.h"
 #include "Obj.h"
 #include "Vertex.h"
-
+#include "Message.h"
 
 using namespace std;
 
@@ -38,6 +38,7 @@ public:
     void setPoint(float x, float y);
     void setPoint2(float x, float y);
 
+    void setCollision(bool collision);
 private:
     /** Robot */
     Robot robot;
@@ -45,10 +46,13 @@ private:
     Enemy enemy;
     Ball ballPoint;
     Ball ballPoint2;
+    Message message;
 
     glm::mat4 camera;
+    
     Scene scene;
 
+    int collision;
 
 };
 

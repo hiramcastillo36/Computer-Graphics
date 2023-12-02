@@ -71,24 +71,17 @@ int main( void )
     do {
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
-        if(key_flag == 1)
-        {
-            
+        if(key_flag == 1){
             simulation.changeCamera(1);
         }
-        else if(key_flag == 2)
-        {
-            
+        else if(key_flag == 2){
             simulation.changeCamera(2);
         }
-        else if(key_flag == 3)
-        {
-            
+        else if(key_flag == 3){
             simulation.changeCamera(3);
         }
         key_flag = 0;
-        if(point_flag < 4)
-        {
+        if(point_flag < 4){
             if(point_flag == 1){
                 simulation.setPoint(xpos/100, -1*(ypos/100));
                 point_flag ++;

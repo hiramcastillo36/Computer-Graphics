@@ -67,6 +67,11 @@ protected:
     glm::mat4 rotate;
     glm::mat4 translate;
 
+    float maxX;
+    float maxZ;
+    float minX;
+    float minZ;
+
     void set_data();
 
 };

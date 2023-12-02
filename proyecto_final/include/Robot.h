@@ -25,10 +25,14 @@ using namespace std;
 class Robot {
 public:
     Robot();
-    void draw(GLuint programID, glm::mat4 camera);
+    void draw(GLuint programID, glm::mat4 camera, int collision);
 
     void setP2(Vertex P2);
     void setP3(Vertex P3);
+    void setP4(Vertex P4);
+
+    Vertex getCurrentPos();
+    vector <Vertex> getPath();
 
 private:
     Model <Ply> robot;

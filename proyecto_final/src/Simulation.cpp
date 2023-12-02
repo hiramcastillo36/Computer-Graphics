@@ -12,7 +12,7 @@ Simulation::Simulation()
     this->scene = Scene();
 
     this -> camera = this->scene.getCameraPrincipal();
-
+    this->collision = -1;
     cout<<"Simulation created"<<endl;
 }
 
@@ -26,10 +26,11 @@ Simulation::Simulation()
 void Simulation::init(GLuint programID)
 {
     ball.draw(programID, camera);   
-    robot.draw(programID, camera);
+    robot.draw(programID, camera, this->collision);
     enemy.draw(programID, camera);  
     ballPoint.draw(programID, camera);
-    ballPoint2.draw(programID, camera);  
+    ballPoint2.draw(programID, camera);
+    message.draw(programID, camera, bool(this->collision != -1)); 
 }
 
 /**
@@ -54,6 +55,7 @@ void Simulation::changeCamera(int camera)
     }
 }
 
+
 /**
  * @brief 
  * This method sets the point.
@@ -67,6 +69,21 @@ void Simulation::setPoint(float x, float y)
     ballPoint.setTranslate(translate);
     Vertex P2 = Vertex (x, 0.0, y);
     robot.setP2(P2);
+    vector <Vertex> path = robot.getPath();
+    int limit = 0;
+    for(Vertex v : path)
+    {
+        if(v.getX() + 0.15 > -0.6 && v.getX() - 0.15 < 0.6 && v.getZ() + 0.15 > -0.6 && v.getZ() - 0.15 < 0.6)
+        {
+            //robot.setP4(Vertex(v.getX()-0.15, 0.0, v.getZ()-.15));
+            cout << "P4: " << v.getX() - 0.15 << " " << v.getZ() + 0.15 << endl;
+            this->collision = limit;
+            return;
+        }
+        limit++;
+    }
+    collision = -1;
+    
 }
 
 /**
@@ -82,4 +99,20 @@ void Simulation::setPoint2(float x, float y)
     ballPoint2.setTranslate(translate);
     Vertex P3 = Vertex (x, 0.0, y);
     robot.setP3(P3);
+    vector <Vertex> path = robot.getPath();
+    int limit = 0;
+    for(Vertex v : path)
+    {
+        if(v.getX() + 0.15 > -0.5 && v.getX() - 0.15 < 0.5
+        && v.getZ() + 0.15 > -0.5 && v.getZ() - 0.15 < 0.5)
+        {
+            
+            this->collision = limit;
+            //robot.setP4(v);
+            cout << "P4: " << v.getX() - 0.15 << " " << v.getZ() + 0.15 << endl;
+            return;
+        } 
+        limit++;
+    }
+    this->collision = -1;
 }

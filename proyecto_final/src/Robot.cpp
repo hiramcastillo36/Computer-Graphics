@@ -32,14 +32,22 @@ Robot::Robot() {
  * @param camera 
  */
 
-void Robot::draw(GLuint programID, glm::mat4 camera) {
+void Robot::draw(GLuint programID, glm::mat4 camera, int collision) {
     
     this->robot.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(path[pathIndex].getX(), path[pathIndex].getY(), path[pathIndex].getZ())));
-
-    if (pathIndex < path.size() - 1) {
+    cout << collision << endl;
+    if(collision == -1){
+        if (pathIndex < path.size() - 1 ) {
         pathIndex++;
     } else {
         pathIndex = 0;
+    }
+    } else {
+        if (pathIndex < collision - 1 ) {
+            pathIndex++;
+        } else {
+            pathIndex = collision - 1;
+        }
     }
 
     robot.draw(programID, camera);
@@ -65,6 +73,39 @@ void Robot::setP2(Vertex P2) {
 
 void Robot::setP3(Vertex P3) {
     this->P3 = P3;
+    Animation an;
+    this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.004);
+}
+
+
+/**
+ * @brief 
+ * This method returns the current position of the robot.
+ * @return vector <Vertex> 
+ */
+
+Vertex Robot::getCurrentPos() {
+    return path[pathIndex];
+}
+
+/**
+ * @brief 
+ * This method returns the next position of the robot.
+ * @return vector <Vertex> 
+ */
+
+vector <Vertex> Robot::getPath() {
+    return path;    
+}
+
+/**
+ * @brief 
+ * This method sets the P4 vertex.
+ * @param P4 
+ */
+
+void Robot::setP4(Vertex P4) {
+    this->P4 = P4;
     Animation an;
     this->path = an.bezier(this-> P1, this -> P2, this-> P3, this->P4, 0.004);
 }
