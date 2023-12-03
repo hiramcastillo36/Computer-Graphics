@@ -33,12 +33,17 @@ class Simulation
 {
 public:
     Simulation();
+    
     void init(GLuint programID);
     void changeCamera(int camera);
     void setPoint(float x, float y);
     void setPoint2(float x, float y);
 
     void setCollision(bool collision);
+    void setKeyFlag(int key_flag);
+    void setPointFlag(int point_flag);
+    void setClick(double xpos, double ypos);
+    int getPointFlag();
 private:
     Robot robot;
     Ball ball;
@@ -48,9 +53,8 @@ private:
     Message message;
 
     glm::mat4 camera;
-    Scene scene;
     int collision;
-
+    
 };
 
 #endif
