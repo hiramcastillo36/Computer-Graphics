@@ -1,5 +1,5 @@
 <map id="Robot" name="Robot">
-<area shape="rect" id="node1" title="This class is used to create and draw the robot." alt="" coords="45,1233,251,1399"/>
+<area shape="rect" id="node1" title="This class is used to create and draw the robot." alt="" coords="41,1233,255,1457"/>
 <area shape="rect" id="node2" href="$classVertex.html" title="This class is used to create vertices." alt="" coords="5,785,235,1127"/>
 <area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="259,903,445,1009"/>
 <area shape="rect" id="node4" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="149,616,315,723"/>

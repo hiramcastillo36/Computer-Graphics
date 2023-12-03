@@ -26,7 +26,13 @@ Collaboration diagram for Simulation\+:\nopagebreak
 void \mbox{\hyperlink{classSimulation_a089ec7ead73faead7ff9cef850b9c09c}{init}} (GLuint program\+ID)
 \begin{DoxyCompactList}\small\item\em This method initializes the simulation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSimulation_af3b86332848f469748212b35e078980c}{change\+Camera}} (int \mbox{\hyperlink{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}{camera}})
-\begin{DoxyCompactList}\small\item\em This method changes the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method changes the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}{set\+Point}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em This method sets the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}{set\+Point2}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em This method sets the second point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulation_abb18a820966993059629cc00e721cc8c}{set\+Collision}} (bool \mbox{\hyperlink{classSimulation_af46cf9de7b0a815dc663a918872cea82}{collision}})
+\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,9 +42,17 @@ void \mbox{\hyperlink{classSimulation_af3b86332848f469748212b35e078980c}{change\
 \item 
 \mbox{\hyperlink{classEnemy}{Enemy}} \mbox{\hyperlink{classSimulation_abc6eab9e56b5890d072b45490fabb76a}{enemy}}
 \item 
+\mbox{\hyperlink{classBall}{Ball}} \mbox{\hyperlink{classSimulation_aac2e892fa5984267456b0c5552e221d1}{ball\+Point}}
+\item 
+\mbox{\hyperlink{classBall}{Ball}} \mbox{\hyperlink{classSimulation_a81805a3d338d62b11d11ff67e4a70937}{ball\+Point2}}
+\item 
+\mbox{\hyperlink{classMessage}{Message}} \mbox{\hyperlink{classSimulation_a56b6945f9244f686453574223be0f96e}{message}}
+\item 
 glm\+::mat4 \mbox{\hyperlink{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}{camera}}
 \item 
 \mbox{\hyperlink{classScene}{Scene}} \mbox{\hyperlink{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}{scene}}
+\item 
+int \mbox{\hyperlink{classSimulation_af46cf9de7b0a815dc663a918872cea82}{collision}}
 \end{DoxyCompactItemize}
 
 
@@ -103,6 +117,60 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=248pt]{classSimulation_a089ec7ead73faead7ff9cef850b9c09c_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classSimulation_abb18a820966993059629cc00e721cc8c}\label{classSimulation_abb18a820966993059629cc00e721cc8c}} 
+\index{Simulation@{Simulation}!setCollision@{setCollision}}
+\index{setCollision@{setCollision}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setCollision()}{setCollision()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Collision (\begin{DoxyParamCaption}\item[{bool}]{collision }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}\label{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}} 
+\index{Simulation@{Simulation}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setPoint()}{setPoint()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+This method sets the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & x \\
+\hline
+{\em float} & y \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classSimulation_ac8c400b6601382f9b13e946bc1f069b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}\label{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}} 
+\index{Simulation@{Simulation}!setPoint2@{setPoint2}}
+\index{setPoint2@{setPoint2}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setPoint2()}{setPoint2()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Point2 (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+This method sets the second point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & x \\
+\hline
+{\em float} & y \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classSimulation_a97bef69643599266dd8cd5a71d8f93b7_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -112,11 +180,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{ball}{ball}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classBall}{Ball}} Simulation\+::ball\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{classSimulation_aac2e892fa5984267456b0c5552e221d1}\label{classSimulation_aac2e892fa5984267456b0c5552e221d1}} 
+\index{Simulation@{Simulation}!ballPoint@{ballPoint}}
+\index{ballPoint@{ballPoint}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{ballPoint}{ballPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBall}{Ball}} Simulation\+::ball\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulation_a81805a3d338d62b11d11ff67e4a70937}\label{classSimulation_a81805a3d338d62b11d11ff67e4a70937}} 
+\index{Simulation@{Simulation}!ballPoint2@{ballPoint2}}
+\index{ballPoint2@{ballPoint2}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{ballPoint2}{ballPoint2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBall}{Ball}} Simulation\+::ball\+Point2\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}\label{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}} 
 \index{Simulation@{Simulation}!camera@{camera}}
 \index{camera@{camera}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{camera}{camera}}
 {\footnotesize\ttfamily glm\+::mat4 Simulation\+::camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSimulation_af46cf9de7b0a815dc663a918872cea82}\label{classSimulation_af46cf9de7b0a815dc663a918872cea82}} 
+\index{Simulation@{Simulation}!collision@{collision}}
+\index{collision@{collision}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily int Simulation\+::collision\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classSimulation_abc6eab9e56b5890d072b45490fabb76a}\label{classSimulation_abc6eab9e56b5890d072b45490fabb76a}} 
 \index{Simulation@{Simulation}!enemy@{enemy}}
@@ -124,13 +210,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{enemy}{enemy}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classEnemy}{Enemy}} Simulation\+::enemy\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{classSimulation_a56b6945f9244f686453574223be0f96e}\label{classSimulation_a56b6945f9244f686453574223be0f96e}} 
+\index{Simulation@{Simulation}!message@{message}}
+\index{message@{message}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}} Simulation\+::message\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classSimulation_a958ebac54c64a01ac23a1973380c264c}\label{classSimulation_a958ebac54c64a01ac23a1973380c264c}} 
 \index{Simulation@{Simulation}!robot@{robot}}
 \index{robot@{robot}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{robot}{robot}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classRobot}{Robot}} Simulation\+::robot\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\hyperlink{classRobot}{Robot}} \mbox{\Hypertarget{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}\label{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}} 
+\mbox{\Hypertarget{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}\label{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}} 
 \index{Simulation@{Simulation}!scene@{scene}}
 \index{scene@{scene}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{scene}{scene}}

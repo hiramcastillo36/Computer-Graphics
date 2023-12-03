@@ -56,8 +56,6 @@ vector<Vertex> Animation::hermite(Vertex P1, Vertex P4, Vertex R1, Vertex R4, fl
     GH.insert_rows(2, R1.row());
     GH.insert_rows(3, R4.row());
 
-    cout << GH << endl;
-
     Col<float> GHx{1, 5, 3, -1};
 
     vector<Vertex> v = {};
@@ -107,7 +105,6 @@ vector<Vertex> Animation::bezier(Vertex P1, Vertex P2, Vertex P3, Vertex P4, flo
         Mat<float> Qt = T * MH * GH;
 
         Vertex tv(Qt(0, 0), Qt(0, 1), Qt(0, 2));
-        cout << Qt(0,0) << Qt(0,1) << Qt(0,2) << endl;
         v.push_back(tv);
     }
 

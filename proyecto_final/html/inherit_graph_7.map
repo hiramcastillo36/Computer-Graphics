@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classOpenGL.html" title="This class is used to create the window and load the shaders." alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node1" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,31,69,57"/>
+<area shape="rect" id="node2" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="117,5,161,32"/>
+<area shape="rect" id="node4" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="118,56,161,83"/>
+<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="209,5,324,32"/>
+<area shape="rect" id="node5" href="$classModel.html" title=" " alt="" coords="211,56,323,83"/>
 </map>

@@ -34,8 +34,13 @@ Robot::Robot() {
 
 void Robot::draw(GLuint programID, glm::mat4 camera, int collision) {
     
-    this->robot.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(path[pathIndex].getX(), path[pathIndex].getY(), path[pathIndex].getZ())));
-    cout << collision << endl;
+    this->robot.setTranslate(glm::translate(glm::mat4(1.0f), 
+                            glm::vec3(
+                                        path[pathIndex].getX(), 
+                                        path[pathIndex].getY(), 
+                                        path[pathIndex].getZ()
+                                    )
+                                    ));
     if(collision == -1){
         if (pathIndex < path.size() - 1 ) {
         pathIndex++;

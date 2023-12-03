@@ -19,7 +19,7 @@ Scene::Scene(){
     );
 
     this->view_y = glm::lookAt(
-        glm::vec3(0,6,0), // Camera is at (0,0,2), in World Space
+        glm::vec3(0,6,-1.3), // Camera is at (0,0,2), in World Space
         glm::vec3(0,0,0), // and looks at the origin
         glm::vec3(0,0, -1)  // Head is up (set to 0,-1,0 to look upside-down)
     );
