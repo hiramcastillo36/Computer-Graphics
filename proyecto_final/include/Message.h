@@ -10,10 +10,7 @@
 #include <glm/ext/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale
 #include <glm/glm.hpp>
 #include <GL/glew.h>
-#include "Animation.h"
 #include "Model.h"
-#include "OpenGL.h"
-#include "Scene.h"
 
 /**
  * @brief 

@@ -9,10 +9,10 @@ using namespace std;
 
 Simulation::Simulation()
 {
-    this->scene = Scene();
 
-    this -> camera = this->scene.getCameraY();
+    this -> camera = Scene::getCameraY();
     this->collision = -1;
+    
     cout<<"Simulation created"<<endl;
 }
 
@@ -43,15 +43,15 @@ void Simulation::changeCamera(int camera)
 {
     if(camera == 1)
     {
-        this->camera = this->scene.getCameraPrincipal();
+        this->camera = Scene::getCameraPrincipal();
     }
     else if(camera == 2)
     {
-        this->camera = this->scene.getCameraY();
+        this->camera = Scene::getCameraY();
     }
     else if(camera == 3)
     {
-        this->camera = this->scene.getCameraZ();
+        this->camera = Scene::getCameraZ();
     }
 }
 
@@ -111,4 +111,8 @@ void Simulation::setPoint2(float x, float y)
         limit++;
     }
     this->collision = -1;
+}
+
+void Simulation::setCollision(bool collision){
+    this->collision = collision;
 }

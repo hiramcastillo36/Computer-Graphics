@@ -12,8 +12,6 @@
 #include <GL/glew.h>
 #include "Animation.h"
 #include "Model.h"
-#include "OpenGL.h"
-#include "Scene.h"
 
 using namespace std;
 

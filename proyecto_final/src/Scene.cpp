@@ -2,57 +2,115 @@
 
 /**
  * @brief Construct a new Scene:: Scene object
+ *
+ */
+
+Scene::Scene()
+{
+    this->key_flag = 0;
+    this->point_flag = 0;
+    this->stateSimulation = 1;
+    this->clickLocked = false;
+}
+
+/**
+ * @brief 
+ * This method runs the simulation.
  * 
  */
 
-Scene::Scene(){
-    this->view_principal = glm::lookAt(
-        glm::vec3(6,2,6), // Camera is at (0,0,2), in World Space
-        glm::vec3(-1,0,0), // and looks at the oribgin
-        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
+void Scene::run()
+{
+    OpenGL gl = OpenGL();
 
-    this->view_z = glm::lookAt(
-        glm::vec3(0,0,6), // Camera is at (0,0,2), in World Space
-        glm::vec3(0,0,0), // and looks at the oribgin
-        glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
+    GLFWwindow *window = gl.createWindow(1000, 500, "Simulation");
+    if (window == NULL)
+        return;
 
-    this->view_y = glm::lookAt(
-        glm::vec3(0,6,-1.3), // Camera is at (0,0,2), in World Space
-        glm::vec3(0,0,0), // and looks at the origin
-        glm::vec3(0,0, -1)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
+    glfwMakeContextCurrent(window);
+    glewExperimental = true;
+    if (glewInit() != GLEW_OK)
+    {
+        fprintf(stderr, "Failed to initialize GLEW\n");
+        return;
+    }
 
-    this->projection = glm::perspective(glm::radians(45.0f), (float) 1024 / (float) 500, 0.1f, 100.0f);
-}
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
 
-/**
- * @brief 
- * This method returns the principal camera.
- * @return glm::mat4 
- */
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-glm::mat4 Scene::getCameraPrincipal(){
-    return this->projection * this->view_principal;
-}
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
-/**
- * @brief 
- * This method returns the camera in the z axis.
- * @return glm::mat4 
- */
+    Simulation simulation;
 
-glm::mat4 Scene::getCameraZ(){
-    return this->projection * this->view_z;
-}
+    do
+    {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-/**
- * @brief 
- * This method returns the camera in the y axis.
- * @return glm::mat4 
- */
+        if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
+        {
+            simulation.changeCamera(1);
+            stateSimulation = 0;
+        }
+        if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
+        {
+            simulation.changeCamera(2);
+            stateSimulation = 1;
+        }
+        if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS)
+        {
+            simulation.changeCamera(3);
+            stateSimulation = 0;
+        }
 
-glm::mat4 Scene::getCameraY(){
-    return this->projection * this->view_y;
+        if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+        {
+            if (!clickLocked)
+            {
+                glfwGetCursorPos(window, &xMouseClick, &yMouseClick);
+                yMouseClick = 250 - yMouseClick;
+                xMouseClick -= 500;
+                point_flag++;
+
+                clickLocked = true;
+                glfwSetTime(0.0);
+            }
+        }
+
+        if (glfwGetTime() > 0.5)
+        {
+            clickLocked = false;
+        }
+
+        if (stateSimulation == 1)
+        {
+            if (point_flag == 1)
+            {
+                simulation.setPoint(xMouseClick / 100, -1 * (yMouseClick / 100));
+                point_flag++;
+            }
+            if (point_flag == 3)
+            {
+                simulation.setPoint2(xMouseClick / 100, -1 * (yMouseClick / 100));
+                point_flag = 0;
+            }
+        }
+
+        if (point_flag > 3)
+        {
+            cout << "Error: Presionar tecla numero 2 para cambiar posicion de puntos" << endl;
+            point_flag = 0;
+        }
+
+        simulation.init(gl.getProgramID());
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+
+    } while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
+             glfwWindowShouldClose(window) == 0);
+            
+    glfwTerminate();
+    return;
 }
