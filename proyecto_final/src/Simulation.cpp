@@ -12,7 +12,8 @@ Simulation::Simulation()
 
     this -> camera = Scene::getCameraY();
     this->collision = -1;
-    
+    this->message2.setRotate(glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1.0,0.0,0.0)));
+    this->message2.setTranslate(glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -1.7f)));
     cout<<"Simulation created"<<endl;
 }
 
@@ -31,6 +32,7 @@ void Simulation::init(GLuint programID)
     ballPoint.draw(programID, camera);
     ballPoint2.draw(programID, camera);
     message.draw(programID, camera, bool(this->collision != -1)); 
+    message2.draw(programID, camera, bool(this->collision != -1));
 }
 
 /**
@@ -73,7 +75,7 @@ void Simulation::setPoint(float x, float y)
     int limit = 0;
     for(Vertex v : path)
     {
-        if(v.getX() + 0.15 > -0.4 && v.getX() - 0.15 < 0.4 && v.getZ() + 0.15 > -0.4 && v.getZ() - 0.15 < 0.4)
+        if(v.getX() + 0.16 > -0.45 && v.getX() - 0.16 < 0.45 && v.getZ() + 0.16 > -0.45 && v.getZ() - 0.16 < 0.45)
         {
             this->collision = limit;
             return;

@@ -1,4 +1,4 @@
-// Author: Hiram Jalil Castillo Gutierrez
+// Author: Hiram Jalil Castillo Gutierrez 345169 UASLP 
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>

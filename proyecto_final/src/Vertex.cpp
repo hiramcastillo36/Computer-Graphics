@@ -157,19 +157,6 @@ void Vertex::setZ(float vz) {
  * @return vector < float > 
  */
 
-vector<float> Vertex::getXYZ() {
-    vector<float> xyz = {this->x, this->y, this->z};
-    return xyz;
-}
-
-/**
- * @brief 
- * Overload the == operator.
- * @param Vertex op2 
- * @return true 
- * @return false 
- */
-
-bool Vertex::operator==(Vertex op2) {
-    return (this->x == op2.x && this->y == op2.y && this->z == op2.z);
+glm::vec3 Vertex::getVec3() {
+    return glm::vec3(this->x, this->y, this->z);
 }

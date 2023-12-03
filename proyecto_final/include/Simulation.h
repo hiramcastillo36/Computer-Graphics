@@ -51,6 +51,7 @@ private:
     Ball ballPoint;
     Ball ballPoint2;
     Message message;
+    Message message2;
 
     glm::mat4 camera;
     int collision;

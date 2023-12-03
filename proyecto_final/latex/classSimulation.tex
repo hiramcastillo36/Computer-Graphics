@@ -11,11 +11,12 @@ This class is used to generate the simulation.
 
 
 
-Collaboration diagram for Simulation\+:\nopagebreak
+Collaboration diagram for Simulation\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSimulation__coll__graph}
+\includegraphics[height=550pt]{classSimulation__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,6 +33,14 @@ void \mbox{\hyperlink{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}{set\+Po
 void \mbox{\hyperlink{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}{set\+Point2}} (float x, float y)
 \begin{DoxyCompactList}\small\item\em This method sets the second point. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSimulation_abb18a820966993059629cc00e721cc8c}{set\+Collision}} (bool \mbox{\hyperlink{classSimulation_af46cf9de7b0a815dc663a918872cea82}{collision}})
+\item 
+void \mbox{\hyperlink{classSimulation_ac9a2b56599f7b97c61d0c370203cadb8}{set\+Key\+Flag}} (int key\+\_\+flag)
+\item 
+void \mbox{\hyperlink{classSimulation_af6ab76eb6c13df4baf59e4fdcbb068f0}{set\+Point\+Flag}} (int point\+\_\+flag)
+\item 
+void \mbox{\hyperlink{classSimulation_a001e4c81cfe2922bc489fac761cf67ae}{set\+Click}} (double xpos, double ypos)
+\item 
+int \mbox{\hyperlink{classSimulation_a17ddccd738267ad1779bc932eb695ff2}{get\+Point\+Flag}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -48,9 +57,9 @@ void \mbox{\hyperlink{classSimulation_abb18a820966993059629cc00e721cc8c}{set\+Co
 \item 
 \mbox{\hyperlink{classMessage}{Message}} \mbox{\hyperlink{classSimulation_a56b6945f9244f686453574223be0f96e}{message}}
 \item 
-glm\+::mat4 \mbox{\hyperlink{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}{camera}}
+\mbox{\hyperlink{classMessage}{Message}} \mbox{\hyperlink{classSimulation_a7055477a7a40c09c4cc3b739ec671e58}{message2}}
 \item 
-\mbox{\hyperlink{classScene}{Scene}} \mbox{\hyperlink{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}{scene}}
+glm\+::mat4 \mbox{\hyperlink{classSimulation_a4b4b0626170ab3c2b78dac2a92ed96ed}{camera}}
 \item 
 int \mbox{\hyperlink{classSimulation_af46cf9de7b0a815dc663a918872cea82}{collision}}
 \end{DoxyCompactItemize}
@@ -70,6 +79,14 @@ This class is used to generate the simulation.
 
 Construct a new \mbox{\hyperlink{classSimulation}{Simulation}}\+:\+: \mbox{\hyperlink{classSimulation}{Simulation}} object. 
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSimulation_a5b224cc5b36bcc8eb29689aff223de41_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
@@ -88,13 +105,28 @@ This method changes the camera.
 {\em int} & camera \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=306pt]{classSimulation_af3b86332848f469748212b35e078980c_icgraph}
+\includegraphics[width=350pt]{classSimulation_af3b86332848f469748212b35e078980c_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSimulation_af3b86332848f469748212b35e078980c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSimulation_a17ddccd738267ad1779bc932eb695ff2}\label{classSimulation_a17ddccd738267ad1779bc932eb695ff2}} 
+\index{Simulation@{Simulation}!getPointFlag@{getPointFlag}}
+\index{getPointFlag@{getPointFlag}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{getPointFlag()}{getPointFlag()}}
+{\footnotesize\ttfamily int Simulation\+::get\+Point\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classSimulation_a089ec7ead73faead7ff9cef850b9c09c}\label{classSimulation_a089ec7ead73faead7ff9cef850b9c09c}} 
 \index{Simulation@{Simulation}!init@{init}}
 \index{init@{init}!Simulation@{Simulation}}
@@ -110,18 +142,31 @@ This method initializes the simulation.
 {\em GLuint} & program\+ID \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=248pt]{classSimulation_a089ec7ead73faead7ff9cef850b9c09c_icgraph}
+\includegraphics[width=350pt]{classSimulation_a089ec7ead73faead7ff9cef850b9c09c_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classSimulation_a001e4c81cfe2922bc489fac761cf67ae}\label{classSimulation_a001e4c81cfe2922bc489fac761cf67ae}} 
+\index{Simulation@{Simulation}!setClick@{setClick}}
+\index{setClick@{setClick}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setClick()}{setClick()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Click (\begin{DoxyParamCaption}\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classSimulation_abb18a820966993059629cc00e721cc8c}\label{classSimulation_abb18a820966993059629cc00e721cc8c}} 
 \index{Simulation@{Simulation}!setCollision@{setCollision}}
 \index{setCollision@{setCollision}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{setCollision()}{setCollision()}}
 {\footnotesize\ttfamily void Simulation\+::set\+Collision (\begin{DoxyParamCaption}\item[{bool}]{collision }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSimulation_ac9a2b56599f7b97c61d0c370203cadb8}\label{classSimulation_ac9a2b56599f7b97c61d0c370203cadb8}} 
+\index{Simulation@{Simulation}!setKeyFlag@{setKeyFlag}}
+\index{setKeyFlag@{setKeyFlag}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setKeyFlag()}{setKeyFlag()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Key\+Flag (\begin{DoxyParamCaption}\item[{int}]{key\+\_\+flag }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}\label{classSimulation_ac8c400b6601382f9b13e946bc1f069b5}} 
 \index{Simulation@{Simulation}!setPoint@{setPoint}}
@@ -140,11 +185,12 @@ This method sets the point.
 {\em float} & y \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=272pt]{classSimulation_ac8c400b6601382f9b13e946bc1f069b5_icgraph}
+\includegraphics[width=350pt]{classSimulation_ac8c400b6601382f9b13e946bc1f069b5_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}\label{classSimulation_a97bef69643599266dd8cd5a71d8f93b7}} 
@@ -164,13 +210,20 @@ This method sets the second point.
 {\em float} & y \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=278pt]{classSimulation_a97bef69643599266dd8cd5a71d8f93b7_icgraph}
+\includegraphics[width=350pt]{classSimulation_a97bef69643599266dd8cd5a71d8f93b7_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classSimulation_af6ab76eb6c13df4baf59e4fdcbb068f0}\label{classSimulation_af6ab76eb6c13df4baf59e4fdcbb068f0}} 
+\index{Simulation@{Simulation}!setPointFlag@{setPointFlag}}
+\index{setPointFlag@{setPointFlag}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{setPointFlag()}{setPointFlag()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Point\+Flag (\begin{DoxyParamCaption}\item[{int}]{point\+\_\+flag }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -216,17 +269,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{message}{message}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}} Simulation\+::message\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{classSimulation_a7055477a7a40c09c4cc3b739ec671e58}\label{classSimulation_a7055477a7a40c09c4cc3b739ec671e58}} 
+\index{Simulation@{Simulation}!message2@{message2}}
+\index{message2@{message2}!Simulation@{Simulation}}
+\doxysubsubsection{\texorpdfstring{message2}{message2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}} Simulation\+::message2\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classSimulation_a958ebac54c64a01ac23a1973380c264c}\label{classSimulation_a958ebac54c64a01ac23a1973380c264c}} 
 \index{Simulation@{Simulation}!robot@{robot}}
 \index{robot@{robot}!Simulation@{Simulation}}
 \doxysubsubsection{\texorpdfstring{robot}{robot}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classRobot}{Robot}} Simulation\+::robot\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}\label{classSimulation_a252d46d0e8e6a1eea458512b7dc78181}} 
-\index{Simulation@{Simulation}!scene@{scene}}
-\index{scene@{scene}!Simulation@{Simulation}}
-\doxysubsubsection{\texorpdfstring{scene}{scene}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classScene}{Scene}} Simulation\+::scene\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

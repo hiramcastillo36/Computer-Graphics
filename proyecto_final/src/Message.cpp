@@ -25,3 +25,21 @@ void Message::draw(GLuint programID, glm::mat4 camera, bool status)
     if(status)
         this->message.draw(programID, camera);
 }
+
+/**
+ * @brief 
+ * This method rotate the message.
+ * @param rotate 
+ */
+void Message::setRotate(glm::mat4 rotate)
+{
+    this->message.setRotate(rotate);
+}
+
+/**
+ * @brief 
+ * This method translate the message.
+ */
+void Message::setTranslate(glm::mat4 translate){
+    this->message.setTranslate(translate);
+}

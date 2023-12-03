@@ -1,13 +1,13 @@
 <map id="include/Animation.h" name="include/Animation.h">
-<area shape="rect" id="node1" title=" " alt="" coords="260,5,412,32"/>
-<area shape="rect" id="node2" href="$Ball_8h.html" title=" " alt="" coords="422,80,533,107"/>
-<area shape="rect" id="node3" href="$Simulation_8h.html" title=" " alt="" coords="160,155,315,181"/>
-<area shape="rect" id="node7" href="$Message_8h.html" title=" " alt="" coords="57,80,199,107"/>
-<area shape="rect" id="node9" href="$Robot_8h.html" title=" " alt="" coords="275,80,397,107"/>
-<area shape="rect" id="node11" href="$Animation_8cpp.html" title=" " alt="" coords="557,80,696,107"/>
-<area shape="rect" id="node6" href="$Ball_8cpp.html" title=" " alt="" coords="474,155,571,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="128,229,211,256"/>
-<area shape="rect" id="node5" href="$Simulation_8cpp.html" title=" " alt="" coords="235,229,378,256"/>
-<area shape="rect" id="node8" href="$Message_8cpp.html" title=" " alt="" coords="5,155,136,181"/>
-<area shape="rect" id="node10" href="$Robot_8cpp.html" title=" " alt="" coords="339,155,450,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="178,5,330,32"/>
+<area shape="rect" id="node2" href="$Ball_8h.html" title=" " alt="" coords="56,80,167,107"/>
+<area shape="rect" id="node3" href="$Simulation_8h.html" title=" " alt="" coords="127,155,282,181"/>
+<area shape="rect" id="node9" href="$Robot_8h.html" title=" " alt="" coords="242,80,365,107"/>
+<area shape="rect" id="node11" href="$Animation_8cpp.html" title=" " alt="" coords="389,80,527,107"/>
+<area shape="rect" id="node8" href="$Ball_8cpp.html" title=" " alt="" coords="5,155,103,181"/>
+<area shape="rect" id="node4" href="$Scene_8h.html" title=" " alt="" coords="143,229,267,256"/>
+<area shape="rect" id="node7" href="$Simulation_8cpp.html" title=" " alt="" coords="291,229,433,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="103,304,186,331"/>
+<area shape="rect" id="node6" href="$Scene_8cpp.html" title=" " alt="" coords="211,304,321,331"/>
+<area shape="rect" id="node10" href="$Robot_8cpp.html" title=" " alt="" coords="307,155,417,181"/>
 </map>

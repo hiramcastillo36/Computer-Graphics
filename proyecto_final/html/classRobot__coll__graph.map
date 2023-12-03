@@ -1,7 +1,7 @@
 <map id="Robot" name="Robot">
-<area shape="rect" id="node1" title="This class is used to create and draw the robot." alt="" coords="41,1233,255,1457"/>
-<area shape="rect" id="node2" href="$classVertex.html" title="This class is used to create vertices." alt="" coords="5,785,235,1127"/>
-<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="259,903,445,1009"/>
+<area shape="rect" id="node1" title="This class is used to create and draw the robot." alt="" coords="41,1248,255,1472"/>
+<area shape="rect" id="node2" href="$classVertex.html" title="This class is used to create vertices." alt="" coords="5,785,235,1141"/>
+<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="259,910,445,1017"/>
 <area shape="rect" id="node4" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="149,616,315,723"/>
 <area shape="rect" id="node5" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="113,5,351,567"/>
 <area shape="rect" id="node6" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="340,616,527,723"/>

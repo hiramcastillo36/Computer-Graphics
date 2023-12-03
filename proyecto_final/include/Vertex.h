@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <armadillo>
+#include <glm/vec3.hpp> // glm::vec3
+#include <glm/glm.hpp>
 
 using namespace std;
 using namespace arma;
@@ -43,8 +45,7 @@ public:
     void setX(float vx);
     void setY(float vy);
     void setZ(float vz);
-    
-
+    glm::vec3 getVec3();
 private:
     float x, y, z;
 };

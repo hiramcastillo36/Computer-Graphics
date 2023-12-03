@@ -11,7 +11,8 @@ This class is used to create and draw collition message.
 
 
 
-Collaboration diagram for Message\+:\nopagebreak
+Collaboration diagram for Message\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,7 +25,11 @@ Collaboration diagram for Message\+:\nopagebreak
 \mbox{\hyperlink{classMessage_a4fc4f717b634e66070366cb7722d7761}{Message}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classMessage}{Message}}\+:\+: \mbox{\hyperlink{classMessage}{Message}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMessage_a20170bfe00c1b9ef92718be95fad97f1}{draw}} (GLuint program\+ID, glm\+::mat4 camera, bool status)
-\begin{DoxyCompactList}\small\item\em This method draw the collition message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method draw the collition message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMessage_aee30afc535ea2b487eb0cac480bf3f05}{set\+Rotate}} (glm\+::mat4 rotate)
+\begin{DoxyCompactList}\small\item\em This method rotate the message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMessage_aa135d88782c0e49f1f232793cbca0a9d}{set\+Translate}} (glm\+::mat4 translate)
+\begin{DoxyCompactList}\small\item\em This method translate the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -80,6 +85,47 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=284pt]{classMessage_a20170bfe00c1b9ef92718be95fad97f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMessage_aee30afc535ea2b487eb0cac480bf3f05}\label{classMessage_aee30afc535ea2b487eb0cac480bf3f05}} 
+\index{Message@{Message}!setRotate@{setRotate}}
+\index{setRotate@{setRotate}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setRotate()}{setRotate()}}
+{\footnotesize\ttfamily void Message\+::set\+Rotate (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{rotate }\end{DoxyParamCaption})}
+
+
+
+This method rotate the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotate} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classMessage_aee30afc535ea2b487eb0cac480bf3f05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMessage_aa135d88782c0e49f1f232793cbca0a9d}\label{classMessage_aa135d88782c0e49f1f232793cbca0a9d}} 
+\index{Message@{Message}!setTranslate@{setTranslate}}
+\index{setTranslate@{setTranslate}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setTranslate()}{setTranslate()}}
+{\footnotesize\ttfamily void Message\+::set\+Translate (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{translate }\end{DoxyParamCaption})}
+
+
+
+This method translate the message. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMessage_aa135d88782c0e49f1f232793cbca0a9d_cgraph}
 \end{center}
 \end{figure}
 

@@ -11,7 +11,8 @@ This class is used to create faces using edges.
 
 
 
-Collaboration diagram for Face\+:\nopagebreak
+Collaboration diagram for Face\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,11 +27,15 @@ Collaboration diagram for Face\+:\nopagebreak
 void \mbox{\hyperlink{classFace_aba2e18d62d62b3d3545fb16f165dbd30}{print}} ()
 \begin{DoxyCompactList}\small\item\em This method prints the face. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \mbox{\hyperlink{classFace_a9ea29a424c8bead4d98968502a17fb31}{get\+Edges}} ()
-\begin{DoxyCompactList}\small\item\em This method returns the edges of the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method returns the edges of the face. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{classFace_a28f41b02ea135a764f7b3974db9ade07}{get\+Normal}} ()
+\begin{DoxyCompactList}\small\item\em This method returns the normal of the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ \mbox{\hyperlink{classFace_a4af64f707af0789cd262738f4854008b}{edges}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classFace_a9384eab7c9ebb8fed6fafe11aed9bd7b}{normal}}
 \end{DoxyCompactItemize}
 
 
@@ -69,6 +74,19 @@ This method returns the edges of the face.
 \begin{DoxyReturn}{Returns}
 vector $<$\+Edge$>$ 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classFace_a28f41b02ea135a764f7b3974db9ade07}\label{classFace_a28f41b02ea135a764f7b3974db9ade07}} 
+\index{Face@{Face}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily glm\+::vec3 Face\+::get\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the normal of the face. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classFace_aba2e18d62d62b3d3545fb16f165dbd30}\label{classFace_aba2e18d62d62b3d3545fb16f165dbd30}} 
 \index{Face@{Face}!print@{print}}
 \index{print@{print}!Face@{Face}}
@@ -87,6 +105,12 @@ This method prints the face.
 \index{edges@{edges}!Face@{Face}}
 \doxysubsubsection{\texorpdfstring{edges}{edges}}
 {\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classEdge}{Edge}}$>$ Face\+::edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFace_a9384eab7c9ebb8fed6fafe11aed9bd7b}\label{classFace_a9384eab7c9ebb8fed6fafe11aed9bd7b}} 
+\index{Face@{Face}!normal@{normal}}
+\index{normal@{normal}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily glm\+::vec3 Face\+::normal\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

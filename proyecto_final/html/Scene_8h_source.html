@@ -74,39 +74,79 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;glm/vec4.hpp&gt;</span> <span class="comment">// glm::vec4</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;glm/mat4x4.hpp&gt;</span> <span class="comment">// glm::mat4</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;glm/vec4.hpp&gt;</span>                 <span class="comment">// glm::vec4</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;glm/mat4x4.hpp&gt;</span>               <span class="comment">// glm::mat4</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;glm/ext/matrix_transform.hpp&gt;</span> <span class="comment">// glm::translate, glm::rotate, glm::scale</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classScene.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScene.html">Scene</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classScene.html#ad10176d75a9cc0da56626f682d083507">Scene</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    glm::mat4 <a class="code" href="classScene.html#a8a50460c97398c00c7c77ca3fafa07b4">getCameraPrincipal</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    glm::mat4 <a class="code" href="classScene.html#aa56a3990faa86d9da5055263f09b8eeb">getCameraZ</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    glm::mat4 <a class="code" href="classScene.html#a3dbfd358d1752feb8cec0fbc312ad715">getCameraY</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classScene.html#a075383b59ac3029c5ff40ec950089f7c">   28</a></span>&#160;    glm::mat4 <a class="code" href="classScene.html#a075383b59ac3029c5ff40ec950089f7c">view_principal</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classScene.html#a275d419f07a6c3c4fa163312e24b2529">   29</a></span>&#160;    glm::mat4 <a class="code" href="classScene.html#a275d419f07a6c3c4fa163312e24b2529">view_z</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classScene.html#a87d8cfdfb19bd888aa3fd3497884f9bb">   30</a></span>&#160;    glm::mat4 <a class="code" href="classScene.html#a87d8cfdfb19bd888aa3fd3497884f9bb">view_y</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classScene.html#a866fbd2d4a47a2e78675f8c16da96b6e">   31</a></span>&#160;    glm::mat4 <a class="code" href="classScene.html#a866fbd2d4a47a2e78675f8c16da96b6e">projection</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdoc">This class is used generate the camera views.</div><div class="ttdef"><b>Definition:</b> Scene.h:19</div></div>
-<div class="ttc" id="aclassScene_html_a075383b59ac3029c5ff40ec950089f7c"><div class="ttname"><a href="classScene.html#a075383b59ac3029c5ff40ec950089f7c">Scene::view_principal</a></div><div class="ttdeci">glm::mat4 view_principal</div><div class="ttdef"><b>Definition:</b> Scene.h:28</div></div>
-<div class="ttc" id="aclassScene_html_a275d419f07a6c3c4fa163312e24b2529"><div class="ttname"><a href="classScene.html#a275d419f07a6c3c4fa163312e24b2529">Scene::view_z</a></div><div class="ttdeci">glm::mat4 view_z</div><div class="ttdef"><b>Definition:</b> Scene.h:29</div></div>
-<div class="ttc" id="aclassScene_html_a3dbfd358d1752feb8cec0fbc312ad715"><div class="ttname"><a href="classScene.html#a3dbfd358d1752feb8cec0fbc312ad715">Scene::getCameraY</a></div><div class="ttdeci">glm::mat4 getCameraY()</div><div class="ttdoc">This method returns the camera in the y axis.</div><div class="ttdef"><b>Definition:</b> Scene.cpp:56</div></div>
-<div class="ttc" id="aclassScene_html_a866fbd2d4a47a2e78675f8c16da96b6e"><div class="ttname"><a href="classScene.html#a866fbd2d4a47a2e78675f8c16da96b6e">Scene::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdef"><b>Definition:</b> Scene.h:31</div></div>
-<div class="ttc" id="aclassScene_html_a87d8cfdfb19bd888aa3fd3497884f9bb"><div class="ttname"><a href="classScene.html#a87d8cfdfb19bd888aa3fd3497884f9bb">Scene::view_y</a></div><div class="ttdeci">glm::mat4 view_y</div><div class="ttdef"><b>Definition:</b> Scene.h:30</div></div>
-<div class="ttc" id="aclassScene_html_a8a50460c97398c00c7c77ca3fafa07b4"><div class="ttname"><a href="classScene.html#a8a50460c97398c00c7c77ca3fafa07b4">Scene::getCameraPrincipal</a></div><div class="ttdeci">glm::mat4 getCameraPrincipal()</div><div class="ttdoc">This method returns the principal camera.</div><div class="ttdef"><b>Definition:</b> Scene.cpp:36</div></div>
-<div class="ttc" id="aclassScene_html_aa56a3990faa86d9da5055263f09b8eeb"><div class="ttname"><a href="classScene.html#aa56a3990faa86d9da5055263f09b8eeb">Scene::getCameraZ</a></div><div class="ttdeci">glm::mat4 getCameraZ()</div><div class="ttdoc">This method returns the camera in the z axis.</div><div class="ttdef"><b>Definition:</b> Scene.cpp:46</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="OpenGL_8h.html">OpenGL.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Simulation_8h.html">Simulation.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classScene.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScene.html">Scene</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classScene.html#ad10176d75a9cc0da56626f682d083507">Scene</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classScene.html#aef70538258ae4abfad9563523de0ece0">run</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classScene.html#af51c1a302474e69cfd7649d5a049c2f9">   31</a></span>&#160;    <span class="keyword">static</span> glm::mat4 <a class="code" href="classScene.html#af51c1a302474e69cfd7649d5a049c2f9">getCameraPrincipal</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> glm::perspective(glm::radians(45.0f), (<span class="keywordtype">float</span>)1000 / (<span class="keywordtype">float</span>)500, 0.1f, 100.0f) *</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;               glm::lookAt(</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                   glm::vec3(6.5, 1.6, 2.6),  <span class="comment">// Camera is at (0,0,2), in World Space</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                   glm::vec3(-1, 0, 0), <span class="comment">// and looks at the oribgin</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                   glm::vec3(0, 1, 0)   <span class="comment">// Head is up (set to 0,-1,0 to look upside-down)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;               );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classScene.html#ac1539c53e753e76c879d0c60e4052507">   41</a></span>&#160;    <span class="keyword">static</span> glm::mat4 <a class="code" href="classScene.html#ac1539c53e753e76c879d0c60e4052507">getCameraZ</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> glm::perspective(glm::radians(45.0f), (<span class="keywordtype">float</span>)1000 / (<span class="keywordtype">float</span>)500, 0.1f, 100.0f) *</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;               glm::lookAt(</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                   glm::vec3(0, 0, 6), <span class="comment">// Camera is at (0,0,2), in World Space</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                   glm::vec3(0, 0, 0), <span class="comment">// and looks at the oribgin</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                   glm::vec3(0, 1, 0)  <span class="comment">// Head is up (set to 0,-1,0 to look upside-down)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;               );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classScene.html#ad337ea0bf514faab5f9ce9617f833311">   50</a></span>&#160;    <span class="keyword">static</span> glm::mat4 <a class="code" href="classScene.html#ad337ea0bf514faab5f9ce9617f833311">getCameraY</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> glm::perspective(glm::radians(45.0f), (<span class="keywordtype">float</span>)1000 / (<span class="keywordtype">float</span>)500, 0.1f, 100.0f) *</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;               glm::lookAt(</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   glm::vec3(0, 6, 0), <span class="comment">// Camera is at (0,0,2), in World Space</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                   glm::vec3(0, 0, 0),    <span class="comment">// and looks at the origin</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   glm::vec3(0, 0, -1)    <span class="comment">// Head is up (set to 0,-1,0 to look upside-down)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;               );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classScene.html#ae089b98dbea18f1712bdd3f8248ff52d">   61</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classScene.html#ae089b98dbea18f1712bdd3f8248ff52d">key_flag</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classScene.html#a4e9aed974deb39b813125cf335b16263">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classScene.html#a4e9aed974deb39b813125cf335b16263">point_flag</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classScene.html#a534af9faf79aac609bb643f92c98c4a9">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classScene.html#a534af9faf79aac609bb643f92c98c4a9">stateSimulation</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classScene.html#a12e366b597455962fdf4240b23a88ae3">   64</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classScene.html#a12e366b597455962fdf4240b23a88ae3">xMouseClick</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classScene.html#acf375b091cc14ff63b87c73366fd97d9">   65</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classScene.html#acf375b091cc14ff63b87c73366fd97d9">yMouseClick</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classScene.html#ae4b0ab4eb1657f34bd1aab26a059ac93">   66</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classScene.html#ae4b0ab4eb1657f34bd1aab26a059ac93">clickLocked</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aOpenGL_8h_html"><div class="ttname"><a href="OpenGL_8h.html">OpenGL.h</a></div></div>
+<div class="ttc" id="aSimulation_8h_html"><div class="ttname"><a href="Simulation_8h.html">Simulation.h</a></div></div>
+<div class="ttc" id="aclassScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdoc">This class is used generate the camera views.</div><div class="ttdef"><b>Definition:</b> Scene.h:26</div></div>
+<div class="ttc" id="aclassScene_html_a12e366b597455962fdf4240b23a88ae3"><div class="ttname"><a href="classScene.html#a12e366b597455962fdf4240b23a88ae3">Scene::xMouseClick</a></div><div class="ttdeci">double xMouseClick</div><div class="ttdef"><b>Definition:</b> Scene.h:64</div></div>
+<div class="ttc" id="aclassScene_html_a4e9aed974deb39b813125cf335b16263"><div class="ttname"><a href="classScene.html#a4e9aed974deb39b813125cf335b16263">Scene::point_flag</a></div><div class="ttdeci">int point_flag</div><div class="ttdef"><b>Definition:</b> Scene.h:62</div></div>
+<div class="ttc" id="aclassScene_html_a534af9faf79aac609bb643f92c98c4a9"><div class="ttname"><a href="classScene.html#a534af9faf79aac609bb643f92c98c4a9">Scene::stateSimulation</a></div><div class="ttdeci">int stateSimulation</div><div class="ttdef"><b>Definition:</b> Scene.h:63</div></div>
+<div class="ttc" id="aclassScene_html_ac1539c53e753e76c879d0c60e4052507"><div class="ttname"><a href="classScene.html#ac1539c53e753e76c879d0c60e4052507">Scene::getCameraZ</a></div><div class="ttdeci">static glm::mat4 getCameraZ()</div><div class="ttdef"><b>Definition:</b> Scene.h:41</div></div>
+<div class="ttc" id="aclassScene_html_acf375b091cc14ff63b87c73366fd97d9"><div class="ttname"><a href="classScene.html#acf375b091cc14ff63b87c73366fd97d9">Scene::yMouseClick</a></div><div class="ttdeci">double yMouseClick</div><div class="ttdef"><b>Definition:</b> Scene.h:65</div></div>
 <div class="ttc" id="aclassScene_html_ad10176d75a9cc0da56626f682d083507"><div class="ttname"><a href="classScene.html#ad10176d75a9cc0da56626f682d083507">Scene::Scene</a></div><div class="ttdeci">Scene()</div><div class="ttdoc">Construct a new Scene:: Scene object.</div><div class="ttdef"><b>Definition:</b> Scene.cpp:8</div></div>
+<div class="ttc" id="aclassScene_html_ad337ea0bf514faab5f9ce9617f833311"><div class="ttname"><a href="classScene.html#ad337ea0bf514faab5f9ce9617f833311">Scene::getCameraY</a></div><div class="ttdeci">static glm::mat4 getCameraY()</div><div class="ttdef"><b>Definition:</b> Scene.h:50</div></div>
+<div class="ttc" id="aclassScene_html_ae089b98dbea18f1712bdd3f8248ff52d"><div class="ttname"><a href="classScene.html#ae089b98dbea18f1712bdd3f8248ff52d">Scene::key_flag</a></div><div class="ttdeci">int key_flag</div><div class="ttdef"><b>Definition:</b> Scene.h:61</div></div>
+<div class="ttc" id="aclassScene_html_ae4b0ab4eb1657f34bd1aab26a059ac93"><div class="ttname"><a href="classScene.html#ae4b0ab4eb1657f34bd1aab26a059ac93">Scene::clickLocked</a></div><div class="ttdeci">bool clickLocked</div><div class="ttdef"><b>Definition:</b> Scene.h:66</div></div>
+<div class="ttc" id="aclassScene_html_aef70538258ae4abfad9563523de0ece0"><div class="ttname"><a href="classScene.html#aef70538258ae4abfad9563523de0ece0">Scene::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">This method runs the simulation.</div><div class="ttdef"><b>Definition:</b> Scene.cpp:22</div></div>
+<div class="ttc" id="aclassScene_html_af51c1a302474e69cfd7649d5a049c2f9"><div class="ttname"><a href="classScene.html#af51c1a302474e69cfd7649d5a049c2f9">Scene::getCameraPrincipal</a></div><div class="ttdeci">static glm::mat4 getCameraPrincipal()</div><div class="ttdef"><b>Definition:</b> Scene.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

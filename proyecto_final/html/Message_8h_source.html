@@ -81,30 +81,27 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;glm/ext/matrix_transform.hpp&gt;</span> <span class="comment">// glm::translate, glm::rotate, glm::scale</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Animation_8h.html">Animation.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Model_8h.html">Model.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="OpenGL_8h.html">OpenGL.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Scene_8h.html">Scene.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMessage.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html">Message</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#a20170bfe00c1b9ef92718be95fad97f1">draw</a>(GLuint programID, glm::mat4 camera, <span class="keywordtype">bool</span> status);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">   30</a></span>&#160;    <a class="code" href="classModel.html">Model &lt;Obj&gt;</a> <a class="code" href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">message</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aAnimation_8h_html"><div class="ttname"><a href="Animation_8h.html">Animation.h</a></div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Model_8h.html">Model.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classMessage.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html">Message</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#a20170bfe00c1b9ef92718be95fad97f1">draw</a>(GLuint programID, glm::mat4 camera, <span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#aee30afc535ea2b487eb0cac480bf3f05">setRotate</a>(glm::mat4 rotate);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#aa135d88782c0e49f1f232793cbca0a9d">setTranslate</a>(glm::mat4 translate);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">   28</a></span>&#160;    <a class="code" href="classModel.html">Model &lt;Obj&gt;</a> <a class="code" href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">message</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aModel_8h_html"><div class="ttname"><a href="Model_8h.html">Model.h</a></div></div>
-<div class="ttc" id="aOpenGL_8h_html"><div class="ttname"><a href="OpenGL_8h.html">OpenGL.h</a></div></div>
-<div class="ttc" id="aScene_8h_html"><div class="ttname"><a href="Scene_8h.html">Scene.h</a></div></div>
-<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">This class is used to create and draw collition message.</div><div class="ttdef"><b>Definition:</b> Message.h:24</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">This class is used to create and draw collition message.</div><div class="ttdef"><b>Definition:</b> Message.h:21</div></div>
 <div class="ttc" id="aclassMessage_html_a20170bfe00c1b9ef92718be95fad97f1"><div class="ttname"><a href="classMessage.html#a20170bfe00c1b9ef92718be95fad97f1">Message::draw</a></div><div class="ttdeci">void draw(GLuint programID, glm::mat4 camera, bool status)</div><div class="ttdoc">This method draw the collition message.</div><div class="ttdef"><b>Definition:</b> Message.cpp:23</div></div>
 <div class="ttc" id="aclassMessage_html_a4fc4f717b634e66070366cb7722d7761"><div class="ttname"><a href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message::Message</a></div><div class="ttdeci">Message()</div><div class="ttdoc">Construct a new Message:: Message object.</div><div class="ttdef"><b>Definition:</b> Message.cpp:8</div></div>
-<div class="ttc" id="aclassMessage_html_a905b1f81dad1a2aaa0fd3955804ccd34"><div class="ttname"><a href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">Message::message</a></div><div class="ttdeci">Model&lt; Obj &gt; message</div><div class="ttdef"><b>Definition:</b> Message.h:30</div></div>
+<div class="ttc" id="aclassMessage_html_a905b1f81dad1a2aaa0fd3955804ccd34"><div class="ttname"><a href="classMessage.html#a905b1f81dad1a2aaa0fd3955804ccd34">Message::message</a></div><div class="ttdeci">Model&lt; Obj &gt; message</div><div class="ttdef"><b>Definition:</b> Message.h:28</div></div>
+<div class="ttc" id="aclassMessage_html_aa135d88782c0e49f1f232793cbca0a9d"><div class="ttname"><a href="classMessage.html#aa135d88782c0e49f1f232793cbca0a9d">Message::setTranslate</a></div><div class="ttdeci">void setTranslate(glm::mat4 translate)</div><div class="ttdoc">This method translate the message.</div><div class="ttdef"><b>Definition:</b> Message.cpp:43</div></div>
+<div class="ttc" id="aclassMessage_html_aee30afc535ea2b487eb0cac480bf3f05"><div class="ttname"><a href="classMessage.html#aee30afc535ea2b487eb0cac480bf3f05">Message::setRotate</a></div><div class="ttdeci">void setRotate(glm::mat4 rotate)</div><div class="ttdoc">This method rotate the message.</div><div class="ttdef"><b>Definition:</b> Message.cpp:34</div></div>
 <div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model&lt; Obj &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

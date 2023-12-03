@@ -1,0 +1,13 @@
+<map id="Scene::run" name="Scene::run">
+<area shape="rect" id="node1" title="This method runs the simulation." alt="" coords="5,220,96,247"/>
+<area shape="rect" id="node2" href="$classSimulation.html#af3b86332848f469748212b35e078980c" title="This method changes the camera." alt="" coords="144,81,343,108"/>
+<area shape="rect" id="node6" href="$classOpenGL.html#a1a09abe8b7a1075baf9b8f21f0a0f43a" title="This method creates the window and load the shaders." alt="" coords="156,144,331,171"/>
+<area shape="rect" id="node8" href="$classOpenGL.html#a39d87020db31c36e3efb53c42f70cfde" title="This method returns the program ID." alt="" coords="158,195,329,221"/>
+<area shape="rect" id="node9" href="$classSimulation.html#a089ec7ead73faead7ff9cef850b9c09c" title="This method initializes the simulation." alt="" coords="183,245,304,272"/>
+<area shape="rect" id="node10" href="$classSimulation.html#ac8c400b6601382f9b13e946bc1f069b5" title="This method sets the point." alt="" coords="167,296,320,323"/>
+<area shape="rect" id="node11" href="$classSimulation.html#a97bef69643599266dd8cd5a71d8f93b7" title="This method sets the second point." alt="" coords="163,347,324,373"/>
+<area shape="rect" id="node3" href="$classScene.html#af51c1a302474e69cfd7649d5a049c2f9" title=" " alt="" coords="391,5,588,32"/>
+<area shape="rect" id="node4" href="$classScene.html#ad337ea0bf514faab5f9ce9617f833311" title=" " alt="" coords="415,56,564,83"/>
+<area shape="rect" id="node5" href="$classScene.html#ac1539c53e753e76c879d0c60e4052507" title=" " alt="" coords="414,107,565,133"/>
+<area shape="rect" id="node7" href="$classOpenGL.html#a223dc8b2e5faf362371912a4f2221d5b" title="This method loads the shaders." alt="" coords="409,157,570,184"/>
+</map>

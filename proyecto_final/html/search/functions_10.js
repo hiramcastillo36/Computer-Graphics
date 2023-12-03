@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['t_270',['T',['../classAnimation.html#a34f28290b5efb7db9bfd3fc41e9a85e4',1,'Animation']]]
+  ['vertex_280',['Vertex',['../classVertex.html#a97488994a2482d70da74e1b91d40e169',1,'Vertex::Vertex()'],['../classVertex.html#a97207a234af1ae7bf05529461c9da822',1,'Vertex::Vertex(float vx, float vy, float vz)']]]
 ];
