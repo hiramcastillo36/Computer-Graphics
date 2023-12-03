@@ -1,6 +1,9 @@
 <map id="Vertex::row" name="Vertex::row">
-<area shape="rect" id="node1" title="This method returns the vertex as a row." alt="" coords="356,31,452,57"/>
-<area shape="rect" id="node2" href="$classAnimation.html#ab64e14e2cfb97930c35009c836b960d3" title="This method returns the bezier curve." alt="" coords="165,5,303,32"/>
-<area shape="rect" id="node4" href="$classAnimation.html#a94579309ac0f3316fa190bfbf8ca6a2e" title="This method returns the hermite curve." alt="" coords="160,56,308,83"/>
+<area shape="rect" id="node1" title="This method returns the vertex as a row." alt="" coords="356,107,452,133"/>
+<area shape="rect" id="node2" href="$classAnimation.html#ab64e14e2cfb97930c35009c836b960d3" title="This method returns the bezier curve." alt="" coords="165,81,303,108"/>
+<area shape="rect" id="node7" href="$classAnimation.html#a94579309ac0f3316fa190bfbf8ca6a2e" title="This method returns the hermite curve." alt="" coords="160,132,308,159"/>
 <area shape="rect" id="node3" href="$classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4" title="Construct a new Robot:: Robot object." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node4" href="$classRobot.html#ad46a0d47d427baea72b5fc43612df61b" title="This method sets the P2 vertex." alt="" coords="7,56,111,83"/>
+<area shape="rect" id="node5" href="$classRobot.html#ac27f97ce38e8b6e57985eaddabcfd034" title="This method sets the P3 vertex." alt="" coords="7,107,111,133"/>
+<area shape="rect" id="node6" href="$classRobot.html#a5f7bb45e0533f50c4031e9774f990b2d" title="This method sets the P4 vertex." alt="" coords="7,157,111,184"/>
 </map>

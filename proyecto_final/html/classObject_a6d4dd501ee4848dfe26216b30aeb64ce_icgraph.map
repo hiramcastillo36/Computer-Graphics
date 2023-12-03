@@ -1,6 +1,7 @@
 <map id="Object::setScale" name="Object::setScale">
-<area shape="rect" id="node1" title="This method sets the scale matrix." alt="" coords="172,56,299,83"/>
-<area shape="rect" id="node2" href="$classBall.html#a86a144d3dad6c953e422e32435923bbb" title="Construct a new Ball:: Ball object." alt="" coords="25,5,105,32"/>
-<area shape="rect" id="node3" href="$classEnemy.html#a94f30d348b6d2840fd71675472ba38dd" title="Construct a new Enemy:: Enemy object." alt="" coords="5,56,124,83"/>
-<area shape="rect" id="node4" href="$classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4" title="Construct a new Robot:: Robot object." alt="" coords="11,107,118,133"/>
+<area shape="rect" id="node1" title="This method sets the scale matrix." alt="" coords="200,81,327,108"/>
+<area shape="rect" id="node2" href="$classBall.html#a86a144d3dad6c953e422e32435923bbb" title="Construct a new Ball:: Ball object." alt="" coords="39,5,119,32"/>
+<area shape="rect" id="node3" href="$classEnemy.html#a94f30d348b6d2840fd71675472ba38dd" title="Construct a new Enemy:: Enemy object." alt="" coords="19,56,138,83"/>
+<area shape="rect" id="node4" href="$classMessage.html#a4fc4f717b634e66070366cb7722d7761" title="Construct a new Message:: Message object." alt="" coords="5,107,152,133"/>
+<area shape="rect" id="node5" href="$classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4" title="Construct a new Robot:: Robot object." alt="" coords="25,157,132,184"/>
 </map>

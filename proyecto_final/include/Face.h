@@ -19,8 +19,7 @@ private:
     vector<Edge> edges;
 
 public:
-    Face(vector<Edge> edges); //constructor
-    // ~Face(vector <Edge> edges); -> destructor
+    Face(vector<Edge> edges);
     void print();
 
     vector<Edge> getEdges();

@@ -6,7 +6,6 @@
  */
 
 Ball::Ball(){
-    // random rgb
     srand (time(NULL));
     float r = (float)(rand() % 10 + 1)/10;
     float g = (float)(rand() % 10 + 1)/10;
@@ -18,7 +17,7 @@ Ball::Ball(){
 
 /**
  * @brief 
- * 
+ *  Construct a new Ball:: Ball object
  */
 
 Ball::Ball(float x, float y, float z){
@@ -41,7 +40,8 @@ void Ball::draw(GLuint programID, glm::mat4 camera)
 
 /**
  * @brief 
- * 
+ *  This method sets the translate.
+ * @param translate
  */
 
 void Ball::setTranslate(glm::mat4 translate){

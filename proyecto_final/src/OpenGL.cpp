@@ -1,6 +1,9 @@
 #include "../include/OpenGL.h"
 
-
+/**
+ * @brief Construct a new Open G L:: Open G L object
+ * 
+ */
 OpenGL::OpenGL() {
     glewExperimental = true; // Needed for core profile
     if (!glfwInit()) {
@@ -13,6 +16,14 @@ OpenGL::OpenGL() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // We don't want the old OpenGL
 }
 
+/**
+ * @brief 
+ *  This method creates the window and load the shaders.
+ * @param width 
+ * @param height 
+ * @param title 
+ * @return GLFWwindow* 
+ */
 GLFWwindow *OpenGL::createWindow(long width, long height, std::string title) {
     GLFWwindow *window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
     if (window == NULL) {
@@ -36,6 +47,14 @@ GLFWwindow *OpenGL::createWindow(long width, long height, std::string title) {
     return (window);
 }
 
+
+/**
+ * @brief 
+ * This method loads the shaders.
+ * @param vertex_file_path 
+ * @param fragment_file_path 
+ * @return GLuint 
+ */
 GLuint OpenGL::loadShaders(const char *vertex_file_path, const char *fragment_file_path) {
     // Create the shaders
     GLuint VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
@@ -124,6 +143,11 @@ GLuint OpenGL::loadShaders(const char *vertex_file_path, const char *fragment_fi
     return ProgramID;
 }
 
+/**
+ * @brief 
+ * This method returns the program ID.
+ * @return GLuint 
+ */
 GLuint OpenGL::getProgramID() {
     return this->programID;
 }

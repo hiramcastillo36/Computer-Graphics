@@ -74,30 +74,23 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef MODEL_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define MODEL_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Obj_8h.html">Obj.h</a>&quot;</span>     <span class="comment">// Incluye la definición de la clase Cubo</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Ply_8h.html">Ply.h</a>&quot;</span> <span class="comment">// Incluye la definición de la clase Triangulo</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Obj_8h.html">Obj.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Ply_8h.html">Ply.h</a>&quot;</span> </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classModel.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classModel.html">Model</a> : <span class="keyword">public</span> T {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classModel.html#ae3df9a91393d8eaf52594479a315e9ec">   20</a></span>&#160;    <a class="code" href="classModel.html#ae3df9a91393d8eaf52594479a315e9ec">Model</a>(<span class="keywordtype">string</span> fileName, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b) : T(fileName, r, g, b) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// El constructor de Model ahora crea un objeto de tipo Obj usando fileName.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">// Esto es posible porque Obj y Ply heredan de Object, por lo que pueden</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// ser tratados como Object.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// El constructor de Model ahora crea un objeto de tipo Obj usando fileName.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Esto es posible porque Obj y Ply heredan de Object, por lo que pueden</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// ser tratados como Object.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">   28</a></span>&#160;    <a class="code" href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">Model</a>() : T(<span class="stringliteral">&quot;&quot;</span>, 0.0, 0.0, 0.0) {}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MODEL_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classModel.html#ae3df9a91393d8eaf52594479a315e9ec">   20</a></span>&#160;    <a class="code" href="classModel.html#ae3df9a91393d8eaf52594479a315e9ec">Model</a>(<span class="keywordtype">string</span> fileName, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b) : T(fileName, r, g, b) {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">   21</a></span>&#160;    <a class="code" href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">Model</a>() : T(<span class="stringliteral">&quot;&quot;</span>, 0.0, 0.0, 0.0) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MODEL_H</span></div>
 <div class="ttc" id="aObj_8h_html"><div class="ttname"><a href="Obj_8h.html">Obj.h</a></div></div>
 <div class="ttc" id="aPly_8h_html"><div class="ttname"><a href="Ply_8h.html">Ply.h</a></div></div>
 <div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">This class is used to create models using Obj and Ply.</div><div class="ttdef"><b>Definition:</b> Model.h:17</div></div>
-<div class="ttc" id="aclassModel_html_a3ca077f3bbbcf692b7fae26cc849f9e6"><div class="ttname"><a href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">Model::Model</a></div><div class="ttdeci">Model()</div><div class="ttdef"><b>Definition:</b> Model.h:28</div></div>
+<div class="ttc" id="aclassModel_html_a3ca077f3bbbcf692b7fae26cc849f9e6"><div class="ttname"><a href="classModel.html#a3ca077f3bbbcf692b7fae26cc849f9e6">Model::Model</a></div><div class="ttdeci">Model()</div><div class="ttdef"><b>Definition:</b> Model.h:21</div></div>
 <div class="ttc" id="aclassModel_html_ae3df9a91393d8eaf52594479a315e9ec"><div class="ttname"><a href="classModel.html#ae3df9a91393d8eaf52594479a315e9ec">Model::Model</a></div><div class="ttdeci">Model(string fileName, float r, float g, float b)</div><div class="ttdef"><b>Definition:</b> Model.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

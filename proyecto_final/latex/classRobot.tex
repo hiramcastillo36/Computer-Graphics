@@ -23,12 +23,18 @@ Collaboration diagram for Robot\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRobot}{Robot}}\+:\+: \mbox{\hyperlink{classRobot}{Robot}} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classRobot_ab95df5f1448465fc35b235c921907ed5}{draw}} (GLuint program\+ID, glm\+::mat4 camera)
+void \mbox{\hyperlink{classRobot_a84eaa7f5fb2c3c9035b8bbad49a31272}{draw}} (GLuint program\+ID, glm\+::mat4 camera, int collision)
 \begin{DoxyCompactList}\small\item\em This method draws the robot with the animation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRobot_ad46a0d47d427baea72b5fc43612df61b}{set\+P2}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a6555bec7b3749537b24ce777c778c42a}{P2}})
 \begin{DoxyCompactList}\small\item\em This method sets the P2 vertex. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}{set\+P3}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_a1895d0b511e164211d3eff710ccfc4e1}{P3}})
-\begin{DoxyCompactList}\small\item\em This method sets the P3 vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method sets the P3 vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobot_a5f7bb45e0533f50c4031e9774f990b2d}{set\+P4}} (\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_abcf717ea4ca5b519896d0c7044cdba73}{P4}})
+\begin{DoxyCompactList}\small\item\em This method sets the P4 vertex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertex}{Vertex}} \mbox{\hyperlink{classRobot_af3871714535e7c32131233c731ab3753}{get\+Current\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em This method returns the current position of the robot. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $>$ \mbox{\hyperlink{classRobot_a3bc07368f0385aef10c4c8d22a0c55d6}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em This method returns the next position of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,11 +80,11 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classRobot_ab95df5f1448465fc35b235c921907ed5}\label{classRobot_ab95df5f1448465fc35b235c921907ed5}} 
+\mbox{\Hypertarget{classRobot_a84eaa7f5fb2c3c9035b8bbad49a31272}\label{classRobot_a84eaa7f5fb2c3c9035b8bbad49a31272}} 
 \index{Robot@{Robot}!draw@{draw}}
 \index{draw@{draw}!Robot@{Robot}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Robot\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Robot\+::draw (\begin{DoxyParamCaption}\item[{GLuint}]{program\+ID,  }\item[{glm\+::mat4}]{camera,  }\item[{int}]{collision }\end{DoxyParamCaption})}
 
 
 
@@ -95,9 +101,35 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=304pt]{classRobot_ab95df5f1448465fc35b235c921907ed5_cgraph}
+\includegraphics[width=304pt]{classRobot_a84eaa7f5fb2c3c9035b8bbad49a31272_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classRobot_af3871714535e7c32131233c731ab3753}\label{classRobot_af3871714535e7c32131233c731ab3753}} 
+\index{Robot@{Robot}!getCurrentPos@{getCurrentPos}}
+\index{getCurrentPos@{getCurrentPos}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{getCurrentPos()}{getCurrentPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVertex}{Vertex}} Robot\+::get\+Current\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the current position of the robot. 
+
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRobot_a3bc07368f0385aef10c4c8d22a0c55d6}\label{classRobot_a3bc07368f0385aef10c4c8d22a0c55d6}} 
+\index{Robot@{Robot}!getPath@{getPath}}
+\index{getPath@{getPath}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classVertex}{Vertex}} $>$ Robot\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method returns the next position of the robot. 
+
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classRobot_ad46a0d47d427baea72b5fc43612df61b}\label{classRobot_ad46a0d47d427baea72b5fc43612df61b}} 
 \index{Robot@{Robot}!setP2@{setP2}}
 \index{setP2@{setP2}!Robot@{Robot}}
@@ -113,6 +145,13 @@ This method sets the P2 vertex.
 {\em P2} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRobot_ad46a0d47d427baea72b5fc43612df61b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}\label{classRobot_ac27f97ce38e8b6e57985eaddabcfd034}} 
 \index{Robot@{Robot}!setP3@{setP3}}
 \index{setP3@{setP3}!Robot@{Robot}}
@@ -128,6 +167,35 @@ This method sets the P3 vertex.
 {\em P3} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRobot_ac27f97ce38e8b6e57985eaddabcfd034_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRobot_a5f7bb45e0533f50c4031e9774f990b2d}\label{classRobot_a5f7bb45e0533f50c4031e9774f990b2d}} 
+\index{Robot@{Robot}!setP4@{setP4}}
+\index{setP4@{setP4}!Robot@{Robot}}
+\doxysubsubsection{\texorpdfstring{setP4()}{setP4()}}
+{\footnotesize\ttfamily void Robot\+::set\+P4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}}]{P4 }\end{DoxyParamCaption})}
+
+
+
+This method sets the P4 vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P4} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRobot_a5f7bb45e0533f50c4031e9774f990b2d_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

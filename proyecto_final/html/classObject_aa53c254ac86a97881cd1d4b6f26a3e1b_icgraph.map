@@ -1,6 +1,7 @@
 <map id="Object::draw" name="Object::draw">
-<area shape="rect" id="node1" title="This method is used to draw the object." alt="" coords="160,56,264,83"/>
-<area shape="rect" id="node2" href="$classBall.html#aac0aa52061c21df923908b281f0a59a8" title="This method draws the ball." alt="" coords="15,5,102,32"/>
-<area shape="rect" id="node3" href="$classEnemy.html#afa438edc8056dde48d2a08441262a883" title="This method draws the enemy." alt="" coords="5,56,112,83"/>
-<area shape="rect" id="node4" href="$classRobot.html#ab95df5f1448465fc35b235c921907ed5" title="This method draws the robot with the animation." alt="" coords="9,107,109,133"/>
+<area shape="rect" id="node1" title="This method is used to draw the object." alt="" coords="173,81,277,108"/>
+<area shape="rect" id="node2" href="$classBall.html#aac0aa52061c21df923908b281f0a59a8" title="This method draws the ball." alt="" coords="22,5,109,32"/>
+<area shape="rect" id="node3" href="$classEnemy.html#afa438edc8056dde48d2a08441262a883" title="This method draws the enemy." alt="" coords="12,56,119,83"/>
+<area shape="rect" id="node4" href="$classMessage.html#a20170bfe00c1b9ef92718be95fad97f1" title="This method draw the collition message." alt="" coords="5,107,125,133"/>
+<area shape="rect" id="node5" href="$classRobot.html#a84eaa7f5fb2c3c9035b8bbad49a31272" title="This method draws the robot with the animation." alt="" coords="15,157,115,184"/>
 </map>

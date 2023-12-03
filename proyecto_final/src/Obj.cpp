@@ -27,7 +27,6 @@ void Obj::load() {
     string line;
     ifstream OBJfile(fileName);
     bool isHaveNormals = false;
-    // Verificar si el archivo se abrio correctamente
     if (!OBJfile.is_open()) {
         cout << "No se pudo abrir el archivo" << endl;
         return;

@@ -89,71 +89,67 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//#include &lt;glm/vec3.hpp&gt; // glm::vec3</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//#include &lt;glm/vec4.hpp&gt; // glm::vec4</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;glm/mat4x4.hpp&gt;</span> <span class="comment">// glm::mat4</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;glm/ext/matrix_transform.hpp&gt;</span> <span class="comment">// glm::translate, glm::rotate, glm::scale</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//#include &lt;glm/ext/matrix_clip_space.hpp&gt; // glm::perspective</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;glm/ext/scalar_constants.hpp&gt;</span> <span class="comment">// glm::pi</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classObject.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObject.html">Object</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classObject.html">Object</a>(<span class="keywordtype">string</span> fileName, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    vector&lt;Vertex&gt; getVertices();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    vector&lt;Face&gt; getFaces();</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classObject.html#a7052058f23997afc23490d904c31872d">   40</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classObject.html#a7052058f23997afc23490d904c31872d">load</a>() = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> draw(GLuint programID, glm::mat4 transform);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> setScale(glm::mat4 scale);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> setRotate(glm::mat4 rotate);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> setTranslate(glm::mat4 translate);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    glm::mat4 getScale();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    glm::mat4 getRotate();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    glm::mat4 getTranslate();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    glm::mat4 getTransform();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classObject.html#aed5219de2a5260b172566ca817411614">   53</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classObject.html#aed5219de2a5260b172566ca817411614">fileName</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classObject.html#a2dbcf166f7dcdf3e21123253b4f91381">   54</a></span>&#160;    vector&lt;Vertex&gt; vertices = {};</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classObject.html#a930e2a0e138690afe71201b8c4552ab7">   55</a></span>&#160;    vector&lt;Face&gt; faces = {};</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classObject.html#ae2658c68493c8595658123484e506c4e">   56</a></span>&#160;    <span class="keywordtype">float</span> r, g, <a class="code" href="classObject.html#ae2658c68493c8595658123484e506c4e">b</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    vector&lt;string&gt; split(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;delim);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">   60</a></span>&#160;    GLuint <a class="code" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">colorbuffer</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">   61</a></span>&#160;    GLuint <a class="code" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">datasize</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classObject.html#a471691d2513e8013cd012b03343c3216">   62</a></span>&#160;    GLuint <a class="code" href="classObject.html#a471691d2513e8013cd012b03343c3216">MatrixID</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">   63</a></span>&#160;    GLuint <a class="code" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">vertexbuffer</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">   65</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">scale</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">   66</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">transform</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">   67</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">rotate</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">   68</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">translate</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;glm/mat4x4.hpp&gt;</span> <span class="comment">// glm::mat4</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;glm/ext/scalar_constants.hpp&gt;</span> <span class="comment">// glm::pi</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classObject.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObject.html">Object</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classObject.html">Object</a>(<span class="keywordtype">string</span> fileName, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    vector&lt;Vertex&gt; getVertices();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    vector&lt;Face&gt; getFaces();</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classObject.html#a7052058f23997afc23490d904c31872d">   36</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classObject.html#a7052058f23997afc23490d904c31872d">load</a>() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> draw(GLuint programID, glm::mat4 transform);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> setScale(glm::mat4 scale);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> setRotate(glm::mat4 rotate);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> setTranslate(glm::mat4 translate);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    glm::mat4 getScale();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    glm::mat4 getRotate();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    glm::mat4 getTranslate();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    glm::mat4 getTransform();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classObject.html#aed5219de2a5260b172566ca817411614">   49</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classObject.html#aed5219de2a5260b172566ca817411614">fileName</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classObject.html#a2dbcf166f7dcdf3e21123253b4f91381">   50</a></span>&#160;    vector&lt;Vertex&gt; vertices = {};</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classObject.html#a930e2a0e138690afe71201b8c4552ab7">   51</a></span>&#160;    vector&lt;Face&gt; faces = {};</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classObject.html#ae2658c68493c8595658123484e506c4e">   52</a></span>&#160;    <span class="keywordtype">float</span> r, g, <a class="code" href="classObject.html#ae2658c68493c8595658123484e506c4e">b</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    vector&lt;string&gt; split(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;str, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;delim);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">   56</a></span>&#160;    GLuint <a class="code" href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">colorbuffer</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">   57</a></span>&#160;    GLuint <a class="code" href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">datasize</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classObject.html#a471691d2513e8013cd012b03343c3216">   58</a></span>&#160;    GLuint <a class="code" href="classObject.html#a471691d2513e8013cd012b03343c3216">MatrixID</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">   59</a></span>&#160;    GLuint <a class="code" href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">vertexbuffer</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">   61</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">scale</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">   62</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">transform</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">   63</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">rotate</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">   64</a></span>&#160;    glm::mat4 <a class="code" href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">translate</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> set_data();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> set_data();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aEdge_8h_html"><div class="ttname"><a href="Edge_8h.html">Edge.h</a></div></div>
 <div class="ttc" id="aFace_8h_html"><div class="ttname"><a href="Face_8h.html">Face.h</a></div></div>
 <div class="ttc" id="aVertex_8h_html"><div class="ttname"><a href="Vertex_8h.html">Vertex.h</a></div></div>
-<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdoc">This class is used to create objects using vertices and faces.</div><div class="ttdef"><b>Definition:</b> Object.h:35</div></div>
-<div class="ttc" id="aclassObject_html_a0a9dbaa64df17576f38576d4c68ce714"><div class="ttname"><a href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">Object::rotate</a></div><div class="ttdeci">glm::mat4 rotate</div><div class="ttdef"><b>Definition:</b> Object.h:67</div></div>
-<div class="ttc" id="aclassObject_html_a19a25fe780e2b07bf1a5dc0db5ded377"><div class="ttname"><a href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">Object::scale</a></div><div class="ttdeci">glm::mat4 scale</div><div class="ttdef"><b>Definition:</b> Object.h:65</div></div>
-<div class="ttc" id="aclassObject_html_a287bec75f2cc84cf8420f2b1f8229dc3"><div class="ttname"><a href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">Object::translate</a></div><div class="ttdeci">glm::mat4 translate</div><div class="ttdef"><b>Definition:</b> Object.h:68</div></div>
-<div class="ttc" id="aclassObject_html_a471691d2513e8013cd012b03343c3216"><div class="ttname"><a href="classObject.html#a471691d2513e8013cd012b03343c3216">Object::MatrixID</a></div><div class="ttdeci">GLuint MatrixID</div><div class="ttdef"><b>Definition:</b> Object.h:62</div></div>
-<div class="ttc" id="aclassObject_html_a514540d6d31ba5a450ffa3fbf3753b4f"><div class="ttname"><a href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">Object::datasize</a></div><div class="ttdeci">GLuint datasize</div><div class="ttdef"><b>Definition:</b> Object.h:61</div></div>
-<div class="ttc" id="aclassObject_html_a6b9e1c5f1dad7c7622cd5523d1a76de3"><div class="ttname"><a href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">Object::transform</a></div><div class="ttdeci">glm::mat4 transform</div><div class="ttdef"><b>Definition:</b> Object.h:66</div></div>
+<div class="ttc" id="aclassObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdoc">This class is used to create objects using vertices and faces.</div><div class="ttdef"><b>Definition:</b> Object.h:31</div></div>
+<div class="ttc" id="aclassObject_html_a0a9dbaa64df17576f38576d4c68ce714"><div class="ttname"><a href="classObject.html#a0a9dbaa64df17576f38576d4c68ce714">Object::rotate</a></div><div class="ttdeci">glm::mat4 rotate</div><div class="ttdef"><b>Definition:</b> Object.h:63</div></div>
+<div class="ttc" id="aclassObject_html_a19a25fe780e2b07bf1a5dc0db5ded377"><div class="ttname"><a href="classObject.html#a19a25fe780e2b07bf1a5dc0db5ded377">Object::scale</a></div><div class="ttdeci">glm::mat4 scale</div><div class="ttdef"><b>Definition:</b> Object.h:61</div></div>
+<div class="ttc" id="aclassObject_html_a287bec75f2cc84cf8420f2b1f8229dc3"><div class="ttname"><a href="classObject.html#a287bec75f2cc84cf8420f2b1f8229dc3">Object::translate</a></div><div class="ttdeci">glm::mat4 translate</div><div class="ttdef"><b>Definition:</b> Object.h:64</div></div>
+<div class="ttc" id="aclassObject_html_a471691d2513e8013cd012b03343c3216"><div class="ttname"><a href="classObject.html#a471691d2513e8013cd012b03343c3216">Object::MatrixID</a></div><div class="ttdeci">GLuint MatrixID</div><div class="ttdef"><b>Definition:</b> Object.h:58</div></div>
+<div class="ttc" id="aclassObject_html_a514540d6d31ba5a450ffa3fbf3753b4f"><div class="ttname"><a href="classObject.html#a514540d6d31ba5a450ffa3fbf3753b4f">Object::datasize</a></div><div class="ttdeci">GLuint datasize</div><div class="ttdef"><b>Definition:</b> Object.h:57</div></div>
+<div class="ttc" id="aclassObject_html_a6b9e1c5f1dad7c7622cd5523d1a76de3"><div class="ttname"><a href="classObject.html#a6b9e1c5f1dad7c7622cd5523d1a76de3">Object::transform</a></div><div class="ttdeci">glm::mat4 transform</div><div class="ttdef"><b>Definition:</b> Object.h:62</div></div>
 <div class="ttc" id="aclassObject_html_a7052058f23997afc23490d904c31872d"><div class="ttname"><a href="classObject.html#a7052058f23997afc23490d904c31872d">Object::load</a></div><div class="ttdeci">virtual void load()=0</div></div>
-<div class="ttc" id="aclassObject_html_a8812b04d88a9771f6e5f7c25bf107958"><div class="ttname"><a href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">Object::colorbuffer</a></div><div class="ttdeci">GLuint colorbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:60</div></div>
-<div class="ttc" id="aclassObject_html_ae2658c68493c8595658123484e506c4e"><div class="ttname"><a href="classObject.html#ae2658c68493c8595658123484e506c4e">Object::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> Object.h:56</div></div>
-<div class="ttc" id="aclassObject_html_aed5219de2a5260b172566ca817411614"><div class="ttname"><a href="classObject.html#aed5219de2a5260b172566ca817411614">Object::fileName</a></div><div class="ttdeci">string fileName</div><div class="ttdef"><b>Definition:</b> Object.h:53</div></div>
-<div class="ttc" id="aclassObject_html_af3c7c45308a764d1f92333c8f72c7e13"><div class="ttname"><a href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">Object::vertexbuffer</a></div><div class="ttdeci">GLuint vertexbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:63</div></div>
+<div class="ttc" id="aclassObject_html_a8812b04d88a9771f6e5f7c25bf107958"><div class="ttname"><a href="classObject.html#a8812b04d88a9771f6e5f7c25bf107958">Object::colorbuffer</a></div><div class="ttdeci">GLuint colorbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:56</div></div>
+<div class="ttc" id="aclassObject_html_ae2658c68493c8595658123484e506c4e"><div class="ttname"><a href="classObject.html#ae2658c68493c8595658123484e506c4e">Object::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> Object.h:52</div></div>
+<div class="ttc" id="aclassObject_html_aed5219de2a5260b172566ca817411614"><div class="ttname"><a href="classObject.html#aed5219de2a5260b172566ca817411614">Object::fileName</a></div><div class="ttdeci">string fileName</div><div class="ttdef"><b>Definition:</b> Object.h:49</div></div>
+<div class="ttc" id="aclassObject_html_af3c7c45308a764d1f92333c8f72c7e13"><div class="ttname"><a href="classObject.html#af3c7c45308a764d1f92333c8f72c7e13">Object::vertexbuffer</a></div><div class="ttdeci">GLuint vertexbuffer</div><div class="ttdef"><b>Definition:</b> Object.h:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

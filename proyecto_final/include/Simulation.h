@@ -40,7 +40,6 @@ public:
 
     void setCollision(bool collision);
 private:
-    /** Robot */
     Robot robot;
     Ball ball;
     Enemy enemy;
@@ -49,9 +48,7 @@ private:
     Message message;
 
     glm::mat4 camera;
-    
     Scene scene;
-
     int collision;
 
 };

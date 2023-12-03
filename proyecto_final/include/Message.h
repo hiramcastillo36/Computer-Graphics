@@ -15,6 +15,11 @@
 #include "OpenGL.h"
 #include "Scene.h"
 
+/**
+ * @brief 
+ * This class is used to create and draw collition message
+ */
+
 class Message
 {
 public:
