@@ -14,7 +14,7 @@ Robot::Robot() {
     Animation an;
 
     this->P1 = Vertex (-4.0, 0.0, 0.0);
-    this->P2 = Vertex (-0.2, 0.0, -1.5);
+    this->P2 = Vertex (-0.2, 0.0, -2.6);
     this->P3 = Vertex (0.9, 0.0, 0.5);
     this->P4 = Vertex (4.0, 0.0, 0.0);
 

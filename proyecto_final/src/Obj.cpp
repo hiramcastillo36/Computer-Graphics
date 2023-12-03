@@ -27,10 +27,7 @@ void Obj::load() {
     string line;
     ifstream OBJfile(fileName);
     bool isHaveNormals = false;
-    if (!OBJfile.is_open()) {
-        cout << "No se pudo abrir el archivo" << endl;
-        return;
-    }
+    
     while (getline(OBJfile, line)) {
         vector<string> elems = split(line, " ");
         

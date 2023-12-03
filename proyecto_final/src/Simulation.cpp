@@ -73,7 +73,7 @@ void Simulation::setPoint(float x, float y)
     int limit = 0;
     for(Vertex v : path)
     {
-        if(v.getX() + 0.15 > -0.6 && v.getX() - 0.15 < 0.6 && v.getZ() + 0.15 > -0.6 && v.getZ() - 0.15 < 0.6)
+        if(v.getX() + 0.15 > -0.4 && v.getX() - 0.15 < 0.4 && v.getZ() + 0.15 > -0.4 && v.getZ() - 0.15 < 0.4)
         {
             this->collision = limit;
             return;
