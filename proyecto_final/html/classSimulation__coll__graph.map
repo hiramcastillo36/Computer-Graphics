@@ -1,16 +1,15 @@
 <map id="Simulation" name="Simulation">
-<area shape="rect" id="node1" title="This class is used to generate the simulation." alt="" coords="483,1549,697,1773"/>
-<area shape="rect" id="node2" href="$classEnemy.html" title="This class is used to create and draw the enemy." alt="" coords="5,1292,212,1399"/>
-<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="267,903,454,1009"/>
-<area shape="rect" id="node13" href="$classMessage.html" title="This class is used to create and draw collition message." alt="" coords="236,1285,443,1406"/>
-<area shape="rect" id="node4" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="329,616,497,723"/>
-<area shape="rect" id="node5" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="401,5,638,567"/>
-<area shape="rect" id="node11" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="531,616,697,723"/>
-<area shape="rect" id="node6" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="726,616,913,723"/>
-<area shape="rect" id="node10" href="$classModel.html" title=" " alt="" coords="751,903,938,1009"/>
-<area shape="rect" id="node7" title=" " alt="" coords="800,247,839,325"/>
-<area shape="rect" id="node8" href="$classRobot.html" title="This class is used to create and draw the robot." alt="" coords="738,1233,951,1457"/>
-<area shape="rect" id="node9" href="$classVertex.html" title="This class is used to create vertices." alt="" coords="498,785,727,1127"/>
-<area shape="rect" id="node14" href="$classBall.html" title="This class is used to create and draw the ball." alt="" coords="976,1263,1183,1428"/>
-<area shape="rect" id="node12" href="$classScene.html" title="This class is used generate the camera views." alt="" coords="467,1263,713,1428"/>
+<area shape="rect" id="node1" title="This class is used to generate the simulation." alt="" coords="312,1564,527,1891"/>
+<area shape="rect" id="node2" href="$classEnemy.html" title="This class is used to create and draw the enemy." alt="" coords="236,1307,443,1413"/>
+<area shape="rect" id="node3" href="$classModel.html" title=" " alt="" coords="246,910,433,1017"/>
+<area shape="rect" id="node12" href="$classMessage.html" title="This class is used to create and draw collition message." alt="" coords="5,1270,212,1450"/>
+<area shape="rect" id="node4" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="307,616,475,723"/>
+<area shape="rect" id="node5" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="379,5,617,567"/>
+<area shape="rect" id="node11" href="$classPly.html" title="This class is used to create objects using the ply file." alt="" coords="509,616,676,723"/>
+<area shape="rect" id="node6" href="$classModel.html" title="This class is used to create models using Obj and Ply." alt="" coords="705,616,891,723"/>
+<area shape="rect" id="node10" href="$classModel.html" title=" " alt="" coords="710,910,897,1017"/>
+<area shape="rect" id="node7" title=" " alt="" coords="779,247,817,325"/>
+<area shape="rect" id="node8" href="$classRobot.html" title="This class is used to create and draw the robot." alt="" coords="467,1248,681,1472"/>
+<area shape="rect" id="node9" href="$classVertex.html" title="This class is used to create vertices." alt="" coords="457,785,686,1141"/>
+<area shape="rect" id="node13" href="$classBall.html" title="This class is used to create and draw the ball." alt="" coords="705,1277,912,1443"/>
 </map>

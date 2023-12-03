@@ -1,5 +1,5 @@
 <map id="Message" name="Message">
-<area shape="rect" id="node1" title="This class is used to create and draw collition message." alt="" coords="121,955,327,1076"/>
+<area shape="rect" id="node1" title="This class is used to create and draw collition message." alt="" coords="121,955,327,1135"/>
 <area shape="rect" id="node2" href="$classModel.html" title=" " alt="" coords="131,785,317,892"/>
 <area shape="rect" id="node3" href="$classObj.html" title="This class is used to create objects using the obj file." alt="" coords="40,616,208,723"/>
 <area shape="rect" id="node4" href="$classObject.html" title="This class is used to create objects using vertices and faces." alt="" coords="5,5,243,567"/>

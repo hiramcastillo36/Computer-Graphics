@@ -83,51 +83,47 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Animation_8h.html">Animation.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Model_8h.html">Model.h</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="OpenGL_8h.html">OpenGL.h</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Scene_8h.html">Scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classRobot.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRobot.html">Robot</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classRobot.html">Robot</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> draw(GLuint programID, glm::mat4 camera, <span class="keywordtype">int</span> collision);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> setP2(<a class="code" href="classVertex.html">Vertex</a> P2);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> setP3(<a class="code" href="classVertex.html">Vertex</a> P3);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> setP4(<a class="code" href="classVertex.html">Vertex</a> P4);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classVertex.html">Vertex</a> getCurrentPos();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    vector &lt;Vertex&gt; getPath();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classRobot.html#ac6aca060cacec32e908032a0ec267763">   38</a></span>&#160;    <a class="code" href="classModel.html">Model &lt;Ply&gt;</a> <a class="code" href="classRobot.html#ac6aca060cacec32e908032a0ec267763">robot</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classRobot.html#a9c1add8560b70a42d1c3a6c44942111b">   39</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pathIndex = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">   40</a></span>&#160;    vector &lt;Vertex&gt; <a class="code" href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">path</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">   42</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">P1</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">   43</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">P2</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">   44</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">P3</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">   45</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">P4</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">   47</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">t</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classRobot.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRobot.html">Robot</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classRobot.html">Robot</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> draw(GLuint programID, glm::mat4 camera, <span class="keywordtype">int</span> collision);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> setP2(<a class="code" href="classVertex.html">Vertex</a> P2);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> setP3(<a class="code" href="classVertex.html">Vertex</a> P3);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> setP4(<a class="code" href="classVertex.html">Vertex</a> P4);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classVertex.html">Vertex</a> getCurrentPos();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    vector &lt;Vertex&gt; getPath();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRobot.html#ac6aca060cacec32e908032a0ec267763">   36</a></span>&#160;    <a class="code" href="classModel.html">Model &lt;Ply&gt;</a> <a class="code" href="classRobot.html#ac6aca060cacec32e908032a0ec267763">robot</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classRobot.html#a9c1add8560b70a42d1c3a6c44942111b">   37</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pathIndex = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">   38</a></span>&#160;    vector &lt;Vertex&gt; <a class="code" href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">path</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">   40</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">P1</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">   41</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">P2</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">   42</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">P3</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">   43</a></span>&#160;    <a class="code" href="classVertex.html">Vertex</a> <a class="code" href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">P4</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">   45</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">t</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAnimation_8h_html"><div class="ttname"><a href="Animation_8h.html">Animation.h</a></div></div>
 <div class="ttc" id="aModel_8h_html"><div class="ttname"><a href="Model_8h.html">Model.h</a></div></div>
-<div class="ttc" id="aOpenGL_8h_html"><div class="ttname"><a href="OpenGL_8h.html">OpenGL.h</a></div></div>
-<div class="ttc" id="aScene_8h_html"><div class="ttname"><a href="Scene_8h.html">Scene.h</a></div></div>
 <div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model&lt; Ply &gt;</a></div></div>
-<div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdoc">This class is used to create and draw the robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:25</div></div>
-<div class="ttc" id="aclassRobot_html_a1895d0b511e164211d3eff710ccfc4e1"><div class="ttname"><a href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">Robot::P3</a></div><div class="ttdeci">Vertex P3</div><div class="ttdef"><b>Definition:</b> Robot.h:44</div></div>
-<div class="ttc" id="aclassRobot_html_a29308ea68bfb377b990e27dacdf57cda"><div class="ttname"><a href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">Robot::t</a></div><div class="ttdeci">float t</div><div class="ttdef"><b>Definition:</b> Robot.h:47</div></div>
-<div class="ttc" id="aclassRobot_html_a6555bec7b3749537b24ce777c778c42a"><div class="ttname"><a href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">Robot::P2</a></div><div class="ttdeci">Vertex P2</div><div class="ttdef"><b>Definition:</b> Robot.h:43</div></div>
-<div class="ttc" id="aclassRobot_html_abb7dd671b8fd99e9fed696facfb8e7c5"><div class="ttname"><a href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">Robot::P1</a></div><div class="ttdeci">Vertex P1</div><div class="ttdef"><b>Definition:</b> Robot.h:42</div></div>
-<div class="ttc" id="aclassRobot_html_abcf717ea4ca5b519896d0c7044cdba73"><div class="ttname"><a href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">Robot::P4</a></div><div class="ttdeci">Vertex P4</div><div class="ttdef"><b>Definition:</b> Robot.h:45</div></div>
-<div class="ttc" id="aclassRobot_html_ac6aca060cacec32e908032a0ec267763"><div class="ttname"><a href="classRobot.html#ac6aca060cacec32e908032a0ec267763">Robot::robot</a></div><div class="ttdeci">Model&lt; Ply &gt; robot</div><div class="ttdef"><b>Definition:</b> Robot.h:38</div></div>
-<div class="ttc" id="aclassRobot_html_af4f69ee436817a1a0b3dc597cd83a26b"><div class="ttname"><a href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">Robot::path</a></div><div class="ttdeci">vector&lt; Vertex &gt; path</div><div class="ttdef"><b>Definition:</b> Robot.h:40</div></div>
-<div class="ttc" id="aclassVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdoc">This class is used to create vertices.</div><div class="ttdef"><b>Definition:</b> Vertex.h:17</div></div>
+<div class="ttc" id="aclassRobot_html"><div class="ttname"><a href="classRobot.html">Robot</a></div><div class="ttdoc">This class is used to create and draw the robot.</div><div class="ttdef"><b>Definition:</b> Robot.h:23</div></div>
+<div class="ttc" id="aclassRobot_html_a1895d0b511e164211d3eff710ccfc4e1"><div class="ttname"><a href="classRobot.html#a1895d0b511e164211d3eff710ccfc4e1">Robot::P3</a></div><div class="ttdeci">Vertex P3</div><div class="ttdef"><b>Definition:</b> Robot.h:42</div></div>
+<div class="ttc" id="aclassRobot_html_a29308ea68bfb377b990e27dacdf57cda"><div class="ttname"><a href="classRobot.html#a29308ea68bfb377b990e27dacdf57cda">Robot::t</a></div><div class="ttdeci">float t</div><div class="ttdef"><b>Definition:</b> Robot.h:45</div></div>
+<div class="ttc" id="aclassRobot_html_a6555bec7b3749537b24ce777c778c42a"><div class="ttname"><a href="classRobot.html#a6555bec7b3749537b24ce777c778c42a">Robot::P2</a></div><div class="ttdeci">Vertex P2</div><div class="ttdef"><b>Definition:</b> Robot.h:41</div></div>
+<div class="ttc" id="aclassRobot_html_abb7dd671b8fd99e9fed696facfb8e7c5"><div class="ttname"><a href="classRobot.html#abb7dd671b8fd99e9fed696facfb8e7c5">Robot::P1</a></div><div class="ttdeci">Vertex P1</div><div class="ttdef"><b>Definition:</b> Robot.h:40</div></div>
+<div class="ttc" id="aclassRobot_html_abcf717ea4ca5b519896d0c7044cdba73"><div class="ttname"><a href="classRobot.html#abcf717ea4ca5b519896d0c7044cdba73">Robot::P4</a></div><div class="ttdeci">Vertex P4</div><div class="ttdef"><b>Definition:</b> Robot.h:43</div></div>
+<div class="ttc" id="aclassRobot_html_ac6aca060cacec32e908032a0ec267763"><div class="ttname"><a href="classRobot.html#ac6aca060cacec32e908032a0ec267763">Robot::robot</a></div><div class="ttdeci">Model&lt; Ply &gt; robot</div><div class="ttdef"><b>Definition:</b> Robot.h:36</div></div>
+<div class="ttc" id="aclassRobot_html_af4f69ee436817a1a0b3dc597cd83a26b"><div class="ttname"><a href="classRobot.html#af4f69ee436817a1a0b3dc597cd83a26b">Robot::path</a></div><div class="ttdeci">vector&lt; Vertex &gt; path</div><div class="ttdef"><b>Definition:</b> Robot.h:38</div></div>
+<div class="ttc" id="aclassVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdoc">This class is used to create vertices.</div><div class="ttdef"><b>Definition:</b> Vertex.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

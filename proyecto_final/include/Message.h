@@ -22,7 +22,8 @@ class Message
 public:
     Message();
     void draw(GLuint programID, glm::mat4 camera, bool status);
-
+    void setRotate(glm::mat4 rotate);
+    void setTranslate(glm::mat4 translate);
 private:
     Model <Obj> message;
 };

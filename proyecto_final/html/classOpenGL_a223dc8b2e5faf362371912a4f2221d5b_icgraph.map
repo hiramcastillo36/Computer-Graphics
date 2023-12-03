@@ -1,5 +1,6 @@
 <map id="OpenGL::loadShaders" name="OpenGL::loadShaders">
-<area shape="rect" id="node1" title="This method loads the shaders." alt="" coords="331,5,492,32"/>
-<area shape="rect" id="node2" href="$classOpenGL.html#a1a09abe8b7a1075baf9b8f21f0a0f43a" title="This method creates the window and load the shaders." alt="" coords="108,5,283,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="Main functiond." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="This method loads the shaders." alt="" coords="469,5,631,32"/>
+<area shape="rect" id="node2" href="$classOpenGL.html#a1a09abe8b7a1075baf9b8f21f0a0f43a" title="This method creates the window and load the shaders." alt="" coords="247,5,421,32"/>
+<area shape="rect" id="node3" href="$classScene.html#aef70538258ae4abfad9563523de0ece0" title="This method runs the simulation." alt="" coords="108,5,199,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="Inicilizacion de simulacion." alt="" coords="5,5,60,32"/>
 </map>

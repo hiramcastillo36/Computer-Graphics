@@ -77,7 +77,8 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Face:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classFace__coll__graph.svg" width="226" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFace__coll__graph.svg" width="226" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -91,11 +92,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ea29a424c8bead4d98968502a17fb31"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classEdge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a9ea29a424c8bead4d98968502a17fb31">getEdges</a> ()</td></tr>
 <tr class="memdesc:a9ea29a424c8bead4d98968502a17fb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the edges of the face.  <a href="classFace.html#a9ea29a424c8bead4d98968502a17fb31">More...</a><br /></td></tr>
 <tr class="separator:a9ea29a424c8bead4d98968502a17fb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f41b02ea135a764f7b3974db9ade07"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a28f41b02ea135a764f7b3974db9ade07">getNormal</a> ()</td></tr>
+<tr class="memdesc:a28f41b02ea135a764f7b3974db9ade07"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the normal of the face.  <a href="classFace.html#a28f41b02ea135a764f7b3974db9ade07">More...</a><br /></td></tr>
+<tr class="separator:a28f41b02ea135a764f7b3974db9ade07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4af64f707af0789cd262738f4854008b"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classEdge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a4af64f707af0789cd262738f4854008b">edges</a></td></tr>
 <tr class="separator:a4af64f707af0789cd262738f4854008b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9384eab7c9ebb8fed6fafe11aed9bd7b"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a9384eab7c9ebb8fed6fafe11aed9bd7b">normal</a></td></tr>
+<tr class="separator:a9384eab7c9ebb8fed6fafe11aed9bd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to create faces using edges. </p>
@@ -147,6 +153,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a28f41b02ea135a764f7b3974db9ade07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f41b02ea135a764f7b3974db9ade07">&#9670;&nbsp;</a></span>getNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 Face::getNormal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the normal of the face. </p>
+<dl class="section return"><dt>Returns</dt><dd>glm::vec3 </dd></dl>
+
+</div>
+</div>
 <a id="aba2e18d62d62b3d3545fb16f165dbd30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba2e18d62d62b3d3545fb16f165dbd30">&#9670;&nbsp;</a></span>print()</h2>
 
@@ -178,6 +204,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">vector&lt;<a class="el" href="classEdge.html">Edge</a>&gt; Face::edges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9384eab7c9ebb8fed6fafe11aed9bd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9384eab7c9ebb8fed6fafe11aed9bd7b">&#9670;&nbsp;</a></span>normal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 Face::normal</td>
         </tr>
       </table>
   </td>
